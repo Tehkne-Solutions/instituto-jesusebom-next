@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { StatCard } from "@/components/StatCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { MouseSpotlight } from "@/components/motion/MouseSpotlight";
 import {
   impactNumbers,
   projectCards,
@@ -24,7 +25,7 @@ export default function ImpactoDoacaoPage() {
       <Header />
       <main>
         <section className="hero">
-          <div className="container heroShell">
+          <MouseSpotlight className="container heroShell">
             <div className="heroContent">
               <span className="eyebrow">Instituto Jesus é Bom · desde 2019</span>
               <h1>Transformando vidas através da <strong>fé, educação e esperança.</strong></h1>
@@ -46,7 +47,7 @@ export default function ImpactoDoacaoPage() {
               <strong>Nossa missão em ação</strong>
               <p>Educação, acolhimento e cuidado caminhando juntos na Comunidade César Maia.</p>
             </aside>
-          </div>
+          </MouseSpotlight>
         </section>
 
         <section className="impactBar">

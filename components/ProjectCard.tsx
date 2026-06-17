@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { StaggerItem } from "./motion/StaggerItem";
 
 type ProjectCardProps = {
   title: string;
@@ -10,6 +11,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, category, description, image, icon: Icon }: ProjectCardProps) {
   return (
+    <StaggerItem className="motionCard">
     <article className="projectCard">
       <div className="projectImage" style={{ backgroundImage: `url(${image})` }}>
         <span><Icon size={16} /> {category}</span>
@@ -20,5 +22,6 @@ export function ProjectCard({ title, category, description, image, icon: Icon }:
         <a href="#">Saiba mais</a>
       </div>
     </article>
+    </StaggerItem>
   );
 }

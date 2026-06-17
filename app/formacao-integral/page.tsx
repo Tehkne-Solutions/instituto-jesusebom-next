@@ -1,9 +1,9 @@
-import type { CSSProperties } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StatCard } from "@/components/StatCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { MouseSpotlight } from "@/components/motion/MouseSpotlight";
 import { impactNumbers, pillars, projectCards, officialCopy } from "@/data/siteContent";
 import { Play } from "lucide-react";
 
@@ -41,7 +41,7 @@ export default function FormacaoIntegralPage() {
       <Header />
       <main>
         <section className="hero">
-          <div className="container heroShell" style={{ "--hero-image": "url('/assets/site-quem-somos-real.jpg')" } as CSSProperties}>
+          <MouseSpotlight className="container heroShell" style={{ "--hero-image": "url('/assets/site-quem-somos-real.jpg')" } as React.CSSProperties}>
             <div className="heroContent">
               <span className="eyebrow">Missão institucional</span>
               <h1>Fé, cuidado e formação para uma <strong>vida com futuro.</strong></h1>
@@ -58,13 +58,13 @@ export default function FormacaoIntegralPage() {
               </div>
             </div>
             <aside className="heroPanel">
-              <div className="heroPanelImage" style={{ "--panel-image": "url('/assets/site-projeto-real.jpg')" } as CSSProperties}>
+              <div className="heroPanelImage" style={{ "--panel-image": "url('/assets/site-projeto-real.jpg')" } as React.CSSProperties}>
                 <span className="playButton"><Play size={24} fill="currentColor" /></span>
               </div>
               <strong>Formação integral</strong>
               <p>Uma visão de cuidado que une desenvolvimento humano, espiritual e social.</p>
             </aside>
-          </div>
+          </MouseSpotlight>
         </section>
 
         <section className="impactBar">

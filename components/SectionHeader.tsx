@@ -1,3 +1,6 @@
+import { FadeIn } from "./motion/FadeIn";
+import { RevealText } from "./motion/RevealText";
+
 type SectionHeaderProps = {
   eyebrow: string;
   title: string;
@@ -7,10 +10,10 @@ type SectionHeaderProps = {
 
 export function SectionHeader({ eyebrow, title, text, align = "left" }: SectionHeaderProps) {
   return (
-    <div className={`sectionHeader ${align === "center" ? "center" : ""}`}>
+    <FadeIn className={`sectionHeader ${align === "center" ? "center" : ""}`}>
       <span>{eyebrow}</span>
-      <h2>{title}</h2>
+      <RevealText text={title} />
       {text && <p>{text}</p>}
-    </div>
+    </FadeIn>
   );
 }

@@ -1,8 +1,8 @@
-import type { CSSProperties } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StatCard } from "@/components/StatCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { MouseSpotlight } from "@/components/motion/MouseSpotlight";
 import {
   impactNumbers,
   transparencyLinks,
@@ -46,7 +46,7 @@ export default function EscolaParceriasPage() {
       <Header />
       <main>
         <section className="hero">
-          <div className="container heroShell partnerHero">
+          <MouseSpotlight className="container heroShell partnerHero">
             <div className="heroContent">
               <span className="eyebrow">Visão de futuro</span>
               <h1>A primeira escola cristã integral da <strong>Comunidade César Maia.</strong></h1>
@@ -65,13 +65,13 @@ export default function EscolaParceriasPage() {
               </div>
             </div>
             <aside className="heroPanel">
-              <div className="heroPanelImage" style={{ "--panel-image": "url('/assets/page-01.png')" } as CSSProperties}>
+              <div className="heroPanelImage" style={{ "--panel-image": "url('/assets/page-01.png')" } as React.CSSProperties}>
                 <SchoolIcon size={54} />
               </div>
               <strong>{officialCopy.futureSchoolTitle}</strong>
               <p>{officialCopy.futureSchoolText}</p>
             </aside>
-          </div>
+          </MouseSpotlight>
         </section>
 
         <section className="impactBar">

@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { StaggerItem } from "./motion/StaggerItem";
 
 type StatCardProps = {
   value: string;
@@ -10,6 +11,7 @@ type StatCardProps = {
 
 export function StatCard({ value, suffix = "", label, description, icon: Icon }: StatCardProps) {
   return (
+    <StaggerItem className="motionCard">
     <article className="statCard">
       <div className="statIcon"><Icon size={24} /></div>
       <div>
@@ -18,5 +20,6 @@ export function StatCard({ value, suffix = "", label, description, icon: Icon }:
         {description && <p>{description}</p>}
       </div>
     </article>
+    </StaggerItem>
   );
 }

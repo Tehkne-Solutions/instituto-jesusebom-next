@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ComparisonCard } from "@/components/ComparisonCard";
+import { StaggerContainer } from "@/components/motion/StaggerContainer";
+import { FadeIn } from "@/components/motion/FadeIn";
 
 export default function Home() {
   return (
@@ -8,16 +10,16 @@ export default function Home() {
       <Header />
       <main className="homeHub">
         <div className="container">
-          <section className="hubHero">
+          <FadeIn className="hubHero">
             <span className="eyebrow">Jesus é Bom · Next.js</span>
             <h1>3 opções de home para apresentar ao cliente.</h1>
             <p>
               As três versões usam a mesma base oficial de conteúdo, mas com estratégias diferentes:
               conversão por doação, narrativa institucional e mobilização por parcerias.
             </p>
-          </section>
+          </FadeIn>
 
-          <section className="comparisonGrid" aria-label="Opções de home">
+          <StaggerContainer className="comparisonGrid" aria-label="Opções de home">
             <ComparisonCard
               href="/impacto-doacao"
               tag="Opção 01"
@@ -39,7 +41,7 @@ export default function Home() {
               description="A versão para gerente, empresas e parceiros: posiciona a escola cristã integral como visão de futuro e campanha principal."
               bullets={["Parcerias e empresas", "Transparência", "Projeto de futuro"]}
             />
-          </section>
+          </StaggerContainer>
         </div>
       </main>
       <Footer />

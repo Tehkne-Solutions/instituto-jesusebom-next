@@ -37,3 +37,36 @@ npm run build
 ## Importante
 
 Não foram inventados telefones, parceiros, depoimentos reais, metas financeiras, CNPJ, chaves PIX ou links internos definitivos. Onde o conteúdo não estava confirmado, o texto foi tratado como CTA institucional ou caminho de navegação a validar.
+
+
+## Hotfix Vercel
+
+Este pacote já está com `eslint@8.57.1`, compatível com `eslint-config-next@14.2.18`.
+
+
+## Fase 2 — Motion, Microinterações e UX Premium
+
+Esta versão já inclui a camada de movimento premium para apresentação ao cliente:
+
+- Framer Motion instalado;
+- animação de entrada no hero;
+- reveal on scroll em títulos de seção;
+- entrada suave/stagger nos cards principais;
+- mouse spotlight sutil nos heros;
+- hover premium em cards, botões, tabs e imagens;
+- respeito a `prefers-reduced-motion`;
+- sem alteração da copy oficial, métricas, imagens ou estrutura das 3 homes.
+
+Rotas mantidas:
+
+- `/` — comparativo das 3 opções;
+- `/impacto-doacao`;
+- `/formacao-integral`;
+- `/escola-parcerias`.
+
+Validação recomendada:
+
+```bash
+npm install
+npm run build
+```

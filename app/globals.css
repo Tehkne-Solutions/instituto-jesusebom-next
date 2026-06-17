@@ -821,3 +821,221 @@ main { overflow: hidden; }
   .newsletter input { width: 100%; }
   .footerBottom { flex-direction: column; }
 }
+
+
+/* Motion Premium — Tehkné Solutions */
+.mouseSpotlightRoot {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mouseSpotlightGlow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.mouseSpotlightRoot > :not(.mouseSpotlightGlow) {
+  position: relative;
+  z-index: 1;
+}
+
+.motionCard {
+  min-width: 0;
+  height: 100%;
+}
+
+.motionCard > .statCard,
+.motionCard > .projectCard,
+.motionCard > .comparisonCard {
+  height: 100%;
+}
+
+.impactGrid .motionCard:not(:last-child) .statCard {
+  border-right: 1px solid var(--line);
+}
+
+.impactGrid .statCard {
+  border-right: 0;
+}
+
+.heroContent > .eyebrow,
+.heroContent > h1,
+.heroContent > p,
+.heroActions,
+.trustRow {
+  animation: heroSoftReveal .82s cubic-bezier(.22,1,.36,1) both;
+}
+
+.heroContent > h1 { animation-delay: .08s; }
+.heroContent > p { animation-delay: .16s; }
+.heroActions { animation-delay: .24s; }
+.trustRow { animation-delay: .32s; }
+
+.heroPanel {
+  animation: heroPanelReveal .9s cubic-bezier(.22,1,.36,1) .18s both;
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.heroPanel:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 28px 80px rgba(12,53,31,.2);
+  border-color: rgba(255,255,255,.75);
+}
+
+.heroPanelImage,
+.projectImage,
+.stackMain,
+.stackSmall,
+.documentPreview {
+  transition: transform .42s cubic-bezier(.22,1,.36,1), filter .42s ease;
+}
+
+.projectCard:hover .projectImage,
+.heroPanel:hover .heroPanelImage {
+  transform: scale(1.035);
+  filter: saturate(1.06) contrast(1.03);
+}
+
+.projectCard,
+.comparisonCard,
+.card,
+.donationBox,
+.roadmapCard,
+.partnerPanel,
+.timelineItem {
+  transition:
+    transform .26s cubic-bezier(.22,1,.36,1),
+    box-shadow .26s ease,
+    border-color .26s ease,
+    background .26s ease;
+}
+
+.projectCard:hover,
+.comparisonCard:hover,
+.card:hover,
+.donationBox:hover,
+.roadmapCard:hover,
+.partnerPanel:hover,
+.timelineItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 70px rgba(12,53,31,.14);
+  border-color: rgba(45,143,72,.28);
+}
+
+.projectCard a,
+.comparisonCard strong,
+.desktopNav a,
+.topbar a {
+  transition: color .18s ease, transform .18s ease;
+}
+
+.projectCard a:hover,
+.comparisonCard:hover strong,
+.desktopNav a:hover,
+.topbar a:hover {
+  color: var(--green);
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+  transition: transform .58s ease;
+}
+
+.btn:hover::after {
+  transform: translateX(120%);
+}
+
+.tabs span {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.tabs span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45,143,72,.32);
+  box-shadow: 0 12px 34px rgba(12,53,31,.08);
+}
+
+.iconButton {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.iconButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45,143,72,.25);
+  box-shadow: 0 12px 32px rgba(12,53,31,.1);
+}
+
+@keyframes heroSoftReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroPanelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(.98);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (hover: none) {
+  .mouseSpotlightGlow {
+    display: none;
+  }
+
+  .projectCard:hover,
+  .comparisonCard:hover,
+  .card:hover,
+  .donationBox:hover,
+  .roadmapCard:hover,
+  .partnerPanel:hover,
+  .timelineItem:hover,
+  .heroPanel:hover,
+  .btn:hover,
+  .tabs span:hover,
+  .iconButton:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+
+  .mouseSpotlightGlow {
+    display: none;
+  }
+}

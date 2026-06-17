@@ -12,10 +12,9 @@ export default function Home() {
         <div className="container">
           <FadeIn className="hubHero">
             <span className="eyebrow">Jesus é Bom · Next.js</span>
-            <h1>3 opções de home para apresentar ao cliente.</h1>
+            <h1>4 opções de home para apresentar ao cliente.</h1>
             <p>
-              As três versões usam a mesma base oficial de conteúdo, mas com estratégias diferentes:
-              conversão por doação, narrativa institucional e mobilização por parcerias.
+              As opções usam a mesma base oficial de conteúdo, com estratégias diferentes: conversão por doação, narrativa institucional, mobilização por parcerias e uma versão completa unificada.
             </p>
           </FadeIn>
 
@@ -40,6 +39,14 @@ export default function Home() {
               title="Escola Cristã e Parcerias"
               description="A versão para gerente, empresas e parceiros: posiciona a escola cristã integral como visão de futuro e campanha principal."
               bullets={["Parcerias e empresas", "Transparência", "Projeto de futuro"]}
+            />
+
+            <ComparisonCard
+              href="/home-completa"
+              tag="Opção 04"
+              title="Home Completa Unificada"
+              description="A versão mais completa: une impacto, missão, projetos, doação, transparência, escola cristã integral, privacidade/cookies e ações flutuantes."
+              bullets={["Hero full width", "Header sticky + botões flutuantes", "Conteúdo das 3 versões em uma home"]}
             />
           </StaggerContainer>
         </div>

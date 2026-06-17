@@ -1039,3 +1039,750 @@ main { overflow: hidden; }
     display: none;
   }
 }
+
+
+/* Opção 04 — Home Completa Unificada */
+.comparisonGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.heroFull {
+  position: relative;
+  min-height: 760px;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.heroFullBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(4, 39, 23, 0.96) 0%, rgba(4, 39, 23, 0.82) 38%, rgba(4, 39, 23, 0.24) 100%),
+    linear-gradient(180deg, rgba(4,39,23,.1), rgba(4,39,23,.34)),
+    url('/assets/site-hero-real.jpg') center/cover;
+}
+
+.heroFull::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 180px;
+  z-index: 0;
+  background: linear-gradient(180deg, transparent, var(--bg));
+  pointer-events: none;
+}
+
+.heroFullInner {
+  position: relative;
+  z-index: 1;
+  min-height: 760px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 54px;
+  align-items: center;
+  padding: 84px 0 120px;
+}
+
+.heroFullContent {
+  max-width: 760px;
+}
+
+.heroFullContent h1 {
+  margin: 18px 0 24px;
+  font-size: clamp(48px, 6.5vw, 92px);
+  line-height: .94;
+  letter-spacing: -0.07em;
+}
+
+.heroFullContent h1 strong {
+  color: #dfffcf;
+}
+
+.heroFullContent p {
+  font-size: 21px;
+  line-height: 1.72;
+  color: rgba(255,255,255,.88);
+}
+
+.heroFullPanel {
+  width: 100%;
+}
+
+.heroFullPanel .heroPanelImage {
+  height: 210px;
+}
+
+.impactGridComplete {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.impactGridComplete .statCard {
+  min-height: 178px;
+}
+
+.sectionSplitHeader {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(360px, .85fr);
+  gap: 36px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+
+.sectionSplitHeader .sectionHeader {
+  margin-bottom: 0;
+}
+
+.tabsComplete {
+  justify-content: flex-end;
+  align-content: end;
+}
+
+.pillarGridComplete {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.pillarCardComplete,
+.helpCardComplete,
+.strategicCard,
+.journeyCard,
+.transparencyItemComplete {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 44px rgba(12,53,31,.07);
+  transition: transform .26s cubic-bezier(.22,1,.36,1), box-shadow .26s ease, border-color .26s ease;
+}
+
+.pillarCardComplete:hover,
+.helpCardComplete:hover,
+.strategicCard:hover,
+.journeyCard:hover,
+.transparencyItemComplete:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 70px rgba(12,53,31,.14);
+  border-color: rgba(45,143,72,.28);
+}
+
+.pillarCardComplete {
+  padding: 28px;
+  min-height: 230px;
+}
+
+.pillarIcon,
+.helpIcon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--green-soft);
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.pillarCardComplete h3,
+.helpCardComplete h3,
+.strategicCard h3 {
+  margin: 0 0 10px;
+  font-size: 23px;
+  letter-spacing: -.035em;
+}
+
+.pillarCardComplete p,
+.helpCardComplete p,
+.strategicCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.sectionSoft {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(153,202,60,.11), transparent 24rem),
+    linear-gradient(180deg, rgba(232,244,236,.48), rgba(245,248,246,0));
+}
+
+.storySplitComplete {
+  display: grid;
+  grid-template-columns: .94fr 1.06fr;
+  gap: 58px;
+  align-items: center;
+}
+
+.imageMosaic {
+  position: relative;
+  min-height: 560px;
+}
+
+.mosaicMain,
+.mosaicSmall,
+.mosaicCard {
+  position: absolute;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+
+.mosaicMain {
+  inset: 0 96px 78px 0;
+  background: url('/assets/site-quem-somos-real.jpg') center/cover;
+}
+
+.mosaicSmall {
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  height: 250px;
+  border: 10px solid var(--bg);
+  background: url('/assets/site-projeto-real.jpg') center/cover;
+}
+
+.mosaicCard {
+  left: 42px;
+  bottom: 42px;
+  padding: 22px 24px;
+  max-width: 310px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.9);
+  backdrop-filter: blur(16px);
+}
+
+.mosaicCard strong {
+  display: block;
+  font-size: 20px;
+  letter-spacing: -.03em;
+}
+
+.mosaicCard span {
+  display: block;
+  margin-top: 6px;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.journeyGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.journeyCard {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 16px;
+  padding: 18px;
+}
+
+.journeyCard > span {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.journeyCard h3 {
+  margin: 0 0 6px;
+}
+
+.journeyCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.helpGridComplete,
+.strategicGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.helpCardComplete,
+.strategicCard {
+  padding: 28px;
+  height: 100%;
+}
+
+.helpCardComplete a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 22px;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.strategicCard svg {
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.projectGridComplete {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.schoolCampaign {
+  display: grid;
+  grid-template-columns: minmax(0, .98fr) minmax(360px, .72fr);
+  gap: 34px;
+  align-items: stretch;
+  min-height: 420px;
+  padding: 44px;
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(153,202,60,.22), transparent 22rem),
+    linear-gradient(135deg, var(--green-deep), #0e623a);
+  color: white;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.schoolCampaignContent h2 {
+  margin: 14px 0 18px;
+  max-width: 840px;
+  font-size: clamp(36px, 4.8vw, 64px);
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+
+.schoolCampaignContent p {
+  max-width: 780px;
+  color: rgba(255,255,255,.82);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.schoolCampaignImage {
+  min-height: 320px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(6,63,39,.12), rgba(6,63,39,.7)),
+    url('/assets/page-12.png') center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.schoolBadge {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.92);
+  color: var(--green-deep);
+}
+
+.transparencyComplete {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(380px, .9fr);
+  gap: 44px;
+  align-items: start;
+}
+
+.transparencyListComplete {
+  display: grid;
+  gap: 12px;
+}
+
+.transparencyItemComplete {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 62px;
+  padding: 0 18px;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.faqPanelComplete {
+  padding: 34px;
+  border-radius: var(--radius-lg);
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.faqPanelComplete h2 {
+  margin: 10px 0 20px;
+  font-size: 34px;
+  letter-spacing: -.04em;
+}
+
+.faqListComplete {
+  display: grid;
+  gap: 10px;
+}
+
+.faqListComplete details {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.faqListComplete summary {
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 900;
+}
+
+.faqListComplete p {
+  margin: 0;
+  padding: 0 18px 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.newsletterComplete {
+  margin: 0;
+}
+
+.privacySection {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  gap: 22px;
+  align-items: center;
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 44px rgba(12,53,31,.07);
+}
+
+.privacySection > svg {
+  color: var(--green);
+}
+
+.privacySection h2 {
+  margin: 8px 0 8px;
+  font-size: 30px;
+  letter-spacing: -.04em;
+}
+
+.privacySection p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.ctaFinalComplete {
+  padding-top: 48px;
+}
+
+.finalCtaCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 42px;
+  border-radius: var(--radius-xl);
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.finalCtaCard h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(34px, 4vw, 54px);
+  letter-spacing: -.055em;
+  line-height: 1;
+}
+
+.finalCtaCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.finalCtaActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Pedido: retirar o efeito gloss/spotlight do mouse na hero */
+.hero .mouseSpotlightGlow,
+.heroFull .mouseSpotlightGlow {
+  display: none !important;
+}
+
+/* Ações flutuantes, botão de privacidade e tarja de cookies */
+.floatingRight {
+  position: fixed;
+  right: 22px;
+  bottom: 28px;
+  z-index: 80;
+  display: grid;
+  gap: 10px;
+}
+
+.floatingAction,
+.privacyFloat {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(223,231,226,.9);
+  background: rgba(255,255,255,.92);
+  color: var(--green-dark);
+  box-shadow: 0 16px 46px rgba(12,53,31,.16);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.floatingAction:hover,
+.privacyFloat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 58px rgba(12,53,31,.2);
+}
+
+.floatingAction.toTop {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+.floatingAction.toTop.isVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.contactFloat {
+  background: var(--green);
+  color: white;
+}
+
+.privacyFloat {
+  position: fixed;
+  left: 22px;
+  bottom: 28px;
+  z-index: 80;
+  width: auto;
+  min-width: 52px;
+  padding: 0 16px;
+  grid-auto-flow: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.cookieBanner {
+  position: fixed;
+  left: 22px;
+  right: 22px;
+  bottom: 96px;
+  z-index: 90;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(232,244,236,.96));
+  border: 1px solid rgba(223,231,226,.95);
+  box-shadow: 0 24px 80px rgba(12,53,31,.2);
+  backdrop-filter: blur(18px);
+}
+
+.cookieIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.cookieText strong {
+  display: block;
+  color: var(--green-deep);
+  font-size: 17px;
+}
+
+.cookieText p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cookieActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cookieActions a,
+.cookieActions button {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cookieActions .accept {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.cookieClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  color: var(--green-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+  .comparisonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroFullInner,
+  .sectionSplitHeader,
+  .storySplitComplete,
+  .schoolCampaign,
+  .transparencyComplete,
+  .finalCtaCard {
+    grid-template-columns: 1fr;
+  }
+
+  .tabsComplete,
+  .finalCtaActions {
+    justify-content: flex-start;
+  }
+
+  .impactGridComplete,
+  .pillarGridComplete,
+  .helpGridComplete,
+  .strategicGrid,
+  .projectGridComplete {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroFullPanel {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroFull {
+    min-height: auto;
+  }
+
+  .heroFullInner {
+    min-height: auto;
+    padding: 58px 0 96px;
+  }
+
+  .heroFullContent h1 {
+    font-size: 42px;
+  }
+
+  .heroFullContent p {
+    font-size: 17px;
+  }
+
+  .impactGridComplete,
+  .pillarGridComplete,
+  .helpGridComplete,
+  .strategicGrid,
+  .projectGridComplete,
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageMosaic {
+    min-height: 420px;
+  }
+
+  .mosaicMain {
+    inset: 0 50px 90px 0;
+  }
+
+  .mosaicSmall {
+    width: 58%;
+    height: 180px;
+  }
+
+  .schoolCampaign,
+  .finalCtaCard,
+  .privacySection {
+    padding: 26px;
+  }
+
+  .privacySection {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter form {
+    width: 100%;
+  }
+
+  .floatingRight {
+    right: 14px;
+    bottom: 18px;
+  }
+
+  .privacyFloat {
+    left: 14px;
+    bottom: 18px;
+  }
+
+  .privacyFloat span {
+    display: none;
+  }
+
+  .cookieBanner {
+    grid-template-columns: 1fr;
+    left: 14px;
+    right: 14px;
+    bottom: 86px;
+  }
+
+  .cookieActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookieActions a,
+  .cookieActions button {
+    justify-content: center;
+    text-align: center;
+  }
+}

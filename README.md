@@ -1,10 +1,10 @@
-# Jesus é Bom — 3 opções de Home em Next.js
+# Jesus é Bom — 4 opções de Home em Next.js
 
 Projeto preparado pela Tehkné Solutions para apresentar **3 caminhos reais de homepage** ao cliente, no mesmo repositório, usando copy e estrutura baseadas no site oficial atual e no PDF institucional `Institucional_v2.pdf`.
 
 ## Rotas
 
-- `/` — Hub de comparação das 3 opções.
+- `/` — Hub de comparação das 4 opções.
 - `/impacto-doacao` — Opção 01: foco em conversão, doação e prova social.
 - `/formacao-integral` — Opção 02: foco em missão, formação integral e acolhimento.
 - `/escola-parcerias` — Opção 03: foco em visão de futuro, escola cristã integral e parcerias.
@@ -59,7 +59,7 @@ Esta versão já inclui a camada de movimento premium para apresentação ao cli
 
 Rotas mantidas:
 
-- `/` — comparativo das 3 opções;
+- `/` — comparativo das 4 opções;
 - `/impacto-doacao`;
 - `/formacao-integral`;
 - `/escola-parcerias`.
@@ -68,5 +68,32 @@ Validação recomendada:
 
 ```bash
 npm install
+npm run build
+```
+
+
+## Opção 04 — Home Completa Unificada
+
+Rota:
+
+```txt
+/home-completa
+```
+
+Esta versão une a estratégia das três homes anteriores em uma única proposta mais completa para validação com o cliente.
+
+Inclui:
+- hero full width;
+- header sticky;
+- botão voltar ao topo;
+- botão de contato flutuante abaixo do voltar ao topo;
+- botão de privacidade no canto esquerdo;
+- tarja de cookies na identidade visual do site;
+- remoção do efeito gloss/spotlight do mouse na hero;
+- seções completas de impacto, missão, projetos, como ajudar, escola cristã integral, transparência, FAQ, newsletter, privacidade e CTA final.
+
+Validação executada:
+
+```bash
 npm run build
 ```

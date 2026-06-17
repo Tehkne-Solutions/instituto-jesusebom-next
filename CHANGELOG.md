@@ -1,3 +1,15 @@
+
+## Home Completa Unificada — Opção 04
+
+- Criada rota `/home-completa` unindo conteúdo e estratégia das três versões anteriores.
+- Hero full width com imagem oficial, sem efeito gloss/spotlight do mouse.
+- Header sticky preservado.
+- Adicionados botões flutuantes: voltar ao topo e contato no canto direito.
+- Adicionado botão fixo de Privacidade no canto esquerdo.
+- Adicionada tarja de cookies na identidade visual do site, com aceitar, somente essenciais e link de política.
+- Incluídas seções completas: impacto, o que fazemos, quem somos, jornada de formação, como ajudar, projetos, escola cristã integral, transparência, FAQ, newsletter, privacidade e CTA final.
+- Build validado com `npm run build`.
+
 # CHANGELOG
 
 ## Motion Premium — Instituto Jesus é Bom

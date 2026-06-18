@@ -29,7 +29,7 @@ body {
     radial-gradient(circle at 88% 20%, rgba(45, 143, 72, 0.14), transparent 32rem),
     var(--bg);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -1062,7 +1062,7 @@ main { overflow: hidden; }
   background:
     linear-gradient(90deg, rgba(4, 39, 23, 0.96) 0%, rgba(4, 39, 23, 0.82) 38%, rgba(4, 39, 23, 0.24) 100%),
     linear-gradient(180deg, rgba(4,39,23,.1), rgba(4,39,23,.34)),
-    url('/assets/site-hero-real.jpg') center/cover;
+    url('/assets/hero-crianca-real.jpg') center/cover;
 }
 
 .heroFull::after {
@@ -1229,7 +1229,7 @@ main { overflow: hidden; }
 
 .mosaicMain {
   inset: 0 96px 78px 0;
-  background: url('/assets/site-quem-somos-real.jpg') center/cover;
+  background: url('/assets/foto-criancas-cuidado-real.jpg') center/cover;
 }
 
 .mosaicSmall {
@@ -1238,7 +1238,7 @@ main { overflow: hidden; }
   width: 48%;
   height: 250px;
   border: 10px solid var(--bg);
-  background: url('/assets/site-projeto-real.jpg') center/cover;
+  background: url('/assets/foto-festa-pascoa-real.jpg') center/cover;
 }
 
 .mosaicCard {
@@ -1366,7 +1366,7 @@ main { overflow: hidden; }
   border-radius: 28px;
   background:
     linear-gradient(180deg, rgba(6,63,39,.12), rgba(6,63,39,.7)),
-    url('/assets/page-12.png') center/cover;
+    url('/assets/foto-comunidade-festa-real.jpg') center/cover;
   position: relative;
   overflow: hidden;
 }
@@ -1784,5 +1784,547 @@ main { overflow: hidden; }
   .cookieActions button {
     justify-content: center;
     text-align: center;
+  }
+}
+
+
+/* V6 — Ajustes Rubens / Home oficial única */
+.officialLogo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.officialLogo img {
+  display: block;
+  width: 190px;
+  max-width: 42vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.siteHeader {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.headerShell {
+  min-height: 88px;
+}
+
+.headerActions {
+  min-width: 132px;
+  justify-content: flex-end;
+}
+
+.heroFullBg {
+  background:
+    linear-gradient(90deg, rgba(4, 39, 23, 0.97) 0%, rgba(4, 39, 23, 0.82) 42%, rgba(4, 39, 23, 0.25) 100%),
+    linear-gradient(180deg, rgba(4,39,23,.1), rgba(4,39,23,.34)),
+    url('/assets/hero-crianca-real.jpg') center/cover;
+}
+
+.whatsappDonationPanel {
+  padding: 24px;
+}
+
+.whatsappPanelHeader {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.whatsappIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #e8f4ec, #d7f3df);
+  color: var(--green);
+}
+
+.whatsappPanelHeader strong {
+  display: block;
+  font-size: 20px;
+  letter-spacing: -.03em;
+}
+
+.whatsappPanelHeader p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.whatsappDonationList {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.whatsappDonationItem {
+  display: grid;
+  grid-template-columns: 28px 1fr 18px;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(245, 248, 246, .84);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.whatsappDonationItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45,143,72,.28);
+  background: var(--white);
+  box-shadow: 0 14px 34px rgba(12,53,31,.08);
+}
+
+.whatsappDonationItem svg {
+  color: var(--green);
+}
+
+.whatsappDonationItem strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.whatsappDonationItem small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.whatsappPanelCta {
+  width: 100%;
+  gap: 8px;
+}
+
+.impactGridComplete .statCard {
+  min-height: 218px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.impactGridComplete .statIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.impactGridComplete .statCard strong {
+  font-size: 36px;
+}
+
+.impactGridComplete .statCard h3 {
+  font-size: 15px;
+  max-width: 165px;
+}
+
+.impactGridComplete .statCard p {
+  font-size: 13px;
+  max-width: 170px;
+}
+
+.mosaicMain {
+  background-image: url('/assets/foto-criancas-cuidado-real.jpg') !important;
+}
+
+.mosaicSmall {
+  background-image: url('/assets/foto-festa-pascoa-real.jpg') !important;
+}
+
+.schoolCampaignImage {
+  background:
+    linear-gradient(180deg, rgba(6,63,39,.08), rgba(6,63,39,.64)),
+    url('/assets/foto-comunidade-festa-real.jpg') center/cover !important;
+}
+
+.heroPanelImage,
+.stackMain,
+.stackSmall,
+.documentPreview {
+  background-image: url('/assets/foto-festa-pascoa-real.jpg');
+}
+
+.whatsappSvg {
+  display: block;
+}
+
+.contactFloat {
+  background: #25d366;
+  color: white;
+}
+
+.floatingAction.contactFloat::after {
+  content: "WhatsApp";
+  position: absolute;
+  right: 60px;
+  min-width: max-content;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(6,63,39,.94);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.floatingAction.contactFloat:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1180px) {
+  .officialLogo img {
+    width: 170px;
+  }
+
+  .impactGridComplete .statCard {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 760px) {
+  .officialLogo img {
+    width: 150px;
+  }
+
+  .headerShell {
+    min-height: 74px;
+  }
+
+  .impactGridComplete .statCard {
+    min-height: auto;
+  }
+
+  .floatingAction.contactFloat::after {
+    display: none;
+  }
+}
+
+
+/* V7 — Logo oficial via URL e bubble de WhatsApp inspirado no fluxo Savol, personalizado Jesus é Bom */
+.officialLogo img {
+  width: 205px;
+  max-width: 44vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.whatsappHeroChat {
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.72);
+  background: rgba(255,255,255,.95);
+}
+
+.whatsappChatMockHeader {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 22px 22px 16px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(153,202,60,.18), transparent 10rem),
+    linear-gradient(135deg, #ffffff, #edf7f0);
+}
+
+.whatsappChatMockHeader strong {
+  display: block;
+  color: var(--green-deep);
+  font-size: 20px;
+  letter-spacing: -.03em;
+}
+
+.whatsappChatMockHeader p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.whatsappChatMockBody {
+  display: grid;
+  gap: 10px;
+  padding: 16px 22px 18px;
+}
+
+.whatsappMockBubble {
+  width: fit-content;
+  max-width: 92%;
+  margin: 0 0 2px;
+  padding: 11px 13px;
+  border-radius: 18px 18px 18px 6px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.whatsappMockBubble.agent {
+  background: var(--green-soft);
+  color: var(--green-deep);
+  font-weight: 700;
+}
+
+.whatsappHeroChat .whatsappDonationItem {
+  grid-template-columns: 30px 1fr 16px;
+  background: #fff;
+}
+
+.whatsappHeroChat .whatsappPanelCta {
+  width: calc(100% - 44px);
+  margin: 0 22px 22px;
+}
+
+/* Modal de atendimento flutuante */
+.jebWhatsappModal {
+  position: fixed;
+  right: 22px;
+  bottom: 148px;
+  z-index: 95;
+  width: min(390px, calc(100vw - 44px));
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(223,231,226,.95);
+  background: rgba(255,255,255,.98);
+  box-shadow: 0 28px 90px rgba(6, 63, 39, .28);
+  backdrop-filter: blur(18px);
+}
+
+.jebWhatsappClose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.88);
+  color: var(--green-deep);
+  cursor: pointer;
+}
+
+.jebWhatsappHead {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 92px;
+  padding: 22px 22px 18px;
+  background:
+    radial-gradient(circle at 88% 16%, rgba(153,202,60,.22), transparent 10rem),
+    linear-gradient(135deg, var(--green-deep), var(--green));
+  color: #fff;
+}
+
+.jebWhatsappHeadIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+}
+
+.jebWhatsappHead h2 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: -.03em;
+}
+
+.jebWhatsappHead p {
+  margin: 4px 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.jebWhatsappBody {
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 18px;
+  background:
+    linear-gradient(rgba(245,248,246,.92), rgba(245,248,246,.92)),
+    radial-gradient(circle at 20% 20%, rgba(45,143,72,.12), transparent 10rem);
+}
+
+.jebChatBubble {
+  width: fit-content;
+  max-width: 86%;
+  margin: 0 0 10px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.45;
+  box-shadow: 0 10px 24px rgba(12,53,31,.06);
+}
+
+.jebChatBubbleAgent {
+  border-bottom-left-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.jebChatBubbleUser {
+  margin-left: auto;
+  border-bottom-right-radius: 6px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+}
+
+.jebChatTyping {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  min-width: 58px;
+}
+
+.jebChatTyping span {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--green);
+  opacity: .55;
+  animation: jebTyping 1s infinite ease-in-out;
+}
+
+.jebChatTyping span:nth-child(2) { animation-delay: .14s; }
+.jebChatTyping span:nth-child(3) { animation-delay: .28s; }
+
+@keyframes jebTyping {
+  0%, 80%, 100% { transform: translateY(0); opacity: .42; }
+  40% { transform: translateY(-4px); opacity: 1; }
+}
+
+.jebWhatsappControls {
+  padding: 16px;
+  background: #fff;
+}
+
+.jebWhatsappOptions {
+  display: grid;
+  gap: 9px;
+}
+
+.jebWhatsappOptions button {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  width: 100%;
+  min-height: 68px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.jebWhatsappOptions button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45,143,72,.32);
+  background: var(--green-soft);
+  box-shadow: 0 14px 34px rgba(12,53,31,.08);
+}
+
+.jebWhatsappOptions svg {
+  color: var(--green);
+  margin-top: 2px;
+}
+
+.jebWhatsappOptions strong {
+  display: block;
+  font-size: 14px;
+}
+
+.jebWhatsappOptions small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.jebWhatsappFinal {
+  display: grid;
+  gap: 10px;
+}
+
+.jebWhatsappStart,
+.jebWhatsappRestart {
+  min-height: 46px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.jebWhatsappStart {
+  background: var(--green);
+  color: #fff;
+  border: 1px solid var(--green);
+}
+
+.jebWhatsappRestart {
+  background: #fff;
+  color: var(--green-dark);
+  border: 1px solid var(--line);
+}
+
+.contactFloat.isOpen {
+  background: var(--green-deep);
+}
+
+@media (max-width: 720px) {
+  .officialLogo img {
+    width: 158px;
+    max-width: 56vw;
+  }
+
+  .jebWhatsappModal {
+    right: 14px;
+    bottom: 92px;
+    width: calc(100vw - 28px);
+    border-radius: 24px;
+  }
+
+  .jebWhatsappBody {
+    max-height: 220px;
+  }
+
+  .whatsappChatMockHeader,
+  .whatsappChatMockBody {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .whatsappHeroChat .whatsappPanelCta {
+    width: calc(100% - 36px);
+    margin-left: 18px;
+    margin-right: 18px;
   }
 }

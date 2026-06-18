@@ -41,3 +41,8 @@ Solução aplicada:
 Arquivo corrigido:
 `components/motion/StaggerContainer.tsx`
 
+
+
+## V6
+
+Correções de Vercel preservadas nesta versão da Home Oficial.

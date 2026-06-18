@@ -3,13 +3,21 @@ import "./globals.css";
 import { FloatingActions } from "@/components/FloatingActions";
 
 export const metadata: Metadata = {
-  title: "Instituto Jesus é Bom — Opções de Home",
-  description: "Quatro propostas de homepage em Next.js para o Instituto Jesus é Bom, com foco em doação, formação integral, parcerias e uma versão completa unificada."
+  title: "Instituto Jesus é Bom — Home Oficial",
+  description: "Homepage oficial em Next.js para o Instituto Jesus é Bom, com foco em impacto social, doação, formação integral, transparência e visão da escola cristã integral."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}<FloatingActions /></body>
     </html>
   );

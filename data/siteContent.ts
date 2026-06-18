@@ -99,42 +99,42 @@ export const projectCards = [
     title: "Estudo Dirigido",
     category: "Educação",
     description: "Rotina de estudos, acompanhamento pedagógico e suporte para crianças e adolescentes.",
-    image: "/assets/site-projetos-real.jpg",
+    image: "/assets/foto-estudo-dirigido-real.jpg",
     icon: BookOpen
   },
   {
     title: "Ensino Bilíngue",
     category: "Educação",
     description: "Aprendizagem de inglês como ampliação de repertório, oportunidade e futuro.",
-    image: "/assets/page-06.png",
+    image: "/assets/foto-ensino-bilingue-real.jpg",
     icon: GraduationCap
   },
   {
     title: "Robótica Educacional",
     category: "Educação",
     description: "Tecnologia, lógica e criatividade como ponte para novas possibilidades.",
-    image: "/assets/page-07.png",
+    image: "/assets/foto-robotica-real.jpg",
     icon: Sparkles
   },
   {
     title: "Artes e Ballet",
     category: "Cultura",
     description: "Expressão, disciplina e desenvolvimento artístico dentro da formação integral.",
-    image: "/assets/page-08.png",
+    image: "/assets/foto-ballet-real.jpg",
     icon: Music2
   },
   {
     title: "Esporte e Jiu-jítsu",
     category: "Esporte",
     description: "Disciplina, saúde, autocontrole e convivência através do esporte.",
-    image: "/assets/site-projeto-real.jpg",
+    image: "/assets/foto-jiujitsu-real.jpg",
     icon: Volleyball
   },
   {
     title: "Acolhimento às famílias",
     category: "Desenvolvimento social",
     description: "Cuidado, escuta e apoio às famílias que caminham junto com as crianças.",
-    image: "/assets/site-quem-somos-real.jpg",
+    image: "/assets/foto-apoio-familias-real.jpg",
     icon: HeartHandshake
   }
 ];

@@ -1,13 +1,30 @@
-# Jesus é Bom — 4 opções de Home em Next.js
+# Instituto Jesus é Bom — Home oficial em Next.js
 
-Projeto preparado pela Tehkné Solutions para apresentar **3 caminhos reais de homepage** ao cliente, no mesmo repositório, usando copy e estrutura baseadas no site oficial atual e no PDF institucional `Institucional_v2.pdf`.
+Projeto preparado pela Tehkné Solutions para apresentar a **Home Completa vencedora** do Instituto Jesus é Bom.
 
-## Rotas
+Esta versão mantém apenas uma homepage principal em `/`, consolidando o melhor das versões anteriores:
+impacto/doação, missão/formação integral, escola cristã integral, parcerias, transparência, privacidade e cookies.
 
-- `/` — Hub de comparação das 4 opções.
-- `/impacto-doacao` — Opção 01: foco em conversão, doação e prova social.
-- `/formacao-integral` — Opção 02: foco em missão, formação integral e acolhimento.
-- `/escola-parcerias` — Opção 03: foco em visão de futuro, escola cristã integral e parcerias.
+## Rota
+
+- `/` — Home Completa Oficial
+
+## Ajustes Rubens — V6
+
+- Mantida apenas a Home Completa.
+- Hero em largura total.
+- Header sticky preservado.
+- Fundo da hero trocado por foto real sem texto sobreposto.
+- Fonte global alterada para Montserrat via `next/font/google`.
+- Logo trocado por recorte do logo oficial presente no PDF institucional.
+- Ícone de busca removido do header.
+- Card lateral da hero trocado por painel de ajuda via WhatsApp com opções de doação/voluntariado/parceria.
+- Indicadores de impacto reorganizados com ícone acima do número.
+- Imagens das seções e cards trocadas por fotos reais extraídas do material oficial/site atual.
+- Botão flutuante de WhatsApp mantido no canto direito, abaixo do voltar ao topo.
+- Botão de privacidade mantido no canto esquerdo.
+- Tarja de cookies mantida na identidade visual do site.
+- Efeito gloss/spotlight do mouse removido da hero.
 
 ## Como rodar
 
@@ -16,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Depois acesse:
+Acesse:
 
 ```txt
 http://localhost:3000
@@ -28,72 +45,43 @@ http://localhost:3000
 npm run build
 ```
 
-## Fontes usadas
+## Fonte de conteúdo
 
-- Print do site oficial atual enviado no chat.
-- PDF `Institucional_v2.pdf` enviado no chat.
-- Assets recortados do print atual e páginas renderizadas do PDF como referências visuais reais.
+- Site oficial atual/print enviado no chat.
+- PDF `Institucional_v2.pdf`.
+- Ajustes solicitados por Rubens em 18/06/2026.
 
 ## Importante
 
-Não foram inventados telefones, parceiros, depoimentos reais, metas financeiras, CNPJ, chaves PIX ou links internos definitivos. Onde o conteúdo não estava confirmado, o texto foi tratado como CTA institucional ou caminho de navegação a validar.
+Não foram inventados telefones, PIX, CNPJ, parceiros, depoimentos reais, metas financeiras ou links definitivos. Onde o dado não estava confirmado, o CTA aponta para contato/validação institucional.
 
+## V7 — Ajustes Rubens / Bubble WhatsApp
 
-## Hotfix Vercel
+Esta versão mantém apenas a Home Completa como página principal e adiciona o bubble de WhatsApp personalizado com conteúdo oficial do Instituto.
 
-Este pacote já está com `eslint@8.57.1`, compatível com `eslint-config-next@14.2.18`.
+### Logo oficial
 
-
-## Fase 2 — Motion, Microinterações e UX Premium
-
-Esta versão já inclui a camada de movimento premium para apresentação ao cliente:
-
-- Framer Motion instalado;
-- animação de entrada no hero;
-- reveal on scroll em títulos de seção;
-- entrada suave/stagger nos cards principais;
-- mouse spotlight sutil nos heros;
-- hover premium em cards, botões, tabs e imagens;
-- respeito a `prefers-reduced-motion`;
-- sem alteração da copy oficial, métricas, imagens ou estrutura das 3 homes.
-
-Rotas mantidas:
-
-- `/` — comparativo das 4 opções;
-- `/impacto-doacao`;
-- `/formacao-integral`;
-- `/escola-parcerias`.
-
-Validação recomendada:
-
-```bash
-npm install
-npm run build
-```
-
-
-## Opção 04 — Home Completa Unificada
-
-Rota:
+O header usa a URL oficial enviada:
 
 ```txt
-/home-completa
+https://jesusebom.org/wp-content/uploads/2023/09/Logo-Jesus-e-bom-1024x401.png
 ```
 
-Esta versão une a estratégia das três homes anteriores em uma única proposta mais completa para validação com o cliente.
+### WhatsApp
 
-Inclui:
-- hero full width;
-- header sticky;
-- botão voltar ao topo;
-- botão de contato flutuante abaixo do voltar ao topo;
-- botão de privacidade no canto esquerdo;
-- tarja de cookies na identidade visual do site;
-- remoção do efeito gloss/spotlight do mouse na hero;
-- seções completas de impacto, missão, projetos, como ajudar, escola cristã integral, transparência, FAQ, newsletter, privacidade e CTA final.
+O bubble funciona com conteúdo de atendimento para:
 
-Validação executada:
+- Doação via PIX
+- Doação recorrente
+- Voluntariado
+- Parcerias
+- Transparência / prestação de contas
 
-```bash
-npm run build
+Por segurança, nenhum telefone foi inventado. Para ativar o link direto do WhatsApp, configure no ambiente:
+
+```env
+NEXT_PUBLIC_JEB_WHATSAPP_PHONE=55DDDNUMERO
 ```
+
+Sem essa variável, o CTA final do atendimento aponta para `#contato`.
+

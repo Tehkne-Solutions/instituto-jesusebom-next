@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import { Logo } from "./Logo";
 import { navItems } from "@/data/siteContent";
 
@@ -30,9 +29,6 @@ export function Header() {
           </nav>
 
           <div className="headerActions">
-            <button className="iconButton" aria-label="Buscar">
-              <Search size={18} />
-            </button>
             <a className="btn primary" href="#como-ajudar">Quero Doar</a>
           </div>
         </div>

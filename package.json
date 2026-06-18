@@ -22,9 +22,5 @@
     "typescript": "5.7.2",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.18"
-  },
-  "engines": {
-    "node": "20.x"
-  },
-  "packageManager": "pnpm@9.15.4"
+  }
 }

@@ -1,54 +1,39 @@
-# Vercel Fix v10 — npm Exit handler never called
+# Vercel Fix — V11
 
-A Vercel falhou antes do `next build`, durante a instalação de dependências:
+## Diagnóstico
 
-```txt
-npm error Exit handler never called!
-```
+Os últimos logs mostram que o deploy morre antes do `next build`, ainda na instalação de dependências.
 
-Esse erro ocorre dentro do próprio npm. Para contornar, esta versão usa pnpm com Corepack.
+- `npm install`/`npm ci` com Node 20: `npm error Exit handler never called!`
+- `pnpm` com Corepack: `ERR_INVALID_THIS` ao buscar pacotes no registry
 
-## Configuração aplicada
+O primeiro build que chegou a compilar o Next instalou dependências quando o projeto ainda estava no Node padrão da Vercel, indicado nos logs como `24.x`.
 
-`package.json`:
+## Correção aplicada
 
-```json
-{
-  "packageManager": "pnpm@9.15.4",
-  "engines": {
-    "node": "20.x"
-  }
-}
-```
-
-`vercel.json`:
+- Removido `engines.node` do `package.json`.
+- Removido `packageManager: pnpm`.
+- Mantido `package-lock.json`.
+- `vercel.json` usa:
 
 ```json
 {
-  "installCommand": "corepack enable && pnpm install --no-frozen-lockfile",
-  "buildCommand": "pnpm run build",
+  "installCommand": "npm ci --no-audit --no-fund",
+  "buildCommand": "npm run build",
   "framework": "nextjs"
 }
 ```
 
-## Deploy
+## Vercel
 
-1. Subir esta versão para o GitHub.
-2. Na Vercel, acionar Redeploy com **Clear Build Cache**.
-3. Conferir se o log passa da etapa de instalação e entra em `pnpm run build`.
+1. Subir esta versão no GitHub.
+2. Em Vercel, manter Node.js Version em Project Settings como `24.x`.
+3. Rodar redeploy com **Clear Build Cache**.
 
 ## Local
 
 ```bash
-corepack enable
-pnpm install
-pnpm run build
-```
-
-Se estiver no PowerShell bloqueado, usar:
-
-```powershell
-cmd /c corepack enable
-cmd /c pnpm install
-cmd /c pnpm run build
+rm -rf node_modules .next
+npm ci --no-audit --no-fund
+npm run build
 ```

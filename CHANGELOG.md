@@ -65,3 +65,11 @@
 - Fixado Node em `20.x` para evitar upgrade automático de major version na Vercel.
 - Mantida a Home Completa oficial como rota principal `/`.
 
+
+
+## V9 — Correção install Vercel
+
+- Restaurado `package-lock.json` compatível com as dependências atuais.
+- Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
+- Mantido Node 20.x.
+- Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.

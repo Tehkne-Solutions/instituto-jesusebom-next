@@ -85,3 +85,11 @@ NEXT_PUBLIC_JEB_WHATSAPP_PHONE=55DDDNUMERO
 
 Sem essa variável, o CTA final do atendimento aponta para `#contato`.
 
+
+
+## V9 — Correção install Vercel
+
+- Restaurado `package-lock.json` compatível com as dependências atuais.
+- Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
+- Mantido Node 20.x.
+- Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.

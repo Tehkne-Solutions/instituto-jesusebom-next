@@ -46,3 +46,11 @@ Arquivo corrigido:
 ## V6
 
 Correções de Vercel preservadas nesta versão da Home Oficial.
+
+
+## V9 — Correção install Vercel
+
+- Restaurado `package-lock.json` compatível com as dependências atuais.
+- Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
+- Mantido Node 20.x.
+- Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.

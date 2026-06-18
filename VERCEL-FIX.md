@@ -1,56 +1,54 @@
-# Hotfix Vercel — ERESOLVE ESLint
+# Vercel Fix v10 — npm Exit handler never called
 
-Correção aplicada:
-
-- `eslint` alterado de `9.16.0` para `8.57.1`.
-- Motivo: `eslint-config-next@14.2.18` declara peer dependency `eslint@^7.23.0 || ^8.0.0`.
-- Adicionado `engines.node >=18.18.0`.
-
-Validação recomendada:
-
-```bash
-rm -rf node_modules package-lock.json
-npm install
-npm run build
-```
-
-Commit sugerido:
-
-```bash
-git add package.json VERCEL-FIX.md
-git commit -m "fix: align eslint version with next config"
-git push origin main
-```
-
-## Correção adicional — TypeScript + Framer Motion
-
-Erro corrigido:
+A Vercel falhou antes do `next build`, durante a instalação de dependências:
 
 ```txt
-Type error: Type ... is not assignable to type 'Omit<HTMLMotionProps<"div">, "ref">'.
-Types of property 'onDrag' are incompatible.
+npm error Exit handler never called!
 ```
 
-Causa:
-`StaggerContainer` estendia `HTMLAttributes<HTMLDivElement>` e repassava `...props` para `motion.div`. Isso faz o TypeScript misturar eventos React, como `onDrag`, com a assinatura própria do Framer Motion.
+Esse erro ocorre dentro do próprio npm. Para contornar, esta versão usa pnpm com Corepack.
 
-Solução aplicada:
-`StaggerContainerProps` agora aceita somente props seguras usadas no projeto:
-`className`, `id`, `role`, `style`, `aria-label` e `aria-labelledby`.
+## Configuração aplicada
 
-Arquivo corrigido:
-`components/motion/StaggerContainer.tsx`
+`package.json`:
 
+```json
+{
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": "20.x"
+  }
+}
+```
 
+`vercel.json`:
 
-## V6
+```json
+{
+  "installCommand": "corepack enable && pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm run build",
+  "framework": "nextjs"
+}
+```
 
-Correções de Vercel preservadas nesta versão da Home Oficial.
+## Deploy
 
+1. Subir esta versão para o GitHub.
+2. Na Vercel, acionar Redeploy com **Clear Build Cache**.
+3. Conferir se o log passa da etapa de instalação e entra em `pnpm run build`.
 
-## V9 — Correção install Vercel
+## Local
 
-- Restaurado `package-lock.json` compatível com as dependências atuais.
-- Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
-- Mantido Node 20.x.
-- Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.
+```bash
+corepack enable
+pnpm install
+pnpm run build
+```
+
+Se estiver no PowerShell bloqueado, usar:
+
+```powershell
+cmd /c corepack enable
+cmd /c pnpm install
+cmd /c pnpm run build
+```

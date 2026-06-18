@@ -93,3 +93,27 @@ Sem essa variável, o CTA final do atendimento aponta para `#contato`.
 - Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
 - Mantido Node 20.x.
 - Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.
+
+
+## Fix Vercel v10 — pnpm
+
+Esta versão troca a instalação da Vercel de `npm install`/`npm ci` para `pnpm`, porque a Vercel estava falhando antes do build com:
+
+```txt
+npm error Exit handler never called!
+```
+
+Arquivos ajustados:
+- `package.json` com `packageManager: pnpm@9.15.4`
+- `vercel.json` com `corepack enable && pnpm install --no-frozen-lockfile`
+- removido `package-lock.json`
+
+Comandos locais recomendados:
+
+```bash
+corepack enable
+pnpm install
+pnpm run build
+```
+
+Na Vercel, fazer redeploy com Clear Build Cache.

@@ -73,3 +73,11 @@
 - Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
 - Mantido Node 20.x.
 - Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.
+
+## v10 — Fix Vercel npm install via pnpm
+
+- Trocado install da Vercel para `pnpm` via Corepack.
+- Removido `package-lock.json` para evitar o bug `npm error Exit handler never called!`.
+- Adicionado `packageManager: pnpm@9.15.4`.
+- Mantida a Home Completa oficial como rota principal.
+- Mantidos logo oficial, WhatsApp bubble, Montserrat, cookies e ajustes do Rubens.

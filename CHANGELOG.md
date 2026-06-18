@@ -57,3 +57,11 @@
 - Removido `next/font/google` para evitar falha de build quando o ambiente não consegue buscar Google Fonts durante o build.
 - Mantido uso de Montserrat via `<link>` no layout e fallback seguro no CSS.
 
+## V8 — Correção npm/Vercel install
+
+- Removido `package-lock.json` gerado em ambiente interno para evitar resolução por registry/cache não público.
+- Adicionado `.npmrc` com `audit=false` e `fund=false` para instalação mais limpa na Vercel.
+- Adicionado `vercel.json` com `installCommand` explícito: `npm install --no-audit --no-fund`.
+- Fixado Node em `20.x` para evitar upgrade automático de major version na Vercel.
+- Mantida a Home Completa oficial como rota principal `/`.
+

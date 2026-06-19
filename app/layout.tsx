@@ -6,7 +6,18 @@ export const metadata: Metadata = {
   title: "Instituto Jesus é Bom — Home Oficial",
   description: "Homepage oficial em Next.js para o Instituto Jesus é Bom, com foco em impacto social, doação, formação integral, transparência e visão da escola cristã integral.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/favicon-Jesus-e-bom.webp",
+        type: "image/webp",
+        sizes: "100x100"
+      },
+      {
+        url: "/favicon.ico",
+        sizes: "any"
+      }
+    ],
+    shortcut: "/favicon-Jesus-e-bom.webp",
     apple: "/apple-touch-icon.png"
   }
 };

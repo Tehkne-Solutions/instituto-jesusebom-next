@@ -125,3 +125,8 @@ git rm -r --cached node_modules
 ```
 
 Depois faça commit apenas dos arquivos reais do projeto.
+
+
+## v14 — Favicon oficial
+
+Esta versão parte da v12 e altera apenas os assets/metadados de favicon. Não altera dependências, scripts ou setup de build.

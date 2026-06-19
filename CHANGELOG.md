@@ -88,3 +88,10 @@
 - Refinada a tipografia do título da hero com Montserrat, `letter-spacing` menos agressivo e `line-height` mais legível.
 - Corrigido o SVG e o CSS do botão flutuante de WhatsApp para evitar distorção/deformação.
 - Adicionado `.gitignore` para impedir commit de `node_modules`, `.next` e arquivos locais.
+
+
+## v14 — Favicon oficial sem alterações de build
+
+- Aplicado `public/favicon-Jesus-e-bom.webp` como favicon principal.
+- Mantida a base da v12, sem alterar `package.json`, lockfile ou configuração de instalação da Vercel.
+- ZIP gerado sem `node_modules`.

@@ -1,3 +1,9 @@
+# Deploy Vercel — v15
+
+Esta versão remove o `package-lock.json` porque o lockfile anterior foi gerado em ambiente de sandbox e continha URLs internas de registry. Na Vercel, use `npm install --no-audit --no-fund --no-package-lock` conforme `vercel.json`.
+
+Não commitar `node_modules`, `.next` ou lockfile gerado localmente.
+
 # Instituto Jesus é Bom — Home oficial em Next.js
 
 Projeto preparado pela Tehkné Solutions para apresentar a **Home Completa vencedora** do Instituto Jesus é Bom.
@@ -130,3 +136,8 @@ Depois faça commit apenas dos arquivos reais do projeto.
 ## v14 — Favicon oficial
 
 Esta versão parte da v12 e altera apenas os assets/metadados de favicon. Não altera dependências, scripts ou setup de build.
+
+
+## V16 — Hotfix WhatsApp
+
+Botão flutuante do WhatsApp ajustado para formato redondo, sem borda e com ícone centralizado.

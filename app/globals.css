@@ -2412,3 +2412,33 @@ main { overflow: hidden; }
     height: 24px !important;
   }
 }
+
+
+/* V16 — Hotfix: botão flutuante do WhatsApp redondo e sem borda */
+.floatingAction.contactFloat {
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  border: 0;
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 18px 42px rgba(37, 211, 102, 0.28), 0 10px 24px rgba(12, 53, 31, 0.18);
+  overflow: hidden;
+}
+
+.floatingAction.contactFloat:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 22px 52px rgba(37, 211, 102, 0.34), 0 14px 32px rgba(12, 53, 31, 0.2);
+}
+
+.floatingAction.contactFloat svg,
+.floatingAction.contactFloat .whatsappSvg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.floatingAction.contactFloat.isOpen {
+  background: var(--green-deep);
+}

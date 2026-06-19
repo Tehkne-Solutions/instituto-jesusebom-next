@@ -1,3 +1,20 @@
+
+## V16 — Hotfix botão WhatsApp flutuante
+
+- Ajustado botão flutuante do WhatsApp para formato redondo.
+- Removida borda do botão de WhatsApp.
+- Corrigido tamanho/centralização do SVG do WhatsApp para evitar deformação visual.
+- Mantida a lógica do bubble de atendimento e conteúdo institucional.
+
+
+## v15 — Clean Registry Install para Vercel
+
+- Removido `package-lock.json` gerado em ambiente de sandbox para evitar URLs de registry internas no deploy.
+- Ajustado `vercel.json` para usar `npm install --no-audit --no-fund --no-package-lock`.
+- Fixado registry público em `.npmrc` com `registry=https://registry.npmjs.org/`.
+- Mantido favicon oficial WebP e ajustes visuais da v14.
+- ZIP segue sem `node_modules`.
+
 # CHANGELOG
 
 ## V6 — Home Oficial / Ajustes Rubens

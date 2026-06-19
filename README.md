@@ -105,3 +105,23 @@ Comandos locais:
 npm ci --no-audit --no-fund
 npm run build
 ```
+
+
+## V12 — Hotfix visual
+
+Esta versão inclui:
+
+- favicon oficial gerado em `public/favicon.ico`, `public/icon.png` e `public/apple-touch-icon.png`;
+- ajuste de tipografia do H1 da hero para ficar mais próximo da hierarquia visual aprovada nas seções internas;
+- correção do ícone do WhatsApp flutuante com SVG limpo e CSS com dimensões fixas;
+- `.gitignore` para impedir que `node_modules/` e `.next/` sejam versionados.
+
+### Importante para Git
+
+Não use `git add .` se `node_modules/` aparecer no `git status`. Use:
+
+```powershell
+git rm -r --cached node_modules
+```
+
+Depois faça commit apenas dos arquivos reais do projeto.

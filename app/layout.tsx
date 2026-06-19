@@ -4,7 +4,11 @@ import { FloatingActions } from "@/components/FloatingActions";
 
 export const metadata: Metadata = {
   title: "Instituto Jesus é Bom — Home Oficial",
-  description: "Homepage oficial em Next.js para o Instituto Jesus é Bom, com foco em impacto social, doação, formação integral, transparência e visão da escola cristã integral."
+  description: "Homepage oficial em Next.js para o Instituto Jesus é Bom, com foco em impacto social, doação, formação integral, transparência e visão da escola cristã integral.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -80,3 +80,11 @@
 - Removido fluxo `pnpm`/Corepack após erro `ERR_INVALID_THIS` no fetch do registry.
 - Restaurado fluxo `npm ci --no-audit --no-fund` com `package-lock.json`.
 - Mantida a Home Completa oficial como rota principal.
+
+## Hotfix visual — favicon, hero e WhatsApp
+
+- Adicionado favicon e apple-touch-icon em `public/`.
+- Configurados ícones no metadata do Next App Router.
+- Refinada a tipografia do título da hero com Montserrat, `letter-spacing` menos agressivo e `line-height` mais legível.
+- Corrigido o SVG e o CSS do botão flutuante de WhatsApp para evitar distorção/deformação.
+- Adicionado `.gitignore` para impedir commit de `node_modules`, `.next` e arquivos locais.

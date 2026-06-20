@@ -1,4 +1,18 @@
 
+## v17 — Páginas legais, footer funcional e consentimento 2026
+
+- Mantida a Home Completa como versão principal.
+- Criadas páginas legais: Política de Privacidade, Termos de Uso, Política de Cookies, Transparência, Relatórios e Trabalhe Conosco/Voluntariado.
+- Atualizados links do footer, topbar e blocos de transparência para rotas reais.
+- Botão flutuante de privacidade alterado para ícone-only.
+- Tarja de cookies atualizada para padrão 2026 com opções: aceitar todos, somente essenciais e personalizar.
+- Criado painel de preferências por categoria: necessários, preferências, métricas e comunicação.
+- Preferências salvas em localStorage com chave `jeb_cookie_consent_2026`.
+- Mantido WhatsApp flutuante redondo, sem borda, e sem alterar a lógica de atendimento.
+- ZIP mantido sem `node_modules` e sem `package-lock.json`.
+
+
+
 ## V16 — Hotfix botão WhatsApp flutuante
 
 - Ajustado botão flutuante do WhatsApp para formato redondo.

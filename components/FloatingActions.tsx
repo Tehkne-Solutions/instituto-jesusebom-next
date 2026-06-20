@@ -4,11 +4,13 @@ import { useEffect, useMemo, useRef, useState, type ElementType } from "react";
 import {
   ArrowUp,
   Building2,
+  Cookie,
   FileText,
   Gift,
   Repeat2,
   Send,
   ShieldCheck,
+  SlidersHorizontal,
   UserPlus,
   X
 } from "lucide-react";
@@ -16,6 +18,7 @@ import {
 const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_JEB_WHATSAPP_PHONE ?? "";
 const AUTO_OPEN_STORAGE_KEY = "jeb-whatsapp-chat-opened";
 const TYPING_DELAY_MS = 650;
+const COOKIE_STORAGE_KEY = "jeb_cookie_consent_2026";
 
 type SupportOptionId = "pix" | "recorrente" | "voluntariado" | "parcerias" | "transparencia";
 type ChatStep = "intro" | "option" | "done";
@@ -26,6 +29,22 @@ type SupportOption = {
   description: string;
   message: string;
   icon: ElementType;
+};
+
+type CookiePreferences = {
+  necessary: true;
+  preferences: boolean;
+  analytics: boolean;
+  communication: boolean;
+  updatedAt: string;
+};
+
+const defaultPreferences: CookiePreferences = {
+  necessary: true,
+  preferences: false,
+  analytics: false,
+  communication: false,
+  updatedAt: ""
 };
 
 const supportOptions: SupportOption[] = [
@@ -66,6 +85,33 @@ const supportOptions: SupportOption[] = [
   }
 ];
 
+const cookieCategories = [
+  {
+    key: "necessary" as const,
+    title: "Necessários",
+    description: "Mantêm o site funcionando, preservam segurança, navegação básica e o registro do consentimento.",
+    locked: true
+  },
+  {
+    key: "preferences" as const,
+    title: "Preferências",
+    description: "Guardam escolhas de experiência, como preferências visuais e funcionamento da interface.",
+    locked: false
+  },
+  {
+    key: "analytics" as const,
+    title: "Métricas",
+    description: "Ajudam a entender uso geral do site de forma agregada para melhorar conteúdo e navegação.",
+    locked: false
+  },
+  {
+    key: "communication" as const,
+    title: "Comunicação",
+    description: "Apoiam recursos de relacionamento, campanhas, formulários, WhatsApp e comunicação institucional.",
+    locked: false
+  }
+];
+
 function WhatsAppLogo({ size = 22 }: { size?: number }) {
   return (
     <svg
@@ -85,14 +131,36 @@ function WhatsAppLogo({ size = 22 }: { size?: number }) {
 
 function createWhatsAppHref(message: string): string {
   const phone = WHATSAPP_PHONE.replace(/[^\d]/g, "");
-  if (!phone) return "#contato";
+  if (!phone) return "/#contato";
   const normalizedPhone = phone.startsWith("55") ? phone : `55${phone}`;
   return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(message)}`;
+}
+
+function loadPreferences(): CookiePreferences | null {
+  if (typeof window === "undefined") return null;
+
+  const stored = window.localStorage.getItem(COOKIE_STORAGE_KEY);
+  if (!stored) return null;
+
+  try {
+    const parsed = JSON.parse(stored) as Partial<CookiePreferences>;
+    return {
+      necessary: true,
+      preferences: Boolean(parsed.preferences),
+      analytics: Boolean(parsed.analytics),
+      communication: Boolean(parsed.communication),
+      updatedAt: parsed.updatedAt || ""
+    };
+  } catch {
+    return null;
+  }
 }
 
 export function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
   const [cookieVisible, setCookieVisible] = useState(false);
+  const [cookiePanelOpen, setCookiePanelOpen] = useState(false);
+  const [preferences, setPreferences] = useState<CookiePreferences>(defaultPreferences);
   const [chatOpen, setChatOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<SupportOption | null>(null);
   const [step, setStep] = useState<ChatStep>("intro");
@@ -111,8 +179,10 @@ export function FloatingActions() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    const consent = window.localStorage.getItem("jeb_cookie_consent");
-    if (!consent) {
+    const storedConsent = loadPreferences();
+    if (storedConsent) {
+      setPreferences(storedConsent);
+    } else {
       const timer = window.setTimeout(() => setCookieVisible(true), 650);
       return () => {
         window.clearTimeout(timer);
@@ -124,15 +194,18 @@ export function FloatingActions() {
   }, []);
 
   useEffect(() => {
-    if (!chatOpen) return;
+    if (!chatOpen && !cookiePanelOpen) return;
 
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setChatOpen(false);
+      if (event.key === "Escape") {
+        setChatOpen(false);
+        setCookiePanelOpen(false);
+      }
     };
 
     window.addEventListener("keydown", closeOnEscape);
     return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [chatOpen]);
+  }, [chatOpen, cookiePanelOpen]);
 
   useEffect(() => {
     if (!chatOpen) return;
@@ -141,14 +214,40 @@ export function FloatingActions() {
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
   }, [chatOpen, isTyping, selectedOption, step]);
 
-  function acceptCookies() {
-    window.localStorage.setItem("jeb_cookie_consent", "accepted");
+  function savePreferences(next: CookiePreferences) {
+    const payload = { ...next, necessary: true as const, updatedAt: new Date().toISOString() };
+    window.localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(payload));
+    setPreferences(payload);
     setCookieVisible(false);
+    setCookiePanelOpen(false);
+  }
+
+  function acceptAllCookies() {
+    savePreferences({
+      necessary: true,
+      preferences: true,
+      analytics: true,
+      communication: true,
+      updatedAt: ""
+    });
   }
 
   function rejectCookies() {
-    window.localStorage.setItem("jeb_cookie_consent", "essential");
-    setCookieVisible(false);
+    savePreferences({
+      necessary: true,
+      preferences: false,
+      analytics: false,
+      communication: false,
+      updatedAt: ""
+    });
+  }
+
+  function togglePreference(key: keyof CookiePreferences) {
+    if (key === "necessary" || key === "updatedAt") return;
+    setPreferences((current) => ({
+      ...current,
+      [key]: !current[key]
+    }));
   }
 
   function scrollTop() {
@@ -280,38 +379,101 @@ export function FloatingActions() {
         </section>
       ) : null}
 
-      <a className="privacyFloat" href="#privacidade">
-        <ShieldCheck size={18} />
-        <span>Privacidade</span>
-      </a>
+      <button
+        className="privacyFloat"
+        type="button"
+        onClick={() => setCookiePanelOpen(true)}
+        aria-label="Abrir preferências de privacidade e cookies"
+        title="Privacidade e cookies"
+      >
+        <ShieldCheck size={20} />
+      </button>
 
       {cookieVisible && (
-        <section className="cookieBanner" aria-label="Aviso de cookies">
+        <section className="cookieBanner cookieBanner2026" aria-label="Aviso de cookies">
           <button
             className="cookieClose"
             type="button"
             onClick={rejectCookies}
-            aria-label="Fechar aviso de cookies"
+            aria-label="Fechar aviso de cookies e manter somente essenciais"
           >
             <X size={18} />
           </button>
 
           <div className="cookieIcon">
-            <ShieldCheck size={22} />
+            <Cookie size={23} />
           </div>
 
           <div className="cookieText">
             <strong>Privacidade e cookies</strong>
             <p>
-              Usamos cookies essenciais e recursos de navegação para melhorar sua experiência,
-              analisar uso do site e manter a comunicação institucional mais segura.
+              Usamos cookies necessários para o funcionamento do site. Com seu consentimento,
+              também podemos usar preferências, métricas e recursos de comunicação para melhorar sua experiência.
             </p>
           </div>
 
           <div className="cookieActions">
-            <a href="#privacidade">Ver política</a>
+            <button type="button" onClick={() => setCookiePanelOpen(true)}>
+              <SlidersHorizontal size={15} />
+              Personalizar
+            </button>
             <button type="button" onClick={rejectCookies}>Somente essenciais</button>
-            <button type="button" className="accept" onClick={acceptCookies}>Aceitar cookies</button>
+            <button type="button" className="accept" onClick={acceptAllCookies}>Aceitar todos</button>
+          </div>
+        </section>
+      )}
+
+      {cookiePanelOpen && (
+        <section className="cookiePreferencesOverlay" role="dialog" aria-modal="true" aria-labelledby="cookie-preferences-title">
+          <div className="cookiePreferencesPanel">
+            <button type="button" className="cookiePreferencesClose" onClick={() => setCookiePanelOpen(false)} aria-label="Fechar preferências">
+              <X size={18} />
+            </button>
+
+            <header>
+              <span className="cookiePreferencesIcon"><ShieldCheck size={24} /></span>
+              <div>
+                <span className="eyebrow">Central de privacidade</span>
+                <h2 id="cookie-preferences-title">Preferências de cookies</h2>
+                <p>
+                  Escolha quais categorias deseja permitir. Cookies necessários permanecem ativos para segurança, navegação e registro do consentimento.
+                </p>
+              </div>
+            </header>
+
+            <div className="cookieCategoryList">
+              {cookieCategories.map((category) => {
+                const enabled = category.key === "necessary" ? true : Boolean(preferences[category.key]);
+
+                return (
+                  <div className="cookieCategory" key={category.key}>
+                    <div>
+                      <strong>{category.title}</strong>
+                      <p>{category.description}</p>
+                    </div>
+                    <button
+                      type="button"
+                      className={`cookieToggle ${enabled ? "isEnabled" : ""}`}
+                      onClick={() => togglePreference(category.key)}
+                      aria-pressed={enabled}
+                      disabled={category.locked}
+                    >
+                      <span />
+                      {category.locked ? "Obrigatório" : enabled ? "Ativo" : "Inativo"}
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
+            <footer className="cookiePreferencesFooter">
+              <a href="/politica-de-cookies">Ler política de cookies</a>
+              <div>
+                <button type="button" onClick={rejectCookies}>Somente essenciais</button>
+                <button type="button" onClick={() => savePreferences(preferences)}>Salvar escolhas</button>
+                <button type="button" className="accept" onClick={acceptAllCookies}>Aceitar todos</button>
+              </div>
+            </footer>
           </div>
         </section>
       )}

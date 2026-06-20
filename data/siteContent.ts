@@ -167,10 +167,10 @@ export const helpWays = [
 ];
 
 export const transparencyLinks = [
-  { label: "Relatórios e prestação de contas", icon: FileText },
-  { label: "Política de transparência", icon: ShieldCheck },
-  { label: "Documentos institucionais", icon: Landmark },
-  { label: "Parcerias e apoios", icon: HandHeart }
+  { label: "Relatórios e prestação de contas", href: "/relatorios", icon: FileText },
+  { label: "Política de transparência", href: "/transparencia", icon: ShieldCheck },
+  { label: "Documentos institucionais", href: "/relatorios", icon: Landmark },
+  { label: "Parcerias e apoios", href: "/#como-ajudar", icon: HandHeart }
 ];
 
 export const faqItems = [

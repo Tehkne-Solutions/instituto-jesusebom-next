@@ -307,9 +307,9 @@ export default function HomeCompletaPage() {
                 text="A transparência reduz objeções, fortalece relacionamento com doadores e prepara o site para comunicação institucional contínua."
               />
               <StaggerContainer className="transparencyListComplete" aria-label="Itens de transparência">
-                {transparencyLinks.map(({ label, icon: Icon }) => (
+                {transparencyLinks.map(({ label, href, icon: Icon }) => (
                   <StaggerItem className="motionCard" key={label}>
-                    <a href="#contato" className="transparencyItemComplete">
+                    <a href={href} className="transparencyItemComplete">
                       <Icon size={20} />
                       <span>{label}</span>
                     </a>
@@ -360,7 +360,7 @@ export default function HomeCompletaPage() {
                   transparência sobre formulários e adequação antes da publicação final.
                 </p>
               </div>
-              <a className="btn outline" href="#contato">Solicitar política oficial</a>
+              <a className="btn outline" href="/privacidade">Ver Política de Privacidade</a>
             </FadeIn>
           </div>
         </section>

@@ -8,9 +8,9 @@ export function Header() {
         <div className="container topbarInner">
           <span>Transformando vidas através da fé, educação e esperança.</span>
           <nav aria-label="Links institucionais">
-            <a href="#transparencia">Transparência</a>
-            <a href="#transparencia">Relatórios</a>
-            <a href="#contato">Trabalhe Conosco</a>
+            <a href="/transparencia">Transparência</a>
+            <a href="/relatorios">Relatórios</a>
+            <a href="/trabalhe-conosco">Trabalhe Conosco</a>
             <a href="#contato">Contato</a>
           </nav>
         </div>

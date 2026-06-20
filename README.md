@@ -1,3 +1,43 @@
+# Instituto Jesus é Bom — Home oficial v17
+
+Versão com Home Completa principal, páginas legais, links de footer funcionais e consentimento de cookies atualizado.
+
+## Rotas principais
+
+- `/` — Home Completa oficial
+- `/privacidade` — Política de Privacidade
+- `/termos-de-uso` — Termos de Uso
+- `/politica-de-cookies` — Política de Cookies
+- `/transparencia` — Transparência
+- `/relatorios` — Relatórios
+- `/trabalhe-conosco` — Trabalhe Conosco e Voluntariado
+
+## Cookies e privacidade
+
+O botão flutuante do lado esquerdo abre a Central de Privacidade sem texto visível, apenas ícone. A tarja de cookies permite aceitar todos, manter somente essenciais ou personalizar categorias.
+
+Categorias implementadas:
+
+- Necessários
+- Preferências
+- Métricas
+- Comunicação
+
+## Vercel
+
+O projeto deve continuar sem `node_modules` no Git. O fluxo configurado evita lockfile contaminado e usa registry público.
+
+```json
+{
+  "installCommand": "npm install --no-audit --no-fund --no-package-lock",
+  "buildCommand": "npm run build",
+  "framework": "nextjs"
+}
+```
+
+
+---
+
 # Deploy Vercel — v15
 
 Esta versão remove o `package-lock.json` porque o lockfile anterior foi gerado em ambiente de sandbox e continha URLs internas de registry. Na Vercel, use `npm install --no-audit --no-fund --no-package-lock` conforme `vercel.json`.

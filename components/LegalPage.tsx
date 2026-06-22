@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { legalIndex, type LegalPageContent } from "@/data/legalContent";
-import { ArrowRight, CalendarDays, FileText, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarDays, FileText } from "lucide-react";
 
 export function LegalPage({ page }: { page: LegalPageContent }) {
   return (
@@ -54,16 +54,6 @@ export function LegalPage({ page }: { page: LegalPageContent }) {
                   ) : null}
                 </section>
               ))}
-
-              <div className="legalNotice">
-                <ShieldCheck size={22} />
-                <div>
-                  <strong>Nota de validação</strong>
-                  <p>
-                    Este texto foi preparado para apresentação institucional com base nas informações disponíveis do site e da apresentação enviada. Dados jurídicos específicos, contatos oficiais, CNPJ, encarregado de dados e documentos formais devem ser validados pelo Instituto antes da publicação definitiva.
-                  </p>
-                </div>
-              </div>
             </article>
           </div>
         </section>

@@ -15,7 +15,7 @@ import {
   X
 } from "lucide-react";
 
-const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_JEB_WHATSAPP_PHONE ?? "";
+const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_JEB_WHATSAPP_PHONE ?? "5521973468327";
 const AUTO_OPEN_STORAGE_KEY = "jeb-whatsapp-chat-opened";
 const TYPING_DELAY_MS = 650;
 const COOKIE_STORAGE_KEY = "jeb_cookie_consent_2026";

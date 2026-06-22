@@ -6,19 +6,19 @@ export function Header() {
     <>
       <div className="topbar">
         <div className="container topbarInner">
-          <span>Transformando vidas através da fé, educação e esperança.</span>
+          <span>Transformando vidas pelo amor de Cristo desde 2019.</span>
           <nav aria-label="Links institucionais">
             <a href="/transparencia">Transparência</a>
             <a href="/relatorios">Relatórios</a>
             <a href="/trabalhe-conosco">Trabalhe Conosco</a>
-            <a href="#contato">Contato</a>
+            <a href="/contato">Contato</a>
           </nav>
         </div>
       </div>
 
       <header className="siteHeader">
         <div className="container headerShell">
-          <a href="/" className="logoLink">
+          <a href="/" className="logoLink" aria-label="Instituto Jesus é Bom">
             <Logo />
           </a>
 
@@ -29,7 +29,7 @@ export function Header() {
           </nav>
 
           <div className="headerActions">
-            <a className="btn primary" href="#como-ajudar">Quero Doar</a>
+            <a className="btn primary" href="/como-ajudar">Doe Agora</a>
           </div>
         </div>
       </header>

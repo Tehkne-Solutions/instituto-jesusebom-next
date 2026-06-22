@@ -4,48 +4,38 @@ const columns = [
   {
     title: "Instituto",
     links: [
-      { label: "Quem Somos", href: "/#quem-somos" },
-      { label: "Nossa História", href: "/#quem-somos" },
-      { label: "Missão e Visão", href: "/#o-que-fazemos" },
+      { label: "Início", href: "/" },
+      { label: "Quem Somos", href: "/quem-somos" },
+      { label: "O Que Fazemos", href: "/o-que-fazemos" },
+      { label: "Impacto Social", href: "/impacto-social" }
+    ]
+  },
+  {
+    title: "Como participar",
+    links: [
+      { label: "Como Ajudar", href: "/como-ajudar" },
+      { label: "Voluntariado", href: "/voluntariado" },
+      { label: "Trabalhe Conosco", href: "/trabalhe-conosco" },
+      { label: "Contato", href: "/contato" }
+    ]
+  },
+  {
+    title: "Transparência",
+    links: [
       { label: "Transparência", href: "/transparencia" },
-      { label: "Relatórios", href: "/relatorios" }
-    ]
-  },
-  {
-    title: "O que fazemos",
-    links: [
-      { label: "Educação", href: "/#o-que-fazemos" },
-      { label: "Esporte", href: "/#o-que-fazemos" },
-      { label: "Cultura", href: "/#o-que-fazemos" },
-      { label: "Desenvolvimento Social", href: "/#o-que-fazemos" },
-      { label: "Formação Cristã", href: "/#o-que-fazemos" }
-    ]
-  },
-  {
-    title: "Projetos",
-    links: [
-      { label: "Todos os Projetos", href: "/#projetos" },
-      { label: "Projeto Escola", href: "/#escola-crista" },
-      { label: "Eventos", href: "/#projetos" },
-      { label: "Campanhas", href: "/#como-ajudar" }
-    ]
-  },
-  {
-    title: "Legal",
-    links: [
+      { label: "Relatórios", href: "/relatorios" },
       { label: "Política de Privacidade", href: "/privacidade" },
       { label: "Termos de Uso", href: "/termos-de-uso" },
-      { label: "Política de Cookies", href: "/politica-de-cookies" },
-      { label: "Trabalhe Conosco", href: "/trabalhe-conosco" }
+      { label: "Política de Cookies", href: "/politica-de-cookies" }
     ]
   },
   {
     title: "Contato",
     links: [
-      { label: "Comunidade César Maia", href: "/#contato" },
-      { label: "Vargem Pequena/RJ", href: "/#contato" },
-      { label: "Contato pelo site oficial", href: "/#contato" },
-      { label: "jesusebom.org", href: "/" }
+      { label: "WhatsApp Secretaria: 21 97346-8327", href: "https://wa.me/5521973468327" },
+      { label: "contato@jesusebom.org", href: "mailto:contato@jesusebom.org" },
+      { label: "Instagram: @institutojesusebom", href: "https://www.instagram.com/institutojesusebom/" },
+      { label: "www.jesusebom.org", href: "/" }
     ]
   }
 ];
@@ -57,13 +47,13 @@ export function Footer() {
         <div className="footerBrand">
           <Logo />
           <p>
-            O Instituto Jesus é Bom transforma vidas através da fé, educação e esperança,
-            atuando na Comunidade César Maia, em Vargem Pequena/RJ.
+            Instituto Jesus é Bom. Transformando vidas pelo amor de Cristo desde 2019.
           </p>
+          <p className="footerLocation">Comunidade César Maia • Vargem Pequena/RJ</p>
           <div className="socialRow" aria-label="Redes sociais">
-            <a href="/#contato">Instagram</a>
-            <a href="/#contato">YouTube</a>
-            <a href="/#contato">WhatsApp</a>
+            <a href="https://www.instagram.com/institutojesusebom/">Instagram</a>
+            <a href="https://wa.me/5521973468327">WhatsApp</a>
+            <a href="mailto:contato@jesusebom.org">E-mail</a>
           </div>
         </div>
 
@@ -75,13 +65,13 @@ export function Footer() {
         ))}
 
         <div className="footerCta">
-          <strong>Precisa de ajuda ou quer contribuir?</strong>
-          <a href="/#como-ajudar" className="btn light">Fale Conosco</a>
+          <strong>Mais que projetos, construímos futuros.</strong>
+          <a href="/como-ajudar" className="btn light">Doe Agora</a>
         </div>
       </div>
 
       <div className="container footerBottom">
-        <span>© Instituto Jesus é Bom. Transformando vidas através da fé, educação e esperança.</span>
+        <span>© Instituto Jesus é Bom. Transformando vidas pelo amor de Cristo.</span>
         <span>
           <a href="/privacidade">Política de Privacidade</a> · <a href="/termos-de-uso">Termos de Uso</a> · <a href="/politica-de-cookies">Cookies</a>
         </span>

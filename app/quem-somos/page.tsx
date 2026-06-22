@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { InstitutionalPage } from "@/components/InstitutionalPage";
 import { pagesContent } from "@/data/pagesContent";
 
-const page = pagesContent["transparencia"];
+const page = pagesContent["quem-somos"];
 
 export const metadata: Metadata = {
-  title: "Transparência — Instituto Jesus é Bom",
-  description: "Transparência e prestação de contas do Instituto Jesus é Bom."
+  title: "Quem Somos — Instituto Jesus é Bom",
+  description: "Uma missão que transforma vidas através da fé, educação e esperança."
 };
 
 export default function Page() {

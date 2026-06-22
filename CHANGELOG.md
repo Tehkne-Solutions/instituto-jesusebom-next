@@ -126,3 +126,15 @@
 - Aplicado `public/favicon-Jesus-e-bom.webp` como favicon principal.
 - Mantida a base da v12, sem alterar `package.json`, lockfile ou configuração de instalação da Vercel.
 - ZIP gerado sem `node_modules`.
+
+
+## v18 — Páginas internas oficiais
+
+- Criadas as páginas `/quem-somos`, `/o-que-fazemos`, `/impacto-social`, `/como-ajudar`, `/voluntariado` e `/contato`.
+- Conteúdo estruturado com fidelidade ao Pacote de Conteúdo Principal do Site e ao Institucional_v3.
+- Atualizada navegação principal para páginas reais.
+- Atualizado footer com links globais e contatos oficiais.
+- Atualizada página `/transparencia` com conteúdo institucional oficial.
+- Removida nota de validação visível do componente LegalPage.
+- WhatsApp passa a usar como fallback o número oficial da Secretaria: 21 97346-8327.
+- Mantida configuração de deploy sem `node_modules` e sem `package-lock.json`.

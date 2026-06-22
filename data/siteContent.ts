@@ -1,4 +1,5 @@
 import {
+  ClipboardList,
   BookOpen,
   HeartHandshake,
   ShieldCheck,
@@ -22,41 +23,49 @@ import {
 } from "lucide-react";
 
 export const navItems = [
-  { label: "Quem Somos", href: "#quem-somos" },
-  { label: "O Que Fazemos", href: "#o-que-fazemos" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Como Ajudar", href: "#como-ajudar" },
-  { label: "Transparência", href: "#transparencia" },
-  { label: "Contato", href: "#contato" }
+  { label: "Quem Somos", href: "/quem-somos" },
+  { label: "O Que Fazemos", href: "/o-que-fazemos" },
+  { label: "Impacto Social", href: "/impacto-social" },
+  { label: "Como Ajudar", href: "/como-ajudar" },
+  { label: "Voluntariado", href: "/voluntariado" },
+  { label: "Transparência", href: "/transparencia" },
+  { label: "Contato", href: "/contato" }
 ];
 
 export const impactNumbers = [
   {
-    value: "573",
-    suffix: "+",
+    value: "627",
+    suffix: "",
     label: "alunos atendidos",
-    description: "Crianças e adolescentes alcançados por projetos de educação, cuidado e formação.",
+    description: "Crianças e adolescentes participando de projetos gratuitos de educação, esporte, fé, cultura e cuidado.",
     icon: UsersRound
   },
   {
     value: "1.500",
     suffix: "+",
     label: "famílias impactadas",
-    description: "Famílias da comunidade impactadas direta e indiretamente pelas ações do Instituto.",
+    description: "Famílias alcançadas por ações sociais, atendimentos, eventos, entrevistas e acompanhamento.",
     icon: HeartHandshake
   },
   {
     value: "100",
-    suffix: "+",
-    label: "atendimentos psicológicos",
-    description: "Apoio, escuta e cuidado emocional dentro da rede de proteção e acolhimento.",
+    suffix: "",
+    label: "atendimentos psicológicos semanalmente",
+    description: "Cuidado emocional, escuta e acolhimento para crianças e adolescentes.",
     icon: ShieldCheck
   },
   {
-    value: "3.000",
-    suffix: "+",
-    label: "inscrições na Festa de Páscoa",
-    description: "Grande mobilização comunitária em uma das ações sociais de maior alcance.",
+    value: "153",
+    suffix: "",
+    label: "entrevistas sociais realizadas",
+    description: "Acompanhamento de famílias e identificação de necessidades reais da comunidade.",
+    icon: ClipboardList
+  },
+  {
+    value: "12",
+    suffix: "",
+    label: "cursos e atividades",
+    description: "Projetos que fortalecem educação, esporte, cultura, valores, convivência e desenvolvimento.",
     icon: Sparkles
   }
 ];
@@ -182,9 +191,9 @@ export const faqItems = [
 ];
 
 export const officialCopy = {
-  heroTitle: "Transformando vidas através da fé, educação e esperança.",
+  heroTitle: "Transformando vidas pelo amor de Cristo",
   heroSubtitle:
-    "Há mais de 5 anos, o Instituto Jesus é Bom atua na Comunidade César Maia, em Vargem Pequena/RJ, oferecendo oportunidades, acolhimento e cuidado para crianças, adolescentes e famílias.",
+    "Fé, educação e esperança para crianças, adolescentes e famílias da Comunidade César Maia.",
   location: "Comunidade César Maia, Vargem Pequena/RJ",
   founded: "Desde 2019",
   futureSchoolTitle: "Primeira escola cristã integral para a comunidade",

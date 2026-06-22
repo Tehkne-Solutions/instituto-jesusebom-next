@@ -181,3 +181,23 @@ Esta versão parte da v12 e altera apenas os assets/metadados de favicon. Não a
 ## V16 — Hotfix WhatsApp
 
 Botão flutuante do WhatsApp ajustado para formato redondo, sem borda e com ícone centralizado.
+
+
+## v18 — Páginas institucionais oficiais
+
+Esta versão adiciona as páginas internas com conteúdo baseado no `Pacote de Conteúdo Principal do Site.docx` e na apresentação `Institucional_v3.pdf`.
+
+Novas rotas:
+- `/quem-somos`
+- `/o-que-fazemos`
+- `/impacto-social`
+- `/como-ajudar`
+- `/voluntariado`
+- `/contato`
+
+Também foi atualizada a navegação global, o footer e os contatos oficiais:
+- WhatsApp Secretaria: 21 97346-8327
+- E-mail: contato@jesusebom.org
+- Instagram: @institutojesusebom
+
+Importante: `node_modules/` e `package-lock.json` continuam ignorados para evitar instabilidade no deploy da Vercel.

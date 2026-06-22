@@ -152,7 +152,7 @@ export const helpWays = [
   {
     title: "Doação via PIX",
     description: "Contribuição pontual para apoiar as ações do Instituto.",
-    cta: "Ver dados de doação",
+    cta: "Prosseguir",
     icon: Gift
   },
   {

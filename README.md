@@ -1,6 +1,6 @@
-# Instituto Jesus é Bom — Home oficial v17
+# Instituto Jesus é Bom — Home oficial v19
 
-Versão com Home Completa principal, páginas legais, links de footer funcionais e consentimento de cookies atualizado.
+Versão com Home Completa principal, páginas institucionais, páginas legais, refinamento visual, fluxo de doação e consentimento de cookies atualizado.
 
 ## Rotas principais
 
@@ -11,6 +11,7 @@ Versão com Home Completa principal, páginas legais, links de footer funcionais
 - `/transparencia` — Transparência
 - `/relatorios` — Relatórios
 - `/trabalhe-conosco` — Trabalhe Conosco e Voluntariado
+- `/doacao/checkout` — Placeholder para futuro checkout de pagamento
 
 ## Cookies e privacidade
 
@@ -201,3 +202,8 @@ Também foi atualizada a navegação global, o footer e os contatos oficiais:
 - Instagram: @institutojesusebom
 
 Importante: `node_modules/` e `package-lock.json` continuam ignorados para evitar instabilidade no deploy da Vercel.
+
+
+## v19 — Refinamento visual
+
+Esta versão reduz a escala dos títulos, remove fades pesados das páginas internas, reorganiza grids, aplica cards coloridos em azul/verde, ajusta o bloco flutuante para “Seja um doador” e cria a rota `/doacao/checkout` como placeholder para integração futura.

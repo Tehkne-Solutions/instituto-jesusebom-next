@@ -1,7 +1,6 @@
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import type { CSSProperties } from "react";
 import type { ContentPage } from "@/data/pagesContent";
 import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 
@@ -49,17 +48,17 @@ export function InstitutionalPage({ page }: { page: ContentPage }) {
     <>
       <Header />
       <main className="contentPage">
-        <section
-          className="contentHero"
-          style={page.heroImage ? { "--page-hero-image": `url(${page.heroImage})` } as CSSProperties : undefined}
-        >
-          <div className="container contentHeroInner">
+        <section className="contentHero contentHeroSplit" aria-labelledby={`${page.slug}-title`}>
+          <div className="container contentHeroSplitInner">
             <div className="contentHeroCopy">
               <span className="eyebrow">{page.eyebrow}</span>
-              <h1>{page.title}</h1>
+              <h1 id={`${page.slug}-title`}>{page.title}</h1>
               <p>{page.subtitle}</p>
               <CtaButtons page={page} />
             </div>
+            <figure className="contentHeroVisual">
+              <img src={page.heroImage ?? "/assets/hero-crianca-real.jpg"} alt={page.title} />
+            </figure>
           </div>
         </section>
 

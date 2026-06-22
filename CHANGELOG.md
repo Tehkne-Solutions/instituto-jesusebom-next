@@ -1,3 +1,17 @@
+## v19 — Refinamento visual, doação e páginas internas
+
+- Reduzida a escala tipográfica de títulos da home e páginas internas.
+- Removidos fades/degradês pesados das heros das páginas internas.
+- Páginas internas passam a usar padrão editorial: texto à esquerda e imagem à direita no topo.
+- Indicadores com mais de 4 itens organizados em 3 colunas por 2 linhas.
+- Removidos chips/tabs sem ação real na home.
+- Cards de atuação e apoio recebem degradê diagonal azul → verde com textos e ícones brancos.
+- Corrigida composição da seção “Quem somos” para evitar sobreposição entre imagem e texto.
+- Seção “Quatro caminhos” mantém somente os 4 caminhos principais e remove dados privados de doação.
+- Bloco flutuante deixa de ser “Atendimento” e passa a ser fluxo “Seja um doador”.
+- Criada rota placeholder `/doacao/checkout` com o texto “Aqui vai o checkout de pagamento.”
+- Corrigido import do ícone `ShieldCheck` em `LegalPage`.
+
 
 ## v17 — Páginas legais, footer funcional e consentimento 2026
 

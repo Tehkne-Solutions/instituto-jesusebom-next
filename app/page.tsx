@@ -17,10 +17,8 @@ import {
 } from "@/data/siteContent";
 import {
   ArrowRight,
-  BookOpen,
   HandHeart,
-  HeartHandshake,
-  MessageCircle,
+  Heart,
   School,
   ShieldCheck,
   Sparkles,
@@ -56,28 +54,6 @@ const journey = [
   }
 ];
 
-const strategicBlocks = [
-  {
-    title: "Impacto e doação",
-    text: "Apoie ações que já alcançam crianças, adolescentes e famílias na Comunidade César Maia.",
-    icon: HeartHandshake
-  },
-  {
-    title: "Formação integral",
-    text: "Educação, cultura, esporte, cuidado emocional e formação cristã em uma atuação contínua.",
-    icon: BookOpen
-  },
-  {
-    title: "Transparência",
-    text: "Prestação de contas, documentos institucionais e clareza para doadores e parceiros.",
-    icon: ShieldCheck
-  },
-  {
-    title: "Visão de futuro",
-    text: "A primeira escola cristã integral como próxima grande etapa da missão.",
-    icon: School
-  }
-];
 
 export default function HomeCompletaPage() {
   return (
@@ -104,17 +80,17 @@ export default function HomeCompletaPage() {
 
             <FadeIn className="heroPanel heroFullPanel whatsappDonationPanel whatsappHeroChat" delay={0.18} y={26}>
               <div className="whatsappChatMockHeader">
-                <span className="whatsappIcon"><MessageCircle size={24} /></span>
+                <span className="whatsappIcon"><Heart size={24} /></span>
                 <div>
-                  <strong>Atendimento pelo WhatsApp</strong>
-                  <p>Escolha uma forma de apoio e fale com a equipe.</p>
+                  <strong>Seja um doador</strong>
+                  <p>Escolha uma forma de contribuição para apoiar essa missão.</p>
                 </div>
               </div>
 
-              <div className="whatsappChatMockBody" aria-label="Opções de ajuda pelo WhatsApp">
-                <p className="whatsappMockBubble agent">Olá! Como você quer apoiar o Instituto Jesus é Bom hoje?</p>
-                {helpWays.map(({ title, description, icon: Icon }) => (
-                  <a href="#contato" key={title} className="whatsappDonationItem">
+              <div className="whatsappChatMockBody" aria-label="Opções de doação">
+                <p className="whatsappMockBubble agent">Como você deseja contribuir hoje?</p>
+                {helpWays.slice(0, 4).map(({ title, description, icon: Icon }) => (
+                  <a href="/doacao/checkout" key={title} className="whatsappDonationItem">
                     <Icon size={18} />
                     <span>
                       <strong>{title}</strong>
@@ -125,9 +101,9 @@ export default function HomeCompletaPage() {
                 ))}
               </div>
 
-              <a className="btn primary whatsappPanelCta" href="#contato">
-                <MessageCircle size={18} />
-                Iniciar atendimento
+              <a className="btn primary whatsappPanelCta" href="/doacao/checkout">
+                <Heart size={18} />
+                Prosseguir
               </a>
             </FadeIn>
           </div>
@@ -157,11 +133,6 @@ export default function HomeCompletaPage() {
                 title="Cuidado integral que transforma vidas"
                 text="Unimos educação, esporte, cultura, desenvolvimento social, proteção da infância e formação cristã em uma atuação organizada para gerar futuro."
               />
-              <div className="tabs tabsComplete" aria-label="Categorias de atuação">
-                {["Educação", "Esporte", "Cultura", "Desenvolvimento Social", "Formação Cristã"].map((tab, index) => (
-                  <span key={tab} className={index === 0 ? "active" : ""}>{tab}</span>
-                ))}
-              </div>
             </div>
 
             <StaggerContainer className="pillarGridComplete" aria-label="Frentes de atuação">
@@ -228,23 +199,7 @@ export default function HomeCompletaPage() {
                     <div className="helpIcon"><Icon size={24} /></div>
                     <h3>{title}</h3>
                     <p>{description}</p>
-                    <a href="#contato">{cta} <ArrowRight size={16} /></a>
-                  </article>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
-        <section className="section compact">
-          <div className="container">
-            <StaggerContainer className="strategicGrid" aria-label="Resumo estratégico da home completa">
-              {strategicBlocks.map(({ title, text, icon: Icon }) => (
-                <StaggerItem className="motionCard" key={title}>
-                  <article className="strategicCard">
-                    <Icon size={26} />
-                    <h3>{title}</h3>
-                    <p>{text}</p>
+                    {title === "Doação via PIX" ? null : <a href={title.includes("Doação") ? "/doacao/checkout" : title === "Voluntariado" ? "/voluntariado" : "/contato"}>{cta} <ArrowRight size={16} /></a>}
                   </article>
                 </StaggerItem>
               ))}
@@ -260,11 +215,6 @@ export default function HomeCompletaPage() {
                 title="Programas desenhados para cuidar, ensinar e desenvolver"
                 text="Cards preparados para páginas internas, SEO por frente de atuação e navegação clara para doadores, voluntários e parceiros."
               />
-              <div className="tabs tabsComplete" aria-label="Filtros de projetos">
-                {["Todos", "Educação", "Esporte", "Cultura", "Desenvolvimento Social"].map((tab, index) => (
-                  <span key={tab} className={index === 0 ? "active" : ""}>{tab}</span>
-                ))}
-              </div>
             </div>
 
             <StaggerContainer className="projectGridComplete" aria-label="Projetos do Instituto">

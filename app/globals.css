@@ -3323,3 +3323,454 @@ main { overflow: hidden; }
     border-radius: 26px;
   }
 }
+
+
+/* V19 — Refinamento visual: escala, seções editoriais, doação e páginas internas */
+body {
+  background: var(--bg);
+}
+
+.sectionSoft,
+.contentPage,
+.contentSuggestedValues,
+.contentContactChannels,
+.contentTimelineSection {
+  background: var(--bg) !important;
+}
+
+.heroFullBg {
+  background:
+    linear-gradient(rgba(4, 39, 23, 0.74), rgba(4, 39, 23, 0.74)),
+    url('/assets/hero-crianca-real.jpg') center/cover !important;
+}
+
+.hero h1,
+.heroFull .heroContent h1,
+.heroFullContent h1 {
+  font-size: clamp(42px, 5vw, 72px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.035em !important;
+  font-weight: 800 !important;
+}
+
+.sectionHeader h2,
+.contentTextPanel h2,
+.contentSectionCopy h2,
+.contentFormShell h2,
+.contentFinalCard h2,
+.contentSuggestedValues h2,
+.contentContactChannels h2,
+.legalHero h1 {
+  font-size: clamp(32px, 4vw, 52px) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 800 !important;
+}
+
+.sectionHeader p,
+.contentHero p,
+.contentTextPanel p,
+.contentSectionCopy p {
+  font-size: clamp(16px, 1.35vw, 18px);
+}
+
+/* Páginas internas: substituir hero com fundo por composição editorial texto + imagem */
+.contentHeroSplit {
+  color: var(--ink) !important;
+  min-height: auto !important;
+  background: var(--bg) !important;
+  padding: clamp(64px, 7vw, 110px) 0 52px !important;
+}
+
+.contentHeroSplit::after {
+  display: none !important;
+}
+
+.contentHeroSplitInner {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, .85fr);
+  gap: clamp(36px, 6vw, 84px);
+  align-items: center;
+  padding: 0 !important;
+}
+
+.contentHeroSplit .contentHeroCopy {
+  width: 100%;
+  max-width: 720px;
+}
+
+.contentHeroSplit h1 {
+  margin: 14px 0 20px;
+  font-size: clamp(38px, 5vw, 68px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.04em !important;
+  color: var(--green-deep);
+}
+
+.contentHeroSplit p {
+  color: var(--muted) !important;
+  max-width: 620px;
+}
+
+.contentHeroVisual {
+  margin: 0;
+  position: relative;
+}
+
+.contentHeroVisual::before {
+  content: "";
+  position: absolute;
+  inset: 7% 10% -7% -8%;
+  border-radius: 40% 60% 56% 44%;
+  background: rgba(232, 244, 236, .95);
+  z-index: 0;
+}
+
+.contentHeroVisual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 22px 70px rgba(12, 53, 31, .12);
+}
+
+/* Impacto: até 4 em uma linha; acima disso, 3 colunas por 2 linhas */
+.impactGridComplete {
+  grid-template-columns: repeat(3, 1fr) !important;
+  border-radius: 30px !important;
+}
+
+.impactGridComplete .motionCard {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.impactGridComplete .motionCard:nth-child(3n) {
+  border-right: 0;
+}
+
+.impactGridComplete .motionCard:nth-last-child(-n+3) {
+  border-bottom: 0;
+}
+
+.impactGridComplete .statCard {
+  min-height: 250px !important;
+  height: 100%;
+  border: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.statIcon,
+.contentStatIcon {
+  margin-bottom: 0;
+}
+
+.statCard strong,
+.contentStatCard strong {
+  font-size: clamp(30px, 3.3vw, 44px) !important;
+  letter-spacing: -0.04em !important;
+}
+
+.contentStatsGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Remover chips/tabs decorativos sem função */
+.tabsComplete {
+  display: none !important;
+}
+
+.sectionSplitHeader {
+  display: block !important;
+  max-width: 860px;
+}
+
+/* Cards com cor e contraste */
+.pillarCardComplete,
+.contentCard {
+  background: linear-gradient(135deg, #07345f 0%, #0f6d3b 100%) !important;
+  color: white !important;
+  border: 0 !important;
+  box-shadow: 0 22px 58px rgba(6, 63, 39, .16) !important;
+}
+
+.pillarCardComplete p,
+.contentCard p,
+.contentCardMeta {
+  color: rgba(255,255,255,.84) !important;
+}
+
+.pillarIcon,
+.contentCardIcon {
+  background: rgba(255,255,255,.14) !important;
+  color: white !important;
+}
+
+.pillarCardComplete h3,
+.contentCard h3 {
+  color: white !important;
+}
+
+/* Como ajudar: manter apenas os quatro caminhos e sem CTA de dados privados */
+.helpGridComplete {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.helpCardComplete {
+  background: linear-gradient(135deg, #07345f 0%, #0f6d3b 100%) !important;
+  color: white !important;
+  border: 0 !important;
+}
+
+.helpCardComplete p,
+.helpCardComplete a {
+  color: rgba(255,255,255,.88) !important;
+}
+
+.helpIcon {
+  background: rgba(255,255,255,.14) !important;
+  color: white !important;
+}
+
+.helpCardComplete a[href="/doacao/checkout"] {
+  display: none !important;
+}
+
+/* Composição leve para seções: menos cards gigantes e mais layout editorial */
+.contentTextPanel,
+.contentSectionCopy {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.contentSplit,
+.contentSectionGrid {
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 82px);
+}
+
+.contentImageFrame {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.contentImageFrame img {
+  border-radius: 28px;
+  box-shadow: 0 22px 70px rgba(12, 53, 31, .12);
+}
+
+.contentTextPanel blockquote,
+.contentSectionCopy blockquote {
+  border-left: 0 !important;
+  border-radius: 22px !important;
+  background: #edf5ec !important;
+  color: var(--green-deep) !important;
+  padding: 20px 24px !important;
+}
+
+/* Home - Quem somos: composição no padrão de referência, sem sobreposição ruim */
+.storySplitComplete {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+}
+
+.imageMosaic {
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: 1fr .74fr;
+  grid-template-rows: 1fr .82fr;
+  gap: 14px;
+}
+
+.mosaicMain,
+.mosaicSmall,
+.mosaicCard {
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  box-shadow: 0 18px 55px rgba(12,53,31,.10) !important;
+}
+
+.mosaicMain {
+  grid-row: 1 / 3;
+  min-height: 440px;
+}
+
+.mosaicSmall {
+  min-height: 210px;
+}
+
+.mosaicCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+  background: #edf5ec !important;
+  backdrop-filter: none !important;
+}
+
+/* Painel de doação: sem atendimento e com seleção antes de prosseguir */
+.whatsappPanelHeader strong,
+.whatsappChatMockHeader strong,
+.jebWhatsappHead h2 {
+  letter-spacing: -0.025em;
+}
+
+.jebWhatsappHead {
+  background: var(--green-deep) !important;
+}
+
+.jebWhatsappHeadIcon {
+  border: 0 !important;
+  background: rgba(255,255,255,.14) !important;
+}
+
+.jebWhatsappOptions button.isSelected {
+  border-color: rgba(45,143,72,.42);
+  background: var(--green-soft);
+  box-shadow: 0 14px 34px rgba(12,53,31,.08);
+}
+
+.jebWhatsappStart {
+  background: var(--green) !important;
+}
+
+/* Placeholder de checkout */
+.checkoutPage {
+  background: var(--bg);
+}
+
+.checkoutShell {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(360px, .7fr);
+  gap: clamp(34px, 5vw, 72px);
+  align-items: center;
+  min-height: 560px;
+}
+
+.checkoutIntro h1 {
+  margin: 14px 0 20px;
+  max-width: 760px;
+  color: var(--green-deep);
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.checkoutIntro p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.checkoutNotice {
+  margin-top: 30px;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: #edf5ec;
+  color: var(--green-deep);
+  font-weight: 900;
+}
+
+.checkoutAside {
+  padding: 32px;
+  border-radius: 28px;
+  color: white;
+  background: linear-gradient(135deg, #07345f, #0f6d3b);
+  box-shadow: 0 22px 70px rgba(12, 53, 31, .16);
+}
+
+.checkoutAside p {
+  color: rgba(255,255,255,.84);
+  line-height: 1.7;
+}
+
+.checkoutAside .btn {
+  margin-top: 16px;
+  background: white;
+  color: var(--green-deep);
+}
+
+/* Botão flutuante do WhatsApp redondo e sem borda */
+.floatingAction.contactFloat {
+  border-radius: 999px !important;
+  border: 0 !important;
+}
+
+@media (max-width: 1080px) {
+  .impactGridComplete,
+  .contentStatsGrid,
+  .pillarGridComplete,
+  .projectGridComplete,
+  .contentCards,
+  .contentCards.three {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .helpGridComplete,
+  .checkoutShell,
+  .contentHeroSplitInner,
+  .storySplitComplete {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contentHeroVisual {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero h1,
+  .heroFull .heroContent h1,
+  .heroFullContent h1,
+  .contentHeroSplit h1 {
+    font-size: clamp(38px, 12vw, 50px) !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .sectionHeader h2,
+  .contentTextPanel h2,
+  .contentSectionCopy h2 {
+    font-size: clamp(32px, 10vw, 44px) !important;
+  }
+
+  .impactGridComplete,
+  .contentStatsGrid,
+  .pillarGridComplete,
+  .projectGridComplete,
+  .contentCards,
+  .contentCards.three,
+  .helpGridComplete {
+    grid-template-columns: 1fr !important;
+  }
+
+  .impactGridComplete .motionCard {
+    border-right: 0 !important;
+  }
+
+  .imageMosaic {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .mosaicMain,
+  .mosaicSmall,
+  .mosaicCard {
+    min-height: 220px;
+  }
+}

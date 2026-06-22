@@ -1,26 +1,23 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type ElementType } from "react";
+import { useEffect, useRef, useState, type ElementType } from "react";
 import {
   ArrowUp,
   Building2,
   Cookie,
-  FileText,
-  Gift,
+  Heart,
   Repeat2,
-  Send,
   ShieldCheck,
   SlidersHorizontal,
   UserPlus,
   X
 } from "lucide-react";
 
-const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_JEB_WHATSAPP_PHONE ?? "5521973468327";
 const AUTO_OPEN_STORAGE_KEY = "jeb-whatsapp-chat-opened";
 const TYPING_DELAY_MS = 650;
 const COOKIE_STORAGE_KEY = "jeb_cookie_consent_2026";
 
-type SupportOptionId = "pix" | "recorrente" | "voluntariado" | "parcerias" | "transparencia";
+type SupportOptionId = "pix" | "recorrente" | "voluntariado" | "parcerias";
 type ChatStep = "intro" | "option" | "done";
 
 type SupportOption = {
@@ -53,7 +50,7 @@ const supportOptions: SupportOption[] = [
     title: "Doação via PIX",
     description: "Quero receber orientação para uma contribuição pontual.",
     message: "Olá! Vim pelo site do Instituto Jesus é Bom e quero informações para fazer uma doação via PIX.",
-    icon: Gift
+    icon: Heart
   },
   {
     id: "recorrente",
@@ -75,13 +72,6 @@ const supportOptions: SupportOption[] = [
     description: "Quero falar sobre apoio institucional, empresa ou igreja.",
     message: "Olá! Vim pelo site do Instituto Jesus é Bom e quero conversar sobre parceria.",
     icon: Building2
-  },
-  {
-    id: "transparencia",
-    title: "Transparência",
-    description: "Quero saber mais sobre relatórios e prestação de contas.",
-    message: "Olá! Vim pelo site do Instituto Jesus é Bom e quero informações sobre transparência e prestação de contas.",
-    icon: FileText
   }
 ];
 
@@ -129,13 +119,6 @@ function WhatsAppLogo({ size = 22 }: { size?: number }) {
   );
 }
 
-function createWhatsAppHref(message: string): string {
-  const phone = WHATSAPP_PHONE.replace(/[^\d]/g, "");
-  if (!phone) return "/#contato";
-  const normalizedPhone = phone.startsWith("55") ? phone : `55${phone}`;
-  return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(message)}`;
-}
-
 function loadPreferences(): CookiePreferences | null {
   if (typeof window === "undefined") return null;
 
@@ -166,13 +149,6 @@ export function FloatingActions() {
   const [step, setStep] = useState<ChatStep>("intro");
   const [isTyping, setIsTyping] = useState(false);
   const chatBodyRef = useRef<HTMLDivElement | null>(null);
-
-  const currentMessage = useMemo(() => {
-    if (!selectedOption) {
-      return "Olá! Vim pelo site do Instituto Jesus é Bom e quero atendimento.";
-    }
-    return selectedOption.message;
-  }, [selectedOption]);
 
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 520);
@@ -295,7 +271,7 @@ export function FloatingActions() {
           className={`floatingAction contactFloat ${chatOpen ? "isOpen" : ""}`}
           type="button"
           onClick={toggleChat}
-          aria-label={chatOpen ? "Fechar atendimento pelo WhatsApp" : "Abrir atendimento pelo WhatsApp"}
+          aria-label={chatOpen ? "Fechar opções de doação" : "Abrir opções de doação"}
         >
           {chatOpen ? <X size={22} /> : <WhatsAppLogo size={24} />}
         </button>
@@ -308,16 +284,16 @@ export function FloatingActions() {
           </button>
 
           <header className="jebWhatsappHead">
-            <span className="jebWhatsappHeadIcon"><WhatsAppLogo size={24} /></span>
+            <span className="jebWhatsappHeadIcon"><Heart size={24} /></span>
             <div>
-              <h2 id="jeb-whatsapp-title">Atendimento Jesus é Bom</h2>
-              <p>Online para orientar sua forma de contribuição</p>
+              <h2 id="jeb-whatsapp-title">Seja um doador</h2>
+              <p>Escolha uma forma de contribuição para apoiar essa missão</p>
             </div>
           </header>
 
           <div className="jebWhatsappBody" ref={chatBodyRef}>
             <p className="jebChatBubble jebChatBubbleAgent">
-              Olá! Como você quer apoiar o Instituto Jesus é Bom hoje?
+              Como você deseja contribuir hoje?
             </p>
 
             {selectedOption ? (
@@ -328,7 +304,7 @@ export function FloatingActions() {
 
             {selectedOption ? (
               <p className="jebChatBubble jebChatBubbleAgent">
-                Perfeito. Vou te direcionar para falar com a equipe sobre <strong>{selectedOption.title.toLowerCase()}</strong>.
+                Perfeito. A opção <strong>{selectedOption.title.toLowerCase()}</strong> foi selecionada. Clique em prosseguir para continuar.
               </p>
             ) : null}
 
@@ -342,12 +318,11 @@ export function FloatingActions() {
           </div>
 
           <div className="jebWhatsappControls">
-            {!selectedOption ? (
-              <div className="jebWhatsappOptions" aria-label="Escolha uma forma de ajuda">
+            <div className="jebWhatsappOptions" aria-label="Escolha uma forma de doação">
                 {supportOptions.map((option) => {
                   const Icon = option.icon;
                   return (
-                    <button type="button" key={option.id} onClick={() => chooseOption(option)}>
+                    <button type="button" key={option.id} onClick={() => chooseOption(option)} className={selectedOption?.id === option.id ? "isSelected" : ""}>
                       <Icon size={18} />
                       <span>
                         <strong>{option.title}</strong>
@@ -357,21 +332,15 @@ export function FloatingActions() {
                   );
                 })}
               </div>
-            ) : null}
 
             {step === "done" ? (
               <div className="jebWhatsappFinal">
-                <a
-                  className="jebWhatsappStart"
-                  href={createWhatsAppHref(currentMessage)}
-                  target={WHATSAPP_PHONE ? "_blank" : undefined}
-                  rel={WHATSAPP_PHONE ? "noopener noreferrer" : undefined}
-                >
-                  <Send size={17} />
-                  {WHATSAPP_PHONE ? "Continuar no WhatsApp" : "Ir para contato"}
+                <a className="jebWhatsappStart" href="/doacao/checkout">
+                  <Heart size={17} />
+                  Prosseguir
                 </a>
                 <button type="button" className="jebWhatsappRestart" onClick={restartChat}>
-                  Escolher outra opção
+                  Alterar opção
                 </button>
               </div>
             ) : null}

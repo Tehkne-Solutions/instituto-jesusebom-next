@@ -231,3 +231,8 @@ Hero da Home corrigida sem degradê/fade: `.heroFullBg` usa apenas a imagem e `.
 ### v23 — Ajuste visual das imagens laterais
 
 As páginas internas agora usam imagens laterais maiores, preenchendo a coluna direita no padrão editorial solicitado. Em mobile, as imagens empilham com proporção controlada.
+
+
+## v24 — imagens laterais corrigidas
+
+As páginas internas tiveram o container editorial ampliado e as imagens da direita agora ocupam a área visual inteira da coluna, conforme revisão visual.

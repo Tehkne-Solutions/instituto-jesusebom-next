@@ -184,3 +184,12 @@
 - Ajustadas as imagens laterais das páginas internas para preencher toda a área visual da coluna direita.
 - Removida sensação de imagem pequena/flutuante em layouts texto + imagem.
 - Mantido padrão responsivo, com imagem empilhada em mobile.
+
+
+## v24 — Correção real das imagens laterais editoriais
+
+- Corrigido o problema em que as imagens das páginas internas ainda ficavam pequenas/flutuantes.
+- Ampliado o container editorial das páginas internas.
+- As imagens laterais agora preenchem de verdade a coluna direita, com mais presença visual.
+- Mantido o padrão texto à esquerda + imagem à direita no desktop.
+- Ajustado responsivo para empilhar com proporção correta no mobile.

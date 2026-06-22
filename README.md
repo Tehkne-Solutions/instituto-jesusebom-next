@@ -226,3 +226,8 @@ Hero da Home corrigida sem degradê/fade: `.heroFullBg` usa apenas a imagem e `.
 - Reduzida escala tipográfica geral e melhorado espaçamento para evitar informação sobre informação.
 - Cards de atuação recebem degradê diagonal azul para verde com textos e ícones brancos.
 - Removidos/ajustados elementos clicáveis sem função real e preparado fluxo /doacao/checkout.
+
+
+### v23 — Ajuste visual das imagens laterais
+
+As páginas internas agora usam imagens laterais maiores, preenchendo a coluna direita no padrão editorial solicitado. Em mobile, as imagens empilham com proporção controlada.

@@ -177,3 +177,10 @@
 - Reduzida escala tipográfica geral e melhorado espaçamento para evitar informação sobre informação.
 - Cards de atuação recebem degradê diagonal azul para verde com textos e ícones brancos.
 - Removidos/ajustados elementos clicáveis sem função real e preparado fluxo /doacao/checkout.
+
+
+## v23 — Imagens editoriais expandidas
+
+- Ajustadas as imagens laterais das páginas internas para preencher toda a área visual da coluna direita.
+- Removida sensação de imagem pequena/flutuante em layouts texto + imagem.
+- Mantido padrão responsivo, com imagem empilhada em mobile.

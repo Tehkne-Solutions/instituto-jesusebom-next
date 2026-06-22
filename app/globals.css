@@ -4152,3 +4152,117 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* v23 — imagens editoriais maiores nas páginas internas
+   Faz a imagem da lateral direita ocupar toda a coluna visual, evitando mini-card solto. */
+.contentHeroSplitInner {
+  grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr) !important;
+  gap: clamp(44px, 6vw, 96px) !important;
+  align-items: stretch !important;
+}
+
+.contentHeroSplit .contentHeroCopy {
+  align-self: center !important;
+}
+
+.contentHeroVisual {
+  width: 100% !important;
+  height: clamp(420px, 36vw, 600px) !important;
+  min-height: 420px !important;
+  display: block !important;
+  align-self: stretch !important;
+  border-radius: 34px !important;
+  overflow: hidden !important;
+  box-shadow: 0 30px 90px rgba(12, 53, 31, .14) !important;
+}
+
+.contentHeroVisual::before {
+  display: none !important;
+}
+
+.contentHeroVisual img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* As seções internas com imagem + texto também ganham presença visual maior. */
+.contentSplit,
+.contentSectionGrid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr) !important;
+  gap: clamp(44px, 6vw, 96px) !important;
+  align-items: stretch !important;
+}
+
+.contentSplitSection .contentSplit {
+  grid-template-areas: "text image" !important;
+}
+
+.contentSplitSection .contentImageFrame {
+  grid-area: image !important;
+}
+
+.contentSplitSection .contentTextPanel {
+  grid-area: text !important;
+}
+
+.contentImageFrame {
+  width: 100% !important;
+  height: clamp(420px, 34vw, 620px) !important;
+  min-height: 420px !important;
+  border-radius: 34px !important;
+  overflow: hidden !important;
+}
+
+.contentImageFrame img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.contentTextPanel,
+.contentSectionCopy {
+  align-self: center !important;
+}
+
+@media (max-width: 980px) {
+  .contentHeroSplitInner,
+  .contentSplit,
+  .contentSectionGrid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .contentSplitSection .contentSplit {
+    grid-template-areas:
+      "text"
+      "image" !important;
+  }
+
+  .contentHeroVisual,
+  .contentImageFrame {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .contentHeroVisual img,
+  .contentImageFrame img {
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentHeroVisual img,
+  .contentImageFrame img {
+    aspect-ratio: 4 / 3 !important;
+  }
+}

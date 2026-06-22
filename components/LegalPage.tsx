@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { legalIndex, type LegalPageContent } from "@/data/legalContent";
-import { ArrowRight, CalendarDays, FileText } from "lucide-react";
+import { ArrowRight, CalendarDays, FileText, ShieldCheck } from "lucide-react";
 
 export function LegalPage({ page }: { page: LegalPageContent }) {
   return (

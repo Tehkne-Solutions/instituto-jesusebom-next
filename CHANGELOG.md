@@ -1,3 +1,10 @@
+
+## v20 — Remoção do degradê da hero da Home
+
+- Removido o `linear-gradient` aplicado diretamente no background da hero principal da Home.
+- Mantida a imagem da hero terminando de forma natural, sem fade/degradê visual.
+- Adicionado apenas `text-shadow` leve para preservar legibilidade da copy sem degradê.
+
 ## v19 — Refinamento visual, doação e páginas internas
 
 - Reduzida a escala tipográfica de títulos da home e páginas internas.

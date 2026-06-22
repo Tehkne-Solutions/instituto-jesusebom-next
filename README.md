@@ -207,3 +207,7 @@ Importante: `node_modules/` e `package-lock.json` continuam ignorados para evita
 ## v19 — Refinamento visual
 
 Esta versão reduz a escala dos títulos, remove fades pesados das páginas internas, reorganiza grids, aplica cards coloridos em azul/verde, ajusta o bloco flutuante para “Seja um doador” e cria a rota `/doacao/checkout` como placeholder para integração futura.
+
+### v20 — Ajuste da hero da Home
+
+A hero principal da Home não usa mais degradê sobre a imagem. A imagem termina naturalmente e a legibilidade do texto é preservada com sombra sutil no texto, sem fade visual.

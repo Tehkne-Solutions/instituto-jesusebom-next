@@ -172,13 +172,12 @@ main { overflow: hidden; }
 .heroShell {
   min-height: 640px;
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(90deg, rgba(4, 39, 23, 0.94) 0%, rgba(4, 39, 23, 0.78) 42%, rgba(4, 39, 23, 0.28) 100%),
-    var(--hero-image, url('/assets/site-hero-real.jpg'));
+  background-image: var(--hero-image, url('/assets/site-hero-real.jpg'));
   background-size: cover;
   background-position: center;
   color: white;
   position: relative;
+  overflow: hidden;
   padding: 68px;
   display: grid;
   grid-template-columns: 1.05fr .65fr;
@@ -205,6 +204,7 @@ main { overflow: hidden; }
 
 .hero .eyebrow {
   color: #d9ffc9;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
 }
 
 .hero h1 {
@@ -214,6 +214,7 @@ main { overflow: hidden; }
   line-height: 1.02;
   letter-spacing: -0.04em;
   text-wrap: balance;
+  text-shadow: 0 10px 32px rgba(0, 0, 0, 0.36);
 }
 
 .hero h1 strong {
@@ -226,6 +227,7 @@ main { overflow: hidden; }
   color: rgba(255,255,255,.88);
   margin: 0;
   max-width: 650px;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.32);
 }
 
 .heroActions {

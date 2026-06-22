@@ -17,10 +17,9 @@ export default function DonationCheckoutPage() {
           <div className="container checkoutShell">
             <div className="checkoutIntro">
               <span className="eyebrow">Doação</span>
-              <h1>Obrigado por escolher apoiar essa missão.</h1>
+              <h1>Seja um doador</h1>
               <p>
-                Esta página está preparada para receber o checkout de pagamento do Instituto Jesus é Bom.
-                Em breve, o formulário de doação será integrado aqui.
+                Aqui vai o checkout de pagamento.
               </p>
               <div className="checkoutNotice">
                 <Heart size={22} />

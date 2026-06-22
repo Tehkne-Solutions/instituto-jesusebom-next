@@ -19,7 +19,7 @@ export function ProjectCard({ title, category, description, image, icon: Icon }:
       <div className="projectBody">
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href="#">Saiba mais</a>
+        <a href="/o-que-fazemos#projetos">Saiba mais</a>
       </div>
     </article>
     </StaggerItem>

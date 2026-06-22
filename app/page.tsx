@@ -188,7 +188,7 @@ export default function HomeCompletaPage() {
             <SectionHeader
               eyebrow="Como ajudar"
               title="Quatro caminhos para fortalecer essa missão"
-              text="A página completa une a clareza da versão de doação, o storytelling da formação integral e a força institucional da versão para parcerias."
+              text="Escolha uma forma de participar da missão: doação, apoio recorrente, voluntariado ou parcerias institucionais."
               align="center"
             />
 
@@ -275,7 +275,7 @@ export default function HomeCompletaPage() {
                 {faqItems.map((item) => (
                   <details key={item}>
                     <summary>{item}</summary>
-                    <p>Resposta a validar com a equipe do Instituto antes da publicação final.</p>
+                    <p>Nossa equipe está disponível para orientar doadores, voluntários, parceiros e famílias pelos canais oficiais do Instituto.</p>
                   </details>
                 ))}
               </div>

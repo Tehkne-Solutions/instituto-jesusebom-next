@@ -108,42 +108,42 @@ export const projectCards = [
     title: "Estudo Dirigido",
     category: "Educação",
     description: "Rotina de estudos, acompanhamento pedagógico e suporte para crianças e adolescentes.",
-    image: "/assets/foto-estudo-dirigido-real.jpg",
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
     icon: BookOpen
   },
   {
     title: "Ensino Bilíngue",
     category: "Educação",
     description: "Aprendizagem de inglês como ampliação de repertório, oportunidade e futuro.",
-    image: "/assets/foto-ensino-bilingue-real.jpg",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
     icon: GraduationCap
   },
   {
     title: "Robótica Educacional",
     category: "Educação",
     description: "Tecnologia, lógica e criatividade como ponte para novas possibilidades.",
-    image: "/assets/foto-robotica-real.jpg",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
     icon: Sparkles
   },
   {
     title: "Artes e Ballet",
     category: "Cultura",
     description: "Expressão, disciplina e desenvolvimento artístico dentro da formação integral.",
-    image: "/assets/foto-ballet-real.jpg",
+    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
     icon: Music2
   },
   {
     title: "Esporte e Jiu-jítsu",
     category: "Esporte",
     description: "Disciplina, saúde, autocontrole e convivência através do esporte.",
-    image: "/assets/foto-jiujitsu-real.jpg",
+    image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=1200&q=80",
     icon: Volleyball
   },
   {
     title: "Acolhimento às famílias",
     category: "Desenvolvimento social",
     description: "Cuidado, escuta e apoio às famílias que caminham junto com as crianças.",
-    image: "/assets/foto-apoio-familias-real.jpg",
+    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
     icon: HeartHandshake
   }
 ];

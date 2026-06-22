@@ -1063,20 +1063,12 @@ main { overflow: hidden; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    linear-gradient(90deg, rgba(4, 39, 23, 0.96) 0%, rgba(4, 39, 23, 0.82) 38%, rgba(4, 39, 23, 0.24) 100%),
-    linear-gradient(180deg, rgba(4,39,23,.1), rgba(4,39,23,.34)),
-    url('/assets/hero-crianca-real.jpg') center/cover;
+  background: url('/assets/hero-crianca-real.jpg') center/cover no-repeat;
 }
 
 .heroFull::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 180px;
-  z-index: 0;
-  background: linear-gradient(180deg, transparent, var(--bg));
-  pointer-events: none;
+  content: none;
+  display: none;
 }
 
 .heroFullInner {
@@ -1820,10 +1812,7 @@ main { overflow: hidden; }
 }
 
 .heroFullBg {
-  background:
-    linear-gradient(90deg, rgba(4, 39, 23, 0.97) 0%, rgba(4, 39, 23, 0.82) 42%, rgba(4, 39, 23, 0.25) 100%),
-    linear-gradient(180deg, rgba(4,39,23,.1), rgba(4,39,23,.34)),
-    url('/assets/hero-crianca-real.jpg') center/cover;
+  background: url('/assets/hero-crianca-real.jpg') center/cover no-repeat;
 }
 
 .whatsappDonationPanel {
@@ -3341,9 +3330,7 @@ body {
 }
 
 .heroFullBg {
-  background:
-    linear-gradient(rgba(4, 39, 23, 0.74), rgba(4, 39, 23, 0.74)),
-    url('/assets/hero-crianca-real.jpg') center/cover !important;
+  background: url('/assets/hero-crianca-real.jpg') center/cover no-repeat !important;
 }
 
 .hero h1,
@@ -3775,4 +3762,19 @@ body {
   .mosaicCard {
     min-height: 220px;
   }
+}
+
+
+/* v21: remover definitivamente qualquer degradê/fade da hero da home */
+.heroFullBg {
+  background-image: url('/assets/hero-crianca-real.jpg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.heroFull::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
 }

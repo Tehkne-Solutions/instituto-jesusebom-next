@@ -211,3 +211,7 @@ Esta versão reduz a escala dos títulos, remove fades pesados das páginas inte
 ### v20 — Ajuste da hero da Home
 
 A hero principal da Home não usa mais degradê sobre a imagem. A imagem termina naturalmente e a legibilidade do texto é preservada com sombra sutil no texto, sem fade visual.
+
+### v21
+
+Hero da Home corrigida sem degradê/fade: `.heroFullBg` usa apenas a imagem e `.heroFull::after` foi desativado.

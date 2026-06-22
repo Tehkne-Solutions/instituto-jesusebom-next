@@ -1,4 +1,11 @@
 
+## v21 — Remoção definitiva do degradê da hero da Home
+
+- Removido o background com `linear-gradient` da `.heroFullBg`.
+- Desativado o pseudo-elemento `.heroFull::after`, que ainda criava o fade para o fundo da página.
+- Adicionado override final de segurança para impedir que o degradê retorne por cascata de CSS.
+
+
 ## v20 — Remoção do degradê da hero da Home
 
 - Removido o `linear-gradient` aplicado diretamente no background da hero principal da Home.

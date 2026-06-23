@@ -229,3 +229,10 @@
 - Formulário passa a montar e enviar apenas o payload para `/api/donation-leads`.
 - Adicionado modal visual no padrão do site com a mensagem “Recebemos suas informações. Em breve nossa equipe dará continuidade.”
 - API de doação retorna `ok: true` e ecoa o payload recebido, sem WhatsApp, e-mail, planilha ou checkout por enquanto.
+
+
+## v29 — Ajuste pixel da hero de doação
+
+- Ajustado o vídeo/card lateral da LP `/doacao` para acompanhar a altura do bloco esquerdo, conforme o protótipo aprovado.
+- Corrigido alinhamento vertical da hero para evitar vídeo centralizado/deslocado em relação ao título e formulário.
+- Mantido formulário abaixo do título e payload sem integração final.

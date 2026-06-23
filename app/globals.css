@@ -5880,3 +5880,40 @@ body {
     width: 100% !important;
   }
 }
+
+
+/* V29 — Doação: vídeo lateral com altura equivalente ao bloco esquerdo do protótipo */
+@media (min-width: 981px) {
+  .donationHeroPixelGrid {
+    align-items: stretch !important;
+    grid-template-columns: minmax(360px, 420px) minmax(340px, 430px) !important;
+    gap: clamp(72px, 9vw, 150px) !important;
+    padding-top: 18px !important;
+    padding-bottom: 58px !important;
+  }
+
+  .donationHeroLeft {
+    align-self: stretch !important;
+    justify-content: flex-start !important;
+    max-width: 420px !important;
+  }
+
+  .donationVideoCard {
+    align-self: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: block !important;
+    border-radius: 26px !important;
+  }
+
+  .donationVideoCard img {
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+  }
+
+  .donationVideoCard .videoOverlay {
+    min-height: 100% !important;
+  }
+}

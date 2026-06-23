@@ -284,3 +284,8 @@ Se `DONATION_LEADS_WEBHOOK_URL` não estiver configurada, a API `/api/donation-l
 - Formulário passa a montar e enviar apenas o payload para `/api/donation-leads`.
 - Adicionado modal visual no padrão do site com a mensagem “Recebemos suas informações. Em breve nossa equipe dará continuidade.”
 - API de doação retorna `ok: true` e ecoa o payload recebido, sem WhatsApp, e-mail, planilha ou checkout por enquanto.
+
+
+### v29 — ajuste da LP de doação
+
+A hero da página `/doacao` foi refinada para que o card de vídeo da direita acompanhe a altura do bloco esquerdo, seguindo o protótipo de referência.

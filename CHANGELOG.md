@@ -1,3 +1,12 @@
+## v26 — LP de Doação alinhada ao protótipo Rubens
+
+- Hero da página `/doacao` realinhada ao protótipo: copy à esquerda, formulário central e vídeo à direita.
+- Removidos elementos extras da hero que não estavam no protótipo.
+- Formulário ajustado para `Doar agora` e `Doação anônima`, com dados do doador e envio preparado.
+- CTAs de doação e apoio revisados para apontar para `/doacao`.
+- Layout das seções da LP refinado para melhor alinhamento e consistência visual.
+- Mantida preparação para WhatsApp, e-mail e webhook/planilha via `DONATION_LEADS_WEBHOOK_URL`.
+
 ## v25 — Landing Page de Doação / Unidos em Cristo
 
 - Criada a rota `/doacao` como LP completa de doação, inspirada na página atual `/unidos-em-cristo/` e no novo padrão visual do site.

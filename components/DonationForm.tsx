@@ -37,7 +37,7 @@ function cleanCurrency(value: string) {
 
 function formatMessage(state: DonationFormState) {
   const amount = cleanCurrency(state.amount || "0");
-  const donationType = state.mode === "mensal" ? "doação mensal/recorrente" : "doação única";
+  const donationType = state.anonymous ? "doação anônima" : "doação";
   const identity = state.anonymous
     ? "Doação anônima"
     : `Nome: ${state.name || "não informado"}\nWhatsApp: ${state.whatsapp || "não informado"}\nE-mail: ${state.email || "não informado"}\nCidade: ${state.city || "não informado"}`;
@@ -104,17 +104,17 @@ export function DonationForm() {
       <div className="donationModeTabs" role="tablist" aria-label="Tipo de doação">
         <button
           type="button"
-          className={state.mode === "unica" ? "active" : ""}
-          onClick={() => update("mode", "unica")}
+          className={!state.anonymous ? "active" : ""}
+          onClick={() => update("anonymous", false)}
         >
           Doar agora
         </button>
         <button
           type="button"
-          className={state.mode === "mensal" ? "active" : ""}
-          onClick={() => update("mode", "mensal")}
+          className={state.anonymous ? "active" : ""}
+          onClick={() => update("anonymous", true)}
         >
-          Doação mensal
+          Doação anônima
         </button>
       </div>
 
@@ -143,15 +143,6 @@ export function DonationForm() {
           </button>
         ))}
       </div>
-
-      <label className="anonymousToggle">
-        <input
-          type="checkbox"
-          checked={state.anonymous}
-          onChange={(event) => update("anonymous", event.target.checked)}
-        />
-        <span>Quero doar de forma anônima</span>
-      </label>
 
       {!state.anonymous && (
         <div className="donorFields">
@@ -210,8 +201,8 @@ export function DonationForm() {
       </button>
 
       <div className="donationSecurity">
-        <span><ShieldCheck size={15} /> Seus dados serão usados apenas para contato sobre esta doação.</span>
-        <span>Ao enviar, você concorda com a política de privacidade do Instituto.</span>
+        <span><ShieldCheck size={15} /> Pagamento 100% seguro.</span>
+        <span>Sua doação faz a diferença hoje.</span>
       </div>
 
       {submitted && (

@@ -68,7 +68,7 @@ export default function HomeCompletaPage() {
               <h1>Transformando vidas através da <strong>fé, educação e esperança.</strong></h1>
               <p>{officialCopy.heroSubtitle}</p>
               <div className="heroActions">
-                <a href="#como-ajudar" className="btn lime">Quero Fazer a Diferença</a>
+                <a href="/doacao" className="btn lime">Quero Fazer a Diferença</a>
                 <a href="#quem-somos" className="btn ghost">Conheça o Instituto</a>
               </div>
               <div className="trustRow">
@@ -324,7 +324,7 @@ export default function HomeCompletaPage() {
                 <p>Doe, seja voluntário, torne-se parceiro ou entre em contato para conhecer o Instituto Jesus é Bom.</p>
               </div>
               <div className="finalCtaActions">
-                <a className="btn lime" href="#como-ajudar">Quero Doar</a>
+                <a className="btn lime" href="/doacao">Quero Doar</a>
                 <a className="btn outline" href="#contato">Falar com a Equipe</a>
                 <a className="btn soft" href="#projetos">Ver Projetos</a>
               </div>

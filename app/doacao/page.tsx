@@ -3,16 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DonationForm } from "@/components/DonationForm";
 import {
-  Baby,
   BookOpen,
-  CheckCircle2,
   GraduationCap,
   HandHeart,
   Heart,
   HeartHandshake,
-  MessageCircle,
   Play,
-  ShieldCheck,
   Sparkles,
   UsersRound,
   Volleyball
@@ -86,16 +82,11 @@ export default function DonationPage() {
           <div className="container donationHeroGrid">
             <div className="donationHeroCopy">
               <span className="donationEyebrow">Unidos em Cristo</span>
-              <h1>Sua doação hoje transforma vidas para sempre.</h1>
+              <h1>Sua doação hoje <strong>transforma vidas</strong> para sempre.</h1>
               <p>
                 No Instituto Jesus é Bom, educamos, protegemos e levamos esperança para crianças,
                 adolescentes e famílias da Comunidade César Maia.
               </p>
-              <div className="donationHeroBullets">
-                <span><CheckCircle2 size={17} /> Doação com propósito</span>
-                <span><ShieldCheck size={17} /> Dados protegidos</span>
-                <span><Heart size={17} /> Amor em movimento</span>
-              </div>
             </div>
 
             <div className="donationHeroFormCard">

@@ -34,7 +34,7 @@ export default function DonationCheckoutPage() {
                 esporte, fé, cuidado emocional, proteção e desenvolvimento para crianças,
                 adolescentes e famílias da Comunidade César Maia.
               </p>
-              <a className="btn primary" href="/como-ajudar">Ver outras formas de ajudar</a>
+              <a className="btn primary" href="/doacao">Ver outras formas de ajudar</a>
             </aside>
           </div>
         </section>

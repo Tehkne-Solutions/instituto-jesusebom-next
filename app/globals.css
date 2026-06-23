@@ -5083,3 +5083,188 @@ body {
     font-size: 42px;
   }
 }
+
+
+/* V26 — Donation LP parity with Rubens prototype and working CTA links */
+.donationHero {
+  min-height: calc(100vh - 126px);
+  background:
+    linear-gradient(90deg, rgba(5, 52, 32, .86) 0%, rgba(5, 52, 32, .72) 43%, rgba(5, 52, 32, .62) 100%),
+    url("https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+
+.donationHeroGrid {
+  min-height: calc(100vh - 126px);
+  grid-template-columns: minmax(300px, .88fr) minmax(340px, 398px) minmax(300px, 350px);
+  gap: clamp(22px, 3.1vw, 44px);
+  align-items: center;
+  padding: clamp(54px, 6vw, 86px) 0;
+}
+
+.donationHeroCopy {
+  align-self: center;
+}
+
+.donationHeroCopy h1 {
+  max-width: 520px;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+
+.donationHeroCopy h1 strong {
+  color: #f5c433;
+}
+
+.donationHeroCopy p {
+  max-width: 430px;
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: 1.62;
+}
+
+.donationHeroBullets {
+  display: none !important;
+}
+
+.donationHeroFormCard {
+  width: 100%;
+  max-width: 398px;
+  justify-self: center;
+  padding: 13px;
+  border-radius: 24px;
+}
+
+.donationForm {
+  gap: 11px;
+}
+
+.donationModeTabs {
+  min-height: 44px;
+  background: #f2f7f3;
+}
+
+.donationModeTabs button.active {
+  background: var(--green);
+  color: #ffffff;
+}
+
+.donorFields {
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.fullField textarea {
+  min-height: 74px;
+}
+
+.donationSubmit {
+  min-height: 48px;
+}
+
+.donationSecurity {
+  font-size: 10.5px;
+}
+
+.donationVideoCard {
+  width: 100%;
+  min-height: 500px;
+  max-width: 350px;
+  justify-self: center;
+  border-radius: 26px;
+}
+
+.donationVideoCard img {
+  min-height: 500px;
+}
+
+.donationStories .sectionHeader,
+.donationHow .sectionHeader,
+.donationReasons .sectionHeader,
+.donationFaq .sectionHeader {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.storyVideoGrid,
+.donationActionGrid {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donationImpactGrid,
+.donationAboutGrid,
+.donationFaqBox {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donationImpactGrid {
+  grid-template-columns: minmax(0, .82fr) minmax(360px, .95fr);
+}
+
+.donationReasonGrid {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donationActionCard,
+.donationReasonCard,
+.donationStat,
+.donationFaqBox,
+.donationImpactGrid,
+.donationAboutGrid {
+  box-shadow: 0 18px 50px rgba(12, 53, 31, .08);
+}
+
+@media (max-width: 1120px) {
+  .donationHeroGrid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .donationHeroCopy h1,
+  .donationHeroCopy p {
+    max-width: 100%;
+  }
+
+  .donationHeroFormCard,
+  .donationVideoCard {
+    max-width: 100%;
+  }
+
+  .donationVideoCard,
+  .donationVideoCard img {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 760px) {
+  .donationHero {
+    min-height: auto;
+  }
+
+  .donationHeroGrid {
+    min-height: auto;
+    padding: 44px 0 58px;
+  }
+
+  .donationHeroCopy h1 {
+    font-size: clamp(38px, 13vw, 54px);
+  }
+
+  .donorFields,
+  .donationImpactGrid,
+  .donationAboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyVideoGrid,
+  .donationActionGrid,
+  .donationReasonGrid {
+    grid-template-columns: 1fr;
+  }
+}

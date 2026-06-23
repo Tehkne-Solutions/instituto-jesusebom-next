@@ -95,7 +95,7 @@ export const pagesContent: Record<string, ContentPage> = {
       "Desde 2019, o Instituto Jesus é Bom acolhe crianças, adolescentes e famílias da Comunidade César Maia com projetos gratuitos que unem cuidado, formação, proteção e amor ao próximo.",
     heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
     primaryCta: { label: "Conheça nossa missão", href: "#missao" },
-    secondaryCta: { label: "Quero apoiar", href: "/como-ajudar" },
+    secondaryCta: { label: "Quero apoiar", href: "/doacao" },
     intro: {
       eyebrow: "Nossa história",
       title: "Nascemos para cuidar de vidas",
@@ -171,7 +171,7 @@ export const pagesContent: Record<string, ContentPage> = {
       title: "Faça parte dessa história",
       text: "O Instituto Jesus é Bom segue crescendo porque pessoas escolhem caminhar conosco. A sua ajuda pode manter essa missão viva e alcançar ainda mais crianças.",
       buttons: [
-        { label: "Doe Agora", href: "/como-ajudar" },
+        { label: "Doe Agora", href: "/doacao" },
         { label: "Quero Apoiar", href: "/contato", variant: "outline" }
       ]
     }
@@ -185,7 +185,7 @@ export const pagesContent: Record<string, ContentPage> = {
       "Educação, esporte, cultura, cuidado emocional, alimentação, proteção, fé e oportunidades para crianças e adolescentes da Comunidade César Maia.",
     heroImage: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
     primaryCta: { label: "Conheça os projetos", href: "#projetos" },
-    secondaryCta: { label: "Como ajudar", href: "/como-ajudar" },
+    secondaryCta: { label: "Como ajudar", href: "/doacao" },
     intro: {
       eyebrow: "Introdução",
       title: "Mais do que atividades, oferecemos caminhos de transformação",
@@ -248,8 +248,8 @@ export const pagesContent: Record<string, ContentPage> = {
       title: "Apoie projetos que transformam histórias",
       text: "Ao apoiar o Instituto Jesus é Bom, você ajuda a manter projetos que alcançam crianças em diferentes áreas da vida.",
       buttons: [
-        { label: "Doe Agora", href: "/como-ajudar" },
-        { label: "Conheça Como Ajudar", href: "/como-ajudar", variant: "outline" }
+        { label: "Doe Agora", href: "/doacao" },
+        { label: "Conheça Como Ajudar", href: "/doacao", variant: "outline" }
       ]
     }
   },
@@ -262,7 +262,7 @@ export const pagesContent: Record<string, ContentPage> = {
       "O impacto do Instituto Jesus é Bom é medido em dados, mas também em histórias, famílias, sorrisos, refeições, atendimentos e oportunidades reais.",
     heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
     primaryCta: { label: "Ver números", href: "#numeros" },
-    secondaryCta: { label: "Quero apoiar", href: "/como-ajudar" },
+    secondaryCta: { label: "Quero apoiar", href: "/doacao" },
     stats: [
       { value: "627", label: "alunos atendidos", description: "Crianças e adolescentes alcançados pelos projetos do Instituto.", icon: UsersRound },
       { value: "+1.500", label: "famílias impactadas", description: "Famílias acompanhadas, acolhidas ou alcançadas por ações e eventos.", icon: HeartHandshake },
@@ -324,8 +324,8 @@ export const pagesContent: Record<string, ContentPage> = {
       title: "Ajude esse impacto a continuar",
       text: "Uma criança não precisa apenas de uma oportunidade. Ela precisa que essa oportunidade continue existindo.",
       buttons: [
-        { label: "Doe Agora", href: "/como-ajudar" },
-        { label: "Seja Mantenedor", href: "/como-ajudar#mantenedor", variant: "outline" }
+        { label: "Doe Agora", href: "/doacao" },
+        { label: "Seja Mantenedor", href: "/doacao", variant: "outline" }
       ]
     }
   },
@@ -337,7 +337,7 @@ export const pagesContent: Record<string, ContentPage> = {
     subtitle:
       "Sua contribuição ajuda o Instituto Jesus é Bom a manter projetos gratuitos de educação, alimentação, esporte, fé, cuidado emocional, proteção e desenvolvimento.",
     heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
-    primaryCta: { label: "Doe agora via PIX", href: "#pix" },
+    primaryCta: { label: "Doe agora", href: "/doacao" },
     secondaryCta: { label: "Falar pelo WhatsApp", href: "https://wa.me/5521973468327" },
     suggestedValues: [
       { title: "R$ 30", description: "Ajuda a manter materiais, atividades e pequenas necessidades da rotina." },
@@ -406,7 +406,7 @@ export const pagesContent: Record<string, ContentPage> = {
       title: "Faça parte do que Deus está construindo aqui",
       text: "Ainda há muitas crianças esperando por cuidado, oportunidade e esperança. A sua ajuda pode manter essa porta aberta.",
       buttons: [
-        { label: "Doe Agora", href: "#pix" },
+        { label: "Doe Agora", href: "/doacao" },
         { label: "Faça Parte dessa Missão", href: "/contato", variant: "outline" }
       ]
     }
@@ -531,7 +531,7 @@ export const pagesContent: Record<string, ContentPage> = {
       text: "Seja para doar, servir, apoiar, conhecer ou tirar dúvidas, o Instituto Jesus é Bom está de portas abertas para conversar.",
       buttons: [
         { label: "Falar com a Secretaria", href: "https://wa.me/5521973468327" },
-        { label: "Faça Parte dessa Missão", href: "/como-ajudar", variant: "outline" }
+        { label: "Faça Parte dessa Missão", href: "/doacao", variant: "outline" }
       ]
     }
   }

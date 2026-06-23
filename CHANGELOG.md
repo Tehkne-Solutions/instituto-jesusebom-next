@@ -221,3 +221,11 @@
 - Removido o header global da LP de doação e aplicado header próprio com navegação por âncoras: Impacto, Como Atuamos, Quem Somos e FAQ.
 - Ajustados espaçamentos, largura do formulário, escala dos campos e proporção do vídeo para evitar elementos extras e desalinhamento.
 - Mantido fluxo técnico da doação com API preparada para WhatsApp, e-mail e futuro webhook/planilha.
+
+
+## v28 — Ajuste final da LP Doação
+
+- Hero da página `/doacao` realinhada ao protótipo: formulário abaixo do título/texto, não lado a lado dentro do bloco esquerdo.
+- Formulário passa a montar e enviar apenas o payload para `/api/donation-leads`.
+- Adicionado modal visual no padrão do site com a mensagem “Recebemos suas informações. Em breve nossa equipe dará continuidade.”
+- API de doação retorna `ok: true` e ecoa o payload recebido, sem WhatsApp, e-mail, planilha ou checkout por enquanto.

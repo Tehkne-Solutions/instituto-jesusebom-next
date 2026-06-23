@@ -66,7 +66,7 @@ export function Footer() {
 
         <div className="footerCta">
           <strong>Mais que projetos, construímos futuros.</strong>
-          <a href="/como-ajudar" className="btn light">Doe Agora</a>
+          <a href="/doacao" className="btn light">Doe Agora</a>
         </div>
       </div>
 

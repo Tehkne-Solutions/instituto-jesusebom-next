@@ -335,7 +335,7 @@ export function FloatingActions() {
 
             {step === "done" ? (
               <div className="jebWhatsappFinal">
-                <a className="jebWhatsappStart" href="/doacao/checkout">
+                <a className="jebWhatsappStart" href="/doacao">
                   <Heart size={17} />
                   Prosseguir
                 </a>

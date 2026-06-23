@@ -1,4 +1,4 @@
-# Instituto Jesus é Bom — Home oficial v19
+# Instituto Jesus é Bom — Home oficial v25
 
 Versão com Home Completa principal, páginas institucionais, páginas legais, refinamento visual, fluxo de doação e consentimento de cookies atualizado.
 
@@ -11,6 +11,7 @@ Versão com Home Completa principal, páginas institucionais, páginas legais, r
 - `/transparencia` — Transparência
 - `/relatorios` — Relatórios
 - `/trabalhe-conosco` — Trabalhe Conosco e Voluntariado
+- `/doacao` — Landing Page de Doação / Unidos em Cristo
 - `/doacao/checkout` — Placeholder para futuro checkout de pagamento
 
 ## Cookies e privacidade
@@ -236,3 +237,25 @@ As páginas internas agora usam imagens laterais maiores, preenchendo a coluna d
 ## v24 — imagens laterais corrigidas
 
 As páginas internas tiveram o container editorial ampliado e as imagens da direita agora ocupam a área visual inteira da coluna, conforme revisão visual.
+
+
+## Landing Page de Doação
+
+A rota `/doacao` contém a nova LP de doação com:
+
+- formulário de doação única ou mensal;
+- opção de doação anônima;
+- valores sugeridos;
+- campos de nome, WhatsApp, e-mail, cidade/estado e mensagem;
+- envio preparado para WhatsApp, e-mail e futuro webhook/planilha;
+- seção de impacto, histórias, atuação, motivos para apoiar e FAQ.
+
+### Variáveis preparadas
+
+```env
+NEXT_PUBLIC_JEB_WHATSAPP_PHONE=5521973468327
+NEXT_PUBLIC_JEB_DONATION_EMAIL=contato@jesusebom.org
+DONATION_LEADS_WEBHOOK_URL=https://sua-automacao-ou-planilha
+```
+
+Se `DONATION_LEADS_WEBHOOK_URL` não estiver configurada, a API `/api/donation-leads` responde normalmente e informa que o webhook ainda não foi ativado.

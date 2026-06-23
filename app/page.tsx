@@ -90,7 +90,7 @@ export default function HomeCompletaPage() {
               <div className="whatsappChatMockBody" aria-label="Opções de doação">
                 <p className="whatsappMockBubble agent">Como você deseja contribuir hoje?</p>
                 {helpWays.slice(0, 4).map(({ title, description, icon: Icon }) => (
-                  <a href="/doacao/checkout" key={title} className="whatsappDonationItem">
+                  <a href="/doacao" key={title} className="whatsappDonationItem">
                     <Icon size={18} />
                     <span>
                       <strong>{title}</strong>
@@ -101,7 +101,7 @@ export default function HomeCompletaPage() {
                 ))}
               </div>
 
-              <a className="btn primary whatsappPanelCta" href="/doacao/checkout">
+              <a className="btn primary whatsappPanelCta" href="/doacao">
                 <Heart size={18} />
                 Prosseguir
               </a>
@@ -199,7 +199,7 @@ export default function HomeCompletaPage() {
                     <div className="helpIcon"><Icon size={24} /></div>
                     <h3>{title}</h3>
                     <p>{description}</p>
-                    {title === "Doação via PIX" ? null : <a href={title.includes("Doação") ? "/doacao/checkout" : title === "Voluntariado" ? "/voluntariado" : "/contato"}>{cta} <ArrowRight size={16} /></a>}
+                    {title === "Doação via PIX" ? null : <a href={title.includes("Doação") ? "/doacao" : title === "Voluntariado" ? "/voluntariado" : "/contato"}>{cta} <ArrowRight size={16} /></a>}
                   </article>
                 </StaggerItem>
               ))}

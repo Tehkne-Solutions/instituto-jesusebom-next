@@ -1,0 +1,250 @@
+import type { Metadata } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { DonationForm } from "@/components/DonationForm";
+import {
+  Baby,
+  BookOpen,
+  CheckCircle2,
+  GraduationCap,
+  HandHeart,
+  Heart,
+  HeartHandshake,
+  MessageCircle,
+  Play,
+  ShieldCheck,
+  Sparkles,
+  UsersRound,
+  Volleyball
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Doação — Instituto Jesus é Bom",
+  description:
+    "Faça sua doação ao Instituto Jesus é Bom e ajude a manter projetos gratuitos de educação, alimentação, esporte, fé, cuidado emocional e proteção para crianças e famílias."
+};
+
+const impactStats = [
+  { value: "627", label: "alunos atendidos", icon: GraduationCap },
+  { value: "+1.500", label: "famílias impactadas", icon: UsersRound },
+  { value: "100", label: "atendimentos psicológicos semanais", icon: HeartHandshake },
+  { value: "12", label: "cursos e atividades", icon: Sparkles }
+];
+
+const actionCards = [
+  { title: "Educação e desenvolvimento", text: "Estudo dirigido, matemática, inglês, robótica, artes e ensino bíblico.", icon: BookOpen },
+  { title: "Esporte e convivência", text: "Natação, jiu-jítsu, ballet, recreação e experiências que fortalecem disciplina.", icon: Volleyball },
+  { title: "Cuidado emocional", text: "Escuta, acolhimento, apoio psicológico e proteção para crianças e adolescentes.", icon: Heart },
+  { title: "Ações sociais", text: "Alimentação, campanhas, eventos e apoio às famílias da comunidade.", icon: HandHeart }
+];
+
+const reasons = [
+  {
+    title: "Impacto direto",
+    text: "Sua doação ajuda a manter projetos que alcançam crianças, adolescentes e famílias em situação de vulnerabilidade."
+  },
+  {
+    title: "Continuidade",
+    text: "Doações recorrentes ajudam o Instituto a planejar melhor aulas, refeições, materiais e atendimentos."
+  },
+  {
+    title: "Missão com propósito",
+    text: "Cada contribuição fortalece uma obra guiada pela fé, pelo amor ao próximo e pela esperança."
+  }
+];
+
+const faqs = [
+  {
+    question: "Como posso contribuir para o Instituto Jesus é Bom?",
+    answer: "Você pode preencher o formulário desta página e prosseguir pelo WhatsApp, e-mail ou PIX enquanto o checkout oficial é configurado."
+  },
+  {
+    question: "Posso doar de forma anônima?",
+    answer: "Sim. O formulário permite marcar a opção de doação anônima. A equipe usará apenas os dados necessários para orientar a contribuição."
+  },
+  {
+    question: "Como minha doação será utilizada?",
+    answer: "As contribuições apoiam projetos gratuitos de educação, alimentação, esporte, cuidado emocional, proteção da infância, ações sociais e formação cristã."
+  },
+  {
+    question: "Existe valor mínimo?",
+    answer: "Não. Toda contribuição é bem-vinda e ajuda a manter a missão viva."
+  },
+  {
+    question: "Como acompanhar o impacto da doação?",
+    answer: "O Instituto compartilha notícias, histórias, ações e informações institucionais por seus canais oficiais e área de transparência."
+  }
+];
+
+export default function DonationPage() {
+  return (
+    <>
+      <Header />
+      <main className="donationPage">
+        <section className="donationHero">
+          <div className="donationHeroBackdrop" />
+          <div className="container donationHeroGrid">
+            <div className="donationHeroCopy">
+              <span className="donationEyebrow">Unidos em Cristo</span>
+              <h1>Sua doação hoje transforma vidas para sempre.</h1>
+              <p>
+                No Instituto Jesus é Bom, educamos, protegemos e levamos esperança para crianças,
+                adolescentes e famílias da Comunidade César Maia.
+              </p>
+              <div className="donationHeroBullets">
+                <span><CheckCircle2 size={17} /> Doação com propósito</span>
+                <span><ShieldCheck size={17} /> Dados protegidos</span>
+                <span><Heart size={17} /> Amor em movimento</span>
+              </div>
+            </div>
+
+            <div className="donationHeroFormCard">
+              <DonationForm />
+            </div>
+
+            <div className="donationVideoCard" aria-label="Vídeo institucional demonstrativo">
+              <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
+                alt="Crianças sorrindo em ação social"
+              />
+              <div className="videoOverlay">
+                <span className="playCircle"><Play size={34} fill="currentColor" /></span>
+                <strong>A palavra é que transforma.</strong>
+                <small>Vídeo institucional / depoimento</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="donationStories section">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span>Nosso impacto</span>
+              <h2>Histórias reais de transformação</h2>
+              <p>Assista, compartilhe e veja como cada apoio ajuda a construir destinos todos os dias.</p>
+            </div>
+            <div className="storyVideoGrid">
+              {[
+                "Professora de inglês",
+                "Famílias acolhidas",
+                "Ações durante a pandemia",
+                "Juventude e fé"
+              ].map((label, index) => (
+                <article className="storyVideoCard" key={label}>
+                  <img
+                    src={`https://images.unsplash.com/photo-${[
+                      "1509062522246-3755977927d7",
+                      "1529156069898-49953e39b3ac",
+                      "1491438590914-bc09fcaaf77a",
+                      "1503454537195-1dcabb73ffb9"
+                    ][index]}?auto=format&fit=crop&w=600&q=85`}
+                    alt={label}
+                  />
+                  <span className="playMini"><Play size={20} fill="currentColor" /></span>
+                  <strong>{label}</strong>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="donationImpact section compact">
+          <div className="container donationImpactGrid">
+            <div>
+              <span className="donationEyebrow">Hoje crescemos juntos</span>
+              <h2>Nosso impacto em números</h2>
+              <p>
+                A cada dia, mais vidas são alcançadas com amor, cuidado e propósito.
+              </p>
+              <div className="donationStatsGrid">
+                {impactStats.map(({ value, label, icon: Icon }) => (
+                  <div className="donationStat" key={label}>
+                    <Icon size={28} />
+                    <strong>{value}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=85"
+              alt="Grupo de voluntários reunidos"
+            />
+          </div>
+        </section>
+
+        <section className="section donationHow">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span>Como atuamos</span>
+              <h2>Como o Instituto Jesus é Bom transforma vidas</h2>
+            </div>
+            <div className="donationActionGrid">
+              {actionCards.map(({ title, text, icon: Icon }) => (
+                <article key={title} className="donationActionCard">
+                  <Icon size={32} />
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="donationReasons section compact">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span>Por que sua doação é essencial</span>
+              <h2>Por que apoiar o Instituto Jesus é Bom?</h2>
+            </div>
+            <div className="donationReasonGrid">
+              {reasons.map((reason, index) => (
+                <article key={reason.title} className="donationReasonCard">
+                  <span>{index + 1}</span>
+                  <h3>{reason.title}</h3>
+                  <p>{reason.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section donationAbout">
+          <div className="container donationAboutGrid">
+            <div>
+              <span className="donationEyebrow">Sobre o Instituto</span>
+              <h2>Conheça mais sobre o Instituto Jesus é Bom</h2>
+              <p>
+                Explore a história e os impactos do Instituto Jesus é Bom, onde cada doação se transforma
+                em educação, proteção, acolhimento e esperança em Cristo Jesus para crianças e famílias.
+              </p>
+              <a className="btn lime" href="/quem-somos">Conheça nossa história</a>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=85"
+              alt="Criança recebendo cuidado e acolhimento"
+            />
+          </div>
+        </section>
+
+        <section className="donationFaq section compact">
+          <div className="container donationFaqBox">
+            <div className="sectionHeader center">
+              <span>Dúvidas frequentes</span>
+              <h2>FAQ</h2>
+            </div>
+            <div className="faqList">
+              {faqs.map((faq) => (
+                <details key={faq.question}>
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

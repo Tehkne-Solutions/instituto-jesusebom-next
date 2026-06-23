@@ -1,3 +1,14 @@
+## v25 — Landing Page de Doação / Unidos em Cristo
+
+- Criada a rota `/doacao` como LP completa de doação, inspirada na página atual `/unidos-em-cristo/` e no novo padrão visual do site.
+- Implementado formulário simples com alternância entre doação única e mensal, opção de doação anônima, valores sugeridos e campos de identificação do doador.
+- Adicionado fluxo preparado para WhatsApp, e-mail e futura planilha/webhook via `DONATION_LEADS_WEBHOOK_URL`.
+- Criada API `/api/donation-leads` para receber intenções de doação e encaminhar para automação quando configurada.
+- Mantida rota `/doacao/checkout` como placeholder visual para futuro checkout de pagamento.
+- Header, Footer, Home e ações flutuantes passam a direcionar a doação para `/doacao`.
+- Incluídas seções de histórias, impacto, formas de atuação, motivos para apoiar, sobre o Instituto e FAQ.
+- Mantido setup Vercel com registry público, sem `node_modules` e sem `package-lock.json`.
+
 
 ## v21 — Remoção definitiva do degradê da hero da Home
 

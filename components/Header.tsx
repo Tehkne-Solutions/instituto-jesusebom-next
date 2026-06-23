@@ -29,7 +29,7 @@ export function Header() {
           </nav>
 
           <div className="headerActions">
-            <a className="btn primary" href="/como-ajudar">Doe Agora</a>
+            <a className="btn primary" href="/doacao">Doe Agora</a>
           </div>
         </div>
       </header>

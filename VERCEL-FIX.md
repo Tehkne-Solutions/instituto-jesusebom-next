@@ -1,50 +1,46 @@
-# Vercel Fix — V11
+# Vercel Fix — fluxo atual estabilizado
 
 ## Diagnóstico
 
-Os últimos logs mostram que o deploy morre antes do `next build`, ainda na instalação de dependências.
+O projeto apresentou falhas de instalação quando `npm ci` e lockfiles gerados fora da Vercel foram usados. A estratégia atual mantém o deploy sem `package-lock.json`, força o registry público do npm e usa `npm install` sem gerar lockfile.
 
-- `npm install`/`npm ci` com Node 20: `npm error Exit handler never called!`
-- `pnpm` com Corepack: `ERR_INVALID_THIS` ao buscar pacotes no registry
+## Configuração atual
 
-O primeiro build que chegou a compilar o Next instalou dependências quando o projeto ainda estava no Node padrão da Vercel, indicado nos logs como `24.x`.
+`.npmrc`:
 
-## Correção aplicada
+```txt
+registry=https://registry.npmjs.org/
+fund=false
+audit=false
+```
 
-- Removido `engines.node` do `package.json`.
-- Removido `packageManager: pnpm`.
-- Mantido `package-lock.json`.
-- `vercel.json` usa:
+`vercel.json`:
 
 ```json
 {
-  "installCommand": "npm ci --no-audit --no-fund",
+  "installCommand": "npm install --no-audit --no-fund --no-package-lock",
   "buildCommand": "npm run build",
   "framework": "nextjs"
 }
 ```
 
-## Vercel
+## Regras
 
-1. Subir esta versão no GitHub.
-2. Em Vercel, manter Node.js Version em Project Settings como `24.x`.
-3. Rodar redeploy com **Clear Build Cache**.
+- Não commitar `node_modules/`.
+- Não commitar `package-lock.json`.
+- Não trocar para `npm ci` sem nova validação.
+- Usar redeploy com **Clear Build Cache** quando houver alteração de dependências ou configuração de install.
 
-## Local
+## Comandos recomendados
 
-```bash
-rm -rf node_modules .next
-npm ci --no-audit --no-fund
-npm run build
+```powershell
+git rm -r --cached --ignore-unmatch node_modules
+git rm --cached --ignore-unmatch package-lock.json
+
+npm.cmd install --no-audit --no-fund --no-package-lock
+npm.cmd run build
 ```
 
+## V25 — Doação
 
-## V22 — Overlay uniforme, imagens Unsplash e correções de encavalamento
-
-- Aplicado overlay escuro uniforme na hero da Home para recuperar legibilidade sem fade branco.
-- Substituídas imagens ruins do material/prints por imagens de preenchimento do Unsplash, enquanto não houver acervo oficial aprovado.
-- Ajustado grid de impacto para 3 colunas x 2 linhas quando houver mais de 4 cards.
-- Padronizadas páginas internas no formato editorial: texto à esquerda e imagem à direita.
-- Reduzida escala tipográfica geral e melhorado espaçamento para evitar informação sobre informação.
-- Cards de atuação recebem degradê diagonal azul para verde com textos e ícones brancos.
-- Removidos/ajustados elementos clicáveis sem função real e preparado fluxo /doacao/checkout.
+A rota `/doacao` foi criada com formulário preparado para WhatsApp, e-mail e futura integração via webhook/planilha com `DONATION_LEADS_WEBHOOK_URL`.

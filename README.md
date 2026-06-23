@@ -289,3 +289,8 @@ Se `DONATION_LEADS_WEBHOOK_URL` não estiver configurada, a API `/api/donation-l
 ### v29 — ajuste da LP de doação
 
 A hero da página `/doacao` foi refinada para que o card de vídeo da direita acompanhe a altura do bloco esquerdo, seguindo o protótipo de referência.
+
+
+### v30 — Hero da doação ajustada
+
+A página `/doacao` recebeu ajuste fino de hero para aproximar a composição do protótipo aprovado: texto e formulário no bloco esquerdo, vídeo vertical à direita, quebras de título controladas e formulário compactado. O formulário continua apenas preparando/enviando o payload para `/api/donation-leads`.

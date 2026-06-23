@@ -236,3 +236,12 @@
 - Ajustado o vídeo/card lateral da LP `/doacao` para acompanhar a altura do bloco esquerdo, conforme o protótipo aprovado.
 - Corrigido alinhamento vertical da hero para evitar vídeo centralizado/deslocado em relação ao título e formulário.
 - Mantido formulário abaixo do título e payload sem integração final.
+
+
+## v30 — Ajuste final da hero da LP de Doação
+
+- Reorganizada a hero da página `/doacao` para maior paridade visual com o protótipo enviado.
+- Título quebrado em linhas controladas: “Sua doação hoje”, “transforma vidas” e “para sempre.”
+- Formulário mantido abaixo do texto, com proporção compacta e alinhamento ao bloco esquerdo.
+- Card de vídeo reposicionado para acompanhar visualmente a composição do protótipo sem esticar de forma artificial.
+- Mantido payload do formulário e modal de confirmação.

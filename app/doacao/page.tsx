@@ -95,7 +95,11 @@ export default function DonationPage() {
             <div className="donationHeroLeft">
               <div className="donationHeroCopy">
                 <span className="donationEyebrow">Unidos em Cristo</span>
-                <h1>Sua doação hoje <strong>transforma vidas</strong> para sempre.</h1>
+                <h1>
+                  <span>Sua doação hoje</span>
+                  <strong>transforma vidas</strong>
+                  <span>para sempre.</span>
+                </h1>
                 <p>
                   No Instituto Jesus é Bom, educamos, protegemos e levamos esperança para crianças,
                   adolescentes e famílias da Comunidade César Maia.

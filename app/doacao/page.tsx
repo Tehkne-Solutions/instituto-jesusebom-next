@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Logo } from "@/components/Logo";
 import { DonationForm } from "@/components/DonationForm";
 import {
   BookOpen,
@@ -75,22 +75,36 @@ const faqs = [
 export default function DonationPage() {
   return (
     <>
-      <Header />
-      <main className="donationPage">
-        <section className="donationHero">
-          <div className="donationHeroBackdrop" />
-          <div className="container donationHeroGrid">
-            <div className="donationHeroCopy">
-              <span className="donationEyebrow">Unidos em Cristo</span>
-              <h1>Sua doação hoje <strong>transforma vidas</strong> para sempre.</h1>
-              <p>
-                No Instituto Jesus é Bom, educamos, protegemos e levamos esperança para crianças,
-                adolescentes e famílias da Comunidade César Maia.
-              </p>
-            </div>
+      <main className="donationPage donationPrototypePage">
+        <section className="donationHero donationHeroPixel">
+          <div className="donationHeroOverlay" />
+          <div className="container donationLpHeader">
+            <a href="/" className="donationLpLogo" aria-label="Instituto Jesus é Bom">
+              <Logo />
+            </a>
+            <nav className="donationLpNav" aria-label="Navegação da página de doação">
+              <a href="#impacto">Impacto</a>
+              <a href="#como-atuamos">Como Atuamos</a>
+              <a href="#quem-somos">Quem Somos</a>
+              <a href="#faq">FAQ</a>
+            </nav>
+            <a className="donationLpDonate" href="#doar">Doar agora</a>
+          </div>
 
-            <div className="donationHeroFormCard">
-              <DonationForm />
+          <div className="container donationHeroPixelGrid">
+            <div className="donationHeroLeft">
+              <div className="donationHeroCopy">
+                <span className="donationEyebrow">Unidos em Cristo</span>
+                <h1>Sua doação hoje <strong>transforma vidas</strong> para sempre.</h1>
+                <p>
+                  No Instituto Jesus é Bom, educamos, protegemos e levamos esperança para crianças,
+                  adolescentes e famílias da Comunidade César Maia.
+                </p>
+              </div>
+
+              <div className="donationHeroFormCard" id="doar">
+                <DonationForm />
+              </div>
             </div>
 
             <div className="donationVideoCard" aria-label="Vídeo institucional demonstrativo">
@@ -107,7 +121,7 @@ export default function DonationPage() {
           </div>
         </section>
 
-        <section className="donationStories section">
+        <section className="donationStories section" id="impacto">
           <div className="container">
             <div className="sectionHeader center">
               <span>Nosso impacto</span>
@@ -164,7 +178,7 @@ export default function DonationPage() {
           </div>
         </section>
 
-        <section className="section donationHow">
+        <section className="section donationHow" id="como-atuamos">
           <div className="container">
             <div className="sectionHeader center">
               <span>Como atuamos</span>
@@ -200,7 +214,7 @@ export default function DonationPage() {
           </div>
         </section>
 
-        <section className="section donationAbout">
+        <section className="section donationAbout" id="quem-somos">
           <div className="container donationAboutGrid">
             <div>
               <span className="donationEyebrow">Sobre o Instituto</span>
@@ -218,7 +232,7 @@ export default function DonationPage() {
           </div>
         </section>
 
-        <section className="donationFaq section compact">
+        <section className="donationFaq section compact" id="faq">
           <div className="container donationFaqBox">
             <div className="sectionHeader center">
               <span>Dúvidas frequentes</span>

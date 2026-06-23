@@ -268,3 +268,11 @@ DONATION_LEADS_WEBHOOK_URL=https://sua-automacao-ou-planilha
 ```
 
 Se `DONATION_LEADS_WEBHOOK_URL` não estiver configurada, a API `/api/donation-leads` responde normalmente e informa que o webhook ainda não foi ativado.
+
+
+## v27 — Correção pixel-perfect da LP de Doação
+
+- Reestruturada a hero da página `/doacao` para seguir o protótipo enviado pelo Rubens: texto à esquerda, formulário acoplado no mesmo bloco e vídeo à direita.
+- Removido o header global da LP de doação e aplicado header próprio com navegação por âncoras: Impacto, Como Atuamos, Quem Somos e FAQ.
+- Ajustados espaçamentos, largura do formulário, escala dos campos e proporção do vídeo para evitar elementos extras e desalinhamento.
+- Mantido fluxo técnico da doação com API preparada para WhatsApp, e-mail e futuro webhook/planilha.

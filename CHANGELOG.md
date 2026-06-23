@@ -213,3 +213,11 @@
 - As imagens laterais agora preenchem de verdade a coluna direita, com mais presença visual.
 - Mantido o padrão texto à esquerda + imagem à direita no desktop.
 - Ajustado responsivo para empilhar com proporção correta no mobile.
+
+
+## v27 — Correção pixel-perfect da LP de Doação
+
+- Reestruturada a hero da página `/doacao` para seguir o protótipo enviado pelo Rubens: texto à esquerda, formulário acoplado no mesmo bloco e vídeo à direita.
+- Removido o header global da LP de doação e aplicado header próprio com navegação por âncoras: Impacto, Como Atuamos, Quem Somos e FAQ.
+- Ajustados espaçamentos, largura do formulário, escala dos campos e proporção do vídeo para evitar elementos extras e desalinhamento.
+- Mantido fluxo técnico da doação com API preparada para WhatsApp, e-mail e futuro webhook/planilha.

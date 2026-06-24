@@ -1,3 +1,14 @@
+
+## v35 — Checkout fake alinhado ao design da Doação
+
+- Reduzida a escala do título da página `/doacao/checkout`.
+- Ajustado o fundo do checkout para seguir a identidade visual da página de Doação.
+- Aplicado hero escuro institucional com imagem/overlay semelhante à LP de doação.
+- Reorganizado o layout do checkout para parecer uma extensão natural da página `/doacao`.
+- Refinados cards, resumo da doação, QR Code fake e formulário completo.
+- Mantido o fluxo fake sem processamento real de pagamento.
+- Mantido payload para `/api/donation-leads`.
+
 # Changelog
 
 ## v34 — Checkout fake de doação

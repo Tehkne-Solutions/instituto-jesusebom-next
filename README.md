@@ -333,3 +333,7 @@ Exemplos:
 /doacao/checkout?modo=anonimo&valor=50&tipo=unica
 /doacao/checkout?modo=dados&valor=100&tipo=mensal
 ```
+
+### v35 — Checkout fake no padrão visual da página de Doação
+
+A rota `/doacao/checkout` foi refinada para seguir o design da LP de doação: fundo escuro institucional, título menor, card de checkout mais limpo, QR Code fake para doação anônima e formulário completo para doação com dados. Nenhum pagamento real é processado; o fluxo apenas prepara payload para integração futura.

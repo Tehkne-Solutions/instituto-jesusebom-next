@@ -6808,3 +6808,272 @@ body {
     border-radius: 16px;
   }
 }
+
+
+/* V35 — Checkout fake alinhado ao design da página de Doação */
+.checkoutPage.checkoutFakePage {
+  min-height: 100vh;
+  background: #f6fbf7;
+}
+
+.checkoutPage .checkoutHero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(92px, 9vw, 128px) 0 clamp(72px, 8vw, 104px);
+  background: #063f2c;
+  isolation: isolate;
+}
+
+.checkoutPage .checkoutHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2200&q=82")
+    center / cover no-repeat;
+  opacity: .34;
+  transform: scale(1.02);
+  z-index: -2;
+}
+
+.checkoutPage .checkoutHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 42, 28, .74);
+  z-index: -1;
+}
+
+.checkoutPage .checkoutHeaderMini,
+.checkoutPage .checkoutFakeShell {
+  position: relative;
+  z-index: 1;
+}
+
+.checkoutPage .checkoutHeaderMini {
+  max-width: 1120px;
+  margin-bottom: clamp(22px, 3vw, 36px);
+}
+
+.checkoutPage .checkoutBack,
+.checkoutPage .checkoutSafe {
+  min-height: 40px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #fff;
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+}
+
+.checkoutPage .checkoutBack:hover {
+  background: rgba(255,255,255,.16);
+  transform: translateY(-1px);
+}
+
+.checkoutPage .checkoutSafe {
+  color: #d9ffc7;
+}
+
+.checkoutPage .checkoutFakeShell {
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(380px, .68fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+.checkoutPage .checkoutCopy {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.checkoutPage .checkoutCopy .donationEyebrow {
+  color: var(--yellow);
+  letter-spacing: .16em;
+}
+
+.checkoutPage .checkoutCopy h1 {
+  max-width: 600px;
+  margin: 12px 0 18px;
+  color: #fff;
+  font-size: clamp(34px, 4.15vw, 54px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-shadow: 0 16px 38px rgba(0,0,0,.28);
+}
+
+.checkoutPage .checkoutCopy p {
+  max-width: 570px;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.7;
+}
+
+.checkoutPage .checkoutSummary {
+  max-width: 620px;
+  margin-top: clamp(24px, 3.2vw, 38px);
+  gap: 10px;
+}
+
+.checkoutPage .checkoutSummary div {
+  min-height: 82px;
+  padding: 14px 15px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(14px);
+}
+
+.checkoutPage .checkoutSummary small {
+  color: rgba(255,255,255,.68);
+}
+
+.checkoutPage .checkoutSummary strong {
+  color: #fff;
+  font-size: 16px;
+}
+
+.checkoutPage .checkoutFakeCard {
+  width: 100%;
+  max-width: 460px;
+  justify-self: end;
+  padding: clamp(22px, 2.4vw, 30px);
+  border-radius: 28px;
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(255,255,255,.74);
+  box-shadow: 0 28px 80px rgba(0, 23, 14, .26);
+}
+
+.checkoutPage .checkoutModeTabs {
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.checkoutPage .checkoutModeTabs button {
+  min-height: 40px;
+  font-size: 13px;
+}
+
+.checkoutPage .checkoutIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+
+.checkoutPage .fakeQrFlow,
+.checkoutPage .checkoutFullForm {
+  gap: 12px;
+}
+
+.checkoutPage .fakeQrFlow h2,
+.checkoutPage .checkoutFullForm h2 {
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.checkoutPage .fakeQrFlow p,
+.checkoutPage .checkoutFullForm p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.checkoutPage .fakeQrBox {
+  width: min(230px, 70vw);
+  padding: 14px;
+  gap: 3px;
+  border-radius: 22px;
+  margin: 8px auto;
+}
+
+.checkoutPage .fakePixInfo {
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.checkoutPage .fakePixInfo strong {
+  font-size: 23px;
+}
+
+.checkoutPage .checkoutFullForm label {
+  gap: 6px;
+  font-size: 11px;
+}
+
+.checkoutPage .checkoutFullForm input,
+.checkoutPage .checkoutFullForm textarea {
+  padding: 11px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.checkoutPage .checkoutFullForm textarea {
+  min-height: 78px;
+}
+
+.checkoutPage .checkoutFieldGrid {
+  gap: 10px;
+}
+
+.checkoutPage .donationSubmit,
+.checkoutPage .checkoutGhostButton {
+  min-height: 46px;
+}
+
+@media (max-width: 980px) {
+  .checkoutPage .checkoutHero {
+    padding-top: 84px;
+  }
+
+  .checkoutPage .checkoutFakeShell {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .checkoutPage .checkoutFakeCard {
+    justify-self: stretch;
+    max-width: none;
+  }
+
+  .checkoutPage .checkoutSummary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .checkoutPage .checkoutHero {
+    padding: 76px 0 64px;
+  }
+
+  .checkoutPage .checkoutHeaderMini {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .checkoutPage .checkoutBack,
+  .checkoutPage .checkoutSafe {
+    justify-content: center;
+  }
+
+  .checkoutPage .checkoutCopy h1 {
+    font-size: clamp(32px, 10vw, 42px);
+    letter-spacing: -0.035em;
+  }
+
+  .checkoutPage .checkoutSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutPage .checkoutFieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutPage .checkoutFakeCard {
+    border-radius: 24px;
+  }
+}

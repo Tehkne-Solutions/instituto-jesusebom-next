@@ -113,8 +113,8 @@ export default function DonationPage() {
 
             <div className="donationVideoCard" aria-label="Vídeo institucional demonstrativo">
               <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
-                alt="Capa demonstrativa do vídeo do Pablo, fundador"
+                src="/assets/doacao-hero-video-pablo-prototipo.jpg"
+                alt="Thumbnail do vídeo do Pablo, fundador, baseada no protótipo aprovado"
               />
               <div className="videoOverlay">
                 <span className="playCircle"><Play size={34} fill="currentColor" /></span>

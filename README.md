@@ -342,3 +342,7 @@ A rota `/doacao/checkout` foi refinada para seguir o design da LP de doação: f
 ## v36 — Doação mobile + fundador
 
 A página `/doacao` recebeu ajustes de mobile, card de vídeo do Pablo/fundador e uma seção institucional preparada para o vídeo oficial.
+
+
+## v37
+- Atualizada a thumbnail do vídeo da hero da página de doação para usar a imagem do Pablo conforme o protótipo.

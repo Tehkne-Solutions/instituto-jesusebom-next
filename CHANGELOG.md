@@ -305,3 +305,7 @@
 - Mantido o header global oculto na LP de doação.
 - Adicionado fundo verde translúcido com blur sutil para preservar legibilidade sobre a hero e seções claras.
 - Ajustado espaçamento superior da hero para evitar sobreposição do conteúdo pelo header fixo.
+
+
+## v37
+- Atualizada a thumbnail do vídeo da hero da página de doação para usar a imagem do Pablo conforme o protótipo.

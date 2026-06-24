@@ -7077,3 +7077,295 @@ body {
     border-radius: 24px;
   }
 }
+
+
+/* V36 — Doação: seção Pablo/fundador + mobile mais limpo
+   - Header da LP compacto no mobile.
+   - Hero mobile sem sobreposição do header.
+   - Vídeo inicial identificado como mensagem do Pablo, fundador.
+   - Nova seção editorial dedicada ao fundador.
+*/
+.donationFounder {
+  padding-top: clamp(64px, 8vw, 112px);
+}
+
+.donationFounderGrid {
+  display: grid;
+  grid-template-columns: minmax(360px, .85fr) minmax(0, .75fr);
+  gap: clamp(34px, 6vw, 76px);
+  align-items: center;
+  padding: clamp(28px, 4.4vw, 56px);
+  border-radius: 34px;
+  background: linear-gradient(135deg, rgba(232,244,236,.98), rgba(255,255,255,.98));
+  border: 1px solid rgba(223,231,226,.9);
+  box-shadow: 0 24px 76px rgba(12, 53, 31, .08);
+}
+
+.donationFounderVideo {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--green-deep);
+  box-shadow: 0 24px 70px rgba(12,53,31,.14);
+}
+
+.donationFounderVideo img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  opacity: .88;
+}
+
+.donationFounderVideo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4,34,23,.02), rgba(4,34,23,.78));
+}
+
+.donationFounderVideo .playCircle {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: 0;
+}
+
+.donationFounderVideo div {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  z-index: 2;
+  color: #fff;
+}
+
+.donationFounderVideo strong {
+  display: block;
+  color: #ffcd2c;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.donationFounderVideo small {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255,255,255,.84);
+  font-weight: 800;
+}
+
+.donationFounderCopy h2 {
+  margin: 12px 0 16px;
+  max-width: 560px;
+  color: var(--green-deep);
+  font-size: clamp(34px, 4.2vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.donationFounderCopy p {
+  margin: 0 0 18px;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.72;
+}
+
+.donationFounderCopy .btn {
+  margin-top: 8px;
+}
+
+/* Mobile da LP Doação — reduzir ruído e eliminar o header cobrindo o título */
+@media (max-width: 760px) {
+  .donationPrototypePage .donationLpHeader {
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    min-height: 68px !important;
+    height: 68px !important;
+    padding: 8px 18px !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    background: rgba(4, 52, 32, .92) !important;
+  }
+
+  .donationPrototypePage .donationLpHeader .donationLpNav {
+    display: none !important;
+  }
+
+  .donationPrototypePage .donationLpHeader .donationLpLogo,
+  .donationPrototypePage .donationLpHeader .donationLpLogo .logoMark {
+    width: 84px !important;
+    max-width: 84px !important;
+  }
+
+  .donationPrototypePage .donationLpHeader .donationLpDonate {
+    min-height: 40px !important;
+    padding: 0 18px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel {
+    min-height: auto !important;
+    padding-top: 88px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixelGrid {
+    width: min(100% - 28px, 430px) !important;
+    max-width: 430px !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 22px 0 42px !important;
+    min-height: auto !important;
+  }
+
+  .donationPrototypePage .donationHeroLeft {
+    max-width: 100% !important;
+    width: 100% !important;
+    gap: 18px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationEyebrow {
+    font-size: 10px !important;
+    letter-spacing: .16em !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationHeroCopy h1 {
+    max-width: 100% !important;
+    margin: 8px 0 14px !important;
+    font-size: clamp(40px, 12vw, 52px) !important;
+    line-height: .94 !important;
+    letter-spacing: -.048em !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationHeroCopy h1 span,
+  .donationPrototypePage .donationHeroPixel .donationHeroCopy h1 strong {
+    white-space: normal !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationHeroCopy p {
+    max-width: 330px !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationHeroFormCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    border-radius: 22px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationFormCompact {
+    padding: 12px !important;
+    gap: 9px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationModeTabs {
+    gap: 6px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationModeTabs button {
+    min-height: 42px !important;
+    font-size: 12px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .amountGrid {
+    grid-template-columns: repeat(4, minmax(76px, 1fr)) !important;
+    overflow-x: auto !important;
+    padding-bottom: 2px !important;
+    scrollbar-width: none !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .amountGrid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationSubmit {
+    min-height: 46px !important;
+    font-size: 13px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationVideoCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+    justify-self: stretch !important;
+    border-radius: 22px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationVideoCard img {
+    object-position: center top !important;
+  }
+
+  .storyVideoGrid,
+  .donationActionGrid,
+  .donationReasonGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .storyVideoCard {
+    min-height: 280px;
+  }
+
+  .storyVideoCard img {
+    min-height: 280px;
+  }
+
+  .donationImpactGrid,
+  .donationAboutGrid,
+  .donationFounderGrid {
+    grid-template-columns: 1fr !important;
+    padding: 22px !important;
+    border-radius: 26px !important;
+  }
+
+  .donationFounderVideo,
+  .donationFounderVideo img {
+    min-height: 340px !important;
+  }
+
+  .donationFounderVideo {
+    order: 2;
+  }
+
+  .donationFounderCopy {
+    order: 1;
+  }
+
+  .donationFounderCopy h2 {
+    font-size: clamp(32px, 9vw, 42px) !important;
+  }
+
+  .donationStatsGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .donationPrototypePage .donationHeroPixel .donationHeroCopy h1 {
+    font-size: clamp(38px, 11.8vw, 48px) !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationLpDonate {
+    padding: 0 14px !important;
+  }
+
+  .donationPrototypePage .donationHeroPixel .donationVideoCard {
+    height: 380px !important;
+    min-height: 380px !important;
+    max-height: 380px !important;
+  }
+}

@@ -1,4 +1,14 @@
 
+## v36 — Mobile da doação, fundador e vídeo do Pablo
+
+- Ajustado o mobile da página `/doacao` para evitar sobreposição do header sticky sobre a hero.
+- Header da LP no mobile foi compactado, escondendo navegação e mantendo logo + CTA.
+- Hero mobile agora mantém título, subtítulo e formulário em fluxo mais limpo.
+- Vídeo inicial da LP agora é identificado como mensagem do Pablo, fundador.
+- Adicionada seção editorial sobre Pablo, fundador, preparada para receber o vídeo oficial.
+- Mantido checkout fake, payload e modal de sucesso.
+
+
 ## v35 — Checkout fake alinhado ao design da Doação
 
 - Reduzida a escala do título da página `/doacao/checkout`.

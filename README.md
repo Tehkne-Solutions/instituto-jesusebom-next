@@ -337,3 +337,8 @@ Exemplos:
 ### v35 — Checkout fake no padrão visual da página de Doação
 
 A rota `/doacao/checkout` foi refinada para seguir o design da LP de doação: fundo escuro institucional, título menor, card de checkout mais limpo, QR Code fake para doação anônima e formulário completo para doação com dados. Nenhum pagamento real é processado; o fluxo apenas prepara payload para integração futura.
+
+
+## v36 — Doação mobile + fundador
+
+A página `/doacao` recebeu ajustes de mobile, card de vídeo do Pablo/fundador e uma seção institucional preparada para o vídeo oficial.

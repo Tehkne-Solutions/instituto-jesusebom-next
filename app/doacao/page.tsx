@@ -114,12 +114,12 @@ export default function DonationPage() {
             <div className="donationVideoCard" aria-label="Vídeo institucional demonstrativo">
               <img
                 src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
-                alt="Crianças sorrindo em ação social"
+                alt="Capa demonstrativa do vídeo do Pablo, fundador"
               />
               <div className="videoOverlay">
                 <span className="playCircle"><Play size={34} fill="currentColor" /></span>
-                <strong>A palavra é que transforma.</strong>
-                <small>Vídeo institucional / depoimento</small>
+                <strong>Pablo, fundador</strong>
+                <small>Vídeo institucional / mensagem</small>
               </div>
             </div>
           </div>
@@ -153,6 +153,35 @@ export default function DonationPage() {
                   <strong>{label}</strong>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+
+        <section className="section donationFounder" id="pablo-fundador">
+          <div className="container donationFounderGrid">
+            <div className="donationFounderVideo" aria-label="Mensagem em vídeo do Pablo, fundador">
+              <img
+                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1100&q=85"
+                alt="Capa demonstrativa para o vídeo do Pablo, fundador"
+              />
+              <span className="playCircle"><Play size={30} fill="currentColor" /></span>
+              <div>
+                <strong>Mensagem do Pablo</strong>
+                <small>Fundador do Instituto Jesus é Bom</small>
+              </div>
+            </div>
+            <div className="donationFounderCopy">
+              <span className="donationEyebrow">Fundador</span>
+              <h2>Pablo e a missão que move o Instituto</h2>
+              <p>
+                Uma seção dedicada ao fundador para apresentar, em vídeo, a visão humana por trás do Instituto
+                Jesus é Bom e aproximar doadores da história real de cuidado, fé, educação e esperança.
+              </p>
+              <p>
+                O vídeo oficial do Pablo será conectado aqui assim que o material final for enviado pela equipe.
+              </p>
+              <a className="btn lime" href="#doar">Quero apoiar essa missão</a>
             </div>
           </div>
         </section>

@@ -253,3 +253,11 @@
 - Formulário mantido abaixo do texto, com proporção compacta e alinhamento ao bloco esquerdo.
 - Card de vídeo reposicionado para acompanhar visualmente a composição do protótipo sem esticar de forma artificial.
 - Mantido payload do formulário e modal de confirmação.
+
+
+## v32 — Header sticky na página de doação
+
+- Header próprio da LP `/doacao` agora fica fixo/sticky durante o scroll.
+- Mantido o header global oculto na LP de doação.
+- Adicionado fundo verde translúcido com blur sutil para preservar legibilidade sobre a hero e seções claras.
+- Ajustado espaçamento superior da hero para evitar sobreposição do conteúdo pelo header fixo.

@@ -299,3 +299,8 @@ A página `/doacao` recebeu ajuste fino de hero para aproximar a composição do
 ### v31 — Hero da LP de Doação
 
 A hero da rota `/doacao` foi refinada para aproximar o título, formulário e vídeo do protótipo enviado pelo Rubens. O ajuste atua apenas em CSS e preserva o payload do formulário.
+
+
+### v32 — Header sticky na página de doação
+
+A rota `/doacao` mantém header próprio da landing page e agora esse header permanece fixo durante o scroll, com fundo verde translúcido e blur sutil para garantir legibilidade.

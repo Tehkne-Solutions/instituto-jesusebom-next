@@ -317,3 +317,19 @@ A página `/doacao` foi refinada para seguir melhor o protótipo enviado pelo Ru
 - payload preservado para futura integração.
 
 Relatório: `docs/RELATORIO-HERO-DOACAO-V33.md`.
+
+## v34 — Checkout fake de doação
+
+A rota `/doacao/checkout` foi preparada como uma simulação visual de checkout:
+
+- `modo=anonimo`: mostra QR Code demonstrativo e cópia de código PIX fake.
+- `modo=dados`: mostra formulário completo do doador.
+- O envio monta payload e chama `/api/donation-leads`.
+- Nenhum pagamento real é processado nesta versão.
+
+Exemplos:
+
+```txt
+/doacao/checkout?modo=anonimo&valor=50&tipo=unica
+/doacao/checkout?modo=dados&valor=100&tipo=mensal
+```

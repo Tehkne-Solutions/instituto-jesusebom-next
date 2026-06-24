@@ -1,5 +1,17 @@
 # Changelog
 
+## v34 — Checkout fake de doação
+
+- Criada experiência de checkout fake em `/doacao/checkout`.
+- Fluxo da hero passa a enviar o usuário para o checkout demonstrativo.
+- Doação anônima exibe QR Code demonstrativo e opção de copiar código PIX fake.
+- Doar agora exibe formulário completo para dados do doador.
+- Payload continua sendo enviado para `/api/donation-leads`.
+- Mantida mensagem de sucesso no padrão visual do site.
+- Preparado para futura integração real com checkout, WhatsApp, e-mail, webhook ou planilha.
+- Mantido ZIP sem `node_modules` e sem `package-lock.json`.
+
+
 ## v33 — Doação hero pixel: form limpo e vídeo full height
 
 - Ajustada a hero da página `/doacao` para ficar mais fiel ao protótipo aprovado.

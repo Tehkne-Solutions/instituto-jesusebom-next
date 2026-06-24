@@ -6504,3 +6504,307 @@ body {
     max-height: 460px !important;
   }
 }
+
+
+/* V34 — Checkout fake de doação */
+.checkoutFakePage {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(153, 202, 60, .13), transparent 24rem),
+    radial-gradient(circle at 92% 72%, rgba(45, 143, 72, .11), transparent 24rem),
+    #f7faf7;
+}
+
+.checkoutHero {
+  padding-top: clamp(40px, 6vw, 74px);
+}
+
+.checkoutHeaderMini {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.checkoutBack,
+.checkoutSafe {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.checkoutBack {
+  color: var(--green-deep);
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(12, 53, 31, .06);
+}
+
+.checkoutSafe {
+  color: var(--green-deep);
+  background: #eaf6ee;
+  border: 1px solid rgba(45, 143, 72, .18);
+}
+
+.checkoutFakeShell {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(420px, .92fr);
+  gap: clamp(24px, 4vw, 54px);
+  align-items: stretch;
+}
+
+.checkoutCopy,
+.checkoutFakeCard {
+  border-radius: 34px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(223,231,226,.88);
+  box-shadow: 0 24px 76px rgba(12, 53, 31, .09);
+}
+
+.checkoutCopy {
+  padding: clamp(30px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkoutCopy h1 {
+  max-width: 620px;
+  margin: 12px 0 18px;
+  color: var(--green-deep);
+  font-size: clamp(42px, 5.4vw, 74px);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+
+.checkoutCopy p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.75;
+}
+
+.checkoutSummary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: clamp(28px, 4vw, 46px);
+}
+
+.checkoutSummary div {
+  min-height: 96px;
+  padding: 16px;
+  border-radius: 20px;
+  background: #f4faf6;
+  border: 1px solid rgba(45, 143, 72, .13);
+}
+
+.checkoutSummary small {
+  display: block;
+  color: var(--muted);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.checkoutSummary strong {
+  color: var(--green-deep);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.checkoutFakeCard {
+  padding: clamp(22px, 3.4vw, 38px);
+}
+
+.checkoutModeTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #edf5ef;
+  margin-bottom: 24px;
+}
+
+.checkoutModeTabs button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--green-deep);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.checkoutModeTabs button.active {
+  color: white;
+  background: var(--green);
+  box-shadow: 0 12px 28px rgba(45,143,72,.24);
+}
+
+.checkoutIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  background: #e9f7ed;
+  margin-bottom: 16px;
+}
+
+.fakeQrFlow,
+.checkoutFullForm {
+  display: grid;
+  gap: 14px;
+}
+
+.fakeQrFlow h2,
+.checkoutFullForm h2 {
+  margin: 0;
+  color: var(--green-deep);
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+
+.fakeQrFlow p,
+.checkoutFullForm p {
+  margin: 0 0 6px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.fakeQrBox {
+  width: min(280px, 78vw);
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 4px;
+  padding: 18px;
+  border-radius: 28px;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: inset 0 0 0 10px #f5faf6, 0 18px 48px rgba(12,53,31,.08);
+  margin: 10px auto;
+}
+
+.fakeQrBox span {
+  border-radius: 4px;
+  background: #edf5ef;
+}
+
+.fakeQrBox span.on {
+  background: var(--green-deep);
+}
+
+.fakePixInfo {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #fff8df;
+  border: 1px solid rgba(248,197,45,.38);
+  color: var(--green-deep);
+  text-align: center;
+}
+
+.fakePixInfo strong {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.fakePixInfo span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.checkoutGhostButton {
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(45,143,72,.25);
+  background: white;
+  color: var(--green-deep);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.checkoutFullForm label {
+  display: grid;
+  gap: 8px;
+  color: var(--green-deep);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.checkoutFullForm input,
+.checkoutFullForm textarea {
+  width: 100%;
+  border: 1px solid #d5e4dc;
+  border-radius: 14px;
+  background: white;
+  color: var(--ink);
+  outline: none;
+  padding: 13px 14px;
+  font-weight: 700;
+}
+
+.checkoutFullForm textarea {
+  resize: vertical;
+  min-height: 92px;
+}
+
+.checkoutFieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Compatibilidade entre o form compacto da hero e o novo checkout */
+.donationFormCompact .donationSecurity {
+  min-height: 32px;
+}
+
+@media (max-width: 980px) {
+  .checkoutFakeShell {
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutSummary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .checkoutHeaderMini {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .checkoutBack,
+  .checkoutSafe {
+    justify-content: center;
+  }
+
+  .checkoutFieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutModeTabs {
+    border-radius: 22px;
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutModeTabs button {
+    border-radius: 16px;
+  }
+}

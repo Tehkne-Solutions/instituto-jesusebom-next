@@ -1,3 +1,14 @@
+# Changelog
+
+## v33 — Doação hero pixel: form limpo e vídeo full height
+
+- Ajustada a hero da página `/doacao` para ficar mais fiel ao protótipo aprovado.
+- Formulário da primeira dobra simplificado, removendo campos pessoais da hero.
+- Campos do doador movidos para etapa modal, preservando payload.
+- Vídeo da direita ajustado para preencher a altura visual do bloco esquerdo.
+- Título da hero reduzido e mantido em três linhas no desktop.
+- Criado relatório técnico em `docs/RELATORIO-HERO-DOACAO-V33.md`.
+
 ## v31 — Ajuste fino da hero da LP de Doação
 
 - Corrigida a escala do título da hero para ficar próximo ao protótipo.

@@ -68,7 +68,8 @@ function buildDonationPayload(state: DonationFormState) {
 
 export function DonationForm() {
   const [state, setState] = useState<DonationFormState>(initialState);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [successOpen, setSuccessOpen] = useState(false);
   const [saving, setSaving] = useState(false);
 
   const payloadPreview = useMemo(() => buildDonationPayload(state), [state]);
@@ -77,8 +78,13 @@ export function DonationForm() {
     setState((current) => ({ ...current, [key]: value }));
   }
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function openDetailsStep(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setDetailsOpen(true);
+  }
+
+  async function handlePayloadSubmit(event?: React.FormEvent<HTMLFormElement>) {
+    event?.preventDefault();
     setSaving(true);
 
     const payload = buildDonationPayload(state);
@@ -94,13 +100,14 @@ export function DonationForm() {
       // Payload já foi montado no frontend. A integração real será conectada depois.
     } finally {
       setSaving(false);
-      setModalOpen(true);
+      setDetailsOpen(false);
+      setSuccessOpen(true);
     }
   }
 
   return (
     <>
-      <form className="donationForm" onSubmit={handleSubmit}>
+      <form className="donationForm donationFormCompact" onSubmit={openDetailsStep}>
         <div className="donationModeTabs" role="tablist" aria-label="Tipo de doação">
           <button
             type="button"
@@ -144,75 +151,104 @@ export function DonationForm() {
           ))}
         </div>
 
-        {!state.anonymous && (
-          <div className="donorFields">
-            <label>
-              Nome completo
-              <input
-                value={state.name}
-                onChange={(event) => update("name", event.target.value)}
-                placeholder="Seu nome"
-                required={!state.anonymous}
-              />
-            </label>
-            <label>
-              WhatsApp
-              <input
-                value={state.whatsapp}
-                onChange={(event) => update("whatsapp", event.target.value)}
-                placeholder="(21) 00000-0000"
-                required={!state.anonymous}
-              />
-            </label>
-            <label>
-              E-mail
-              <input
-                value={state.email}
-                onChange={(event) => update("email", event.target.value)}
-                placeholder="seuemail@exemplo.com"
-                type="email"
-              />
-            </label>
-            <label>
-              Cidade / Estado
-              <input
-                value={state.city}
-                onChange={(event) => update("city", event.target.value)}
-                placeholder="Rio de Janeiro/RJ"
-              />
-            </label>
-          </div>
-        )}
-
-        <label className="fullField">
-          Mensagem opcional
-          <textarea
-            value={state.message}
-            onChange={(event) => update("message", event.target.value)}
-            placeholder="Conte como deseja apoiar ou deixe uma observação para a equipe."
-            rows={3}
-          />
-        </label>
-
-        <button className="donationSubmit" type="submit" disabled={saving}>
+        <button className="donationSubmit" type="submit">
           <Heart size={18} />
-          {saving ? "Preparando payload..." : "Quero transformar vidas"}
+          Quero transformar vidas
           <ArrowRight size={18} />
         </button>
 
         <div className="donationSecurity">
-          <span><ShieldCheck size={15} /> Payload preparado para integração.</span>
+          <span><ShieldCheck size={15} /> Pagamento 100% seguro</span>
           <span>Sua doação faz a diferença hoje.</span>
         </div>
       </form>
 
-      {modalOpen && (
+      {detailsOpen && (
+        <div className="donationModalBackdrop" role="presentation">
+          <div className="donationModal donationDetailsModal" role="dialog" aria-modal="true" aria-labelledby="donation-details-title">
+            <button
+              className="donationModalClose"
+              type="button"
+              onClick={() => setDetailsOpen(false)}
+              aria-label="Fechar formulário"
+            >
+              <X size={18} />
+            </button>
+
+            <span className="donationModalIcon"><Heart size={30} fill="currentColor" /></span>
+            <h2 id="donation-details-title">Complete sua intenção de doação</h2>
+            <p>
+              Por enquanto vamos apenas preparar o payload para a equipe finalizar a integração.
+            </p>
+
+            <form className="donationDetailsForm" onSubmit={handlePayloadSubmit}>
+              {!state.anonymous && (
+                <div className="donorFields">
+                  <label>
+                    Nome completo
+                    <input
+                      value={state.name}
+                      onChange={(event) => update("name", event.target.value)}
+                      placeholder="Seu nome"
+                      required={!state.anonymous}
+                    />
+                  </label>
+                  <label>
+                    WhatsApp
+                    <input
+                      value={state.whatsapp}
+                      onChange={(event) => update("whatsapp", event.target.value)}
+                      placeholder="(21) 00000-0000"
+                      required={!state.anonymous}
+                    />
+                  </label>
+                  <label>
+                    E-mail
+                    <input
+                      value={state.email}
+                      onChange={(event) => update("email", event.target.value)}
+                      placeholder="seuemail@exemplo.com"
+                      type="email"
+                    />
+                  </label>
+                  <label>
+                    Cidade / Estado
+                    <input
+                      value={state.city}
+                      onChange={(event) => update("city", event.target.value)}
+                      placeholder="Rio de Janeiro/RJ"
+                    />
+                  </label>
+                </div>
+              )}
+
+              <label className="fullField">
+                Mensagem opcional
+                <textarea
+                  value={state.message}
+                  onChange={(event) => update("message", event.target.value)}
+                  placeholder="Conte como deseja apoiar ou deixe uma observação para a equipe."
+                  rows={3}
+                />
+              </label>
+
+              <button className="donationSubmit" type="submit" disabled={saving}>
+                <Heart size={18} />
+                {saving ? "Preparando payload..." : "Enviar informações"}
+                <ArrowRight size={18} />
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {successOpen && (
         <div className="donationModalBackdrop" role="presentation">
           <div className="donationModal" role="dialog" aria-modal="true" aria-labelledby="donation-modal-title">
             <button
               className="donationModalClose"
               type="button"
-              onClick={() => setModalOpen(false)}
+              onClick={() => setSuccessOpen(false)}
               aria-label="Fechar mensagem"
             >
               <X size={18} />
@@ -223,7 +259,7 @@ export function DonationForm() {
             <small>
               O payload da intenção de doação já foi preparado para a integração definitiva.
             </small>
-            <button className="donationModalButton" type="button" onClick={() => setModalOpen(false)}>
+            <button className="donationModalButton" type="button" onClick={() => setSuccessOpen(false)}>
               Entendi
             </button>
           </div>

@@ -1,3 +1,11 @@
+## v31 — Ajuste fino da hero da LP de Doação
+
+- Corrigida a escala do título da hero para ficar próximo ao protótipo.
+- Removidas quebras visuais indesejadas, mantendo o título em 3 linhas no desktop.
+- Reajustado o vídeo da direita para não ficar fora do enquadro e não cortar agressivamente a imagem.
+- Reduzida a altura geral da hero para evitar sensação de bloco esticado.
+- Mantido o formulário abaixo do título/texto, conforme protótipo.
+
 ## v26 — LP de Doação alinhada ao protótipo Rubens
 
 - Hero da página `/doacao` realinhada ao protótipo: copy à esquerda, formulário central e vídeo à direita.

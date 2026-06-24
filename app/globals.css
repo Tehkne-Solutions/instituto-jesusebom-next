@@ -6030,3 +6030,199 @@ body {
     display: inline !important;
   }
 }
+
+
+/* V31 — Doação: correção pixel-perfect da hero baseada no protótipo Rubens
+   Objetivo: título em 3 linhas, form abaixo do texto e vídeo enquadrado sem cortes agressivos. */
+@media (min-width: 981px) {
+  .donationHeroPixel {
+    min-height: 690px !important;
+  }
+
+  .donationHeroPixel .donationLpHeader {
+    height: 74px !important;
+    max-width: 1120px !important;
+  }
+
+  .donationHeroPixel .donationLpLogo {
+    width: 118px !important;
+  }
+
+  .donationHeroPixel .donationLpLogo .logoMark {
+    width: 118px !important;
+  }
+
+  .donationHeroPixelGrid {
+    max-width: 1120px !important;
+    grid-template-columns: 430px 300px !important;
+    justify-content: center !important;
+    align-items: start !important;
+    gap: clamp(82px, 10vw, 138px) !important;
+    min-height: 560px !important;
+    padding-top: 10px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .donationHeroLeft {
+    max-width: 430px !important;
+    width: 430px !important;
+    gap: 18px !important;
+  }
+
+  .donationHeroPixel .donationEyebrow {
+    display: block !important;
+    margin-bottom: 10px !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    letter-spacing: .16em !important;
+  }
+
+  .donationHeroPixel .donationHeroCopy h1 {
+    display: grid !important;
+    max-width: 430px !important;
+    margin: 0 0 14px !important;
+    font-size: 54px !important;
+    line-height: .93 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .donationHeroPixel .donationHeroCopy h1 span,
+  .donationHeroPixel .donationHeroCopy h1 strong {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  .donationHeroPixel .donationHeroCopy h1 strong {
+    color: #f8c52d !important;
+  }
+
+  .donationHeroPixel .donationHeroCopy p {
+    max-width: 335px !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+  }
+
+  .donationHeroPixel .donationHeroFormCard {
+    width: 342px !important;
+    max-width: 342px !important;
+    margin-top: 0 !important;
+    border-radius: 18px !important;
+  }
+
+  .donationHeroPixel .donationForm {
+    padding: 12px 14px 11px !important;
+    gap: 8px !important;
+  }
+
+  .donationHeroPixel .donationModeTabs button {
+    min-height: 34px !important;
+    font-size: 11px !important;
+  }
+
+  .donationHeroPixel .currencyInput {
+    min-height: 36px !important;
+  }
+
+  .donationHeroPixel .amountGrid button {
+    min-height: 29px !important;
+  }
+
+  .donationHeroPixel .donorFields {
+    gap: 6px !important;
+  }
+
+  .donationHeroPixel .currencyInput input,
+  .donationHeroPixel .donorFields input,
+  .donationHeroPixel .fullField textarea {
+    font-size: 11px !important;
+    padding: 8px 9px !important;
+  }
+
+  .donationHeroPixel .fullField textarea {
+    min-height: 46px !important;
+  }
+
+  .donationHeroPixel .donationSubmit {
+    min-height: 38px !important;
+  }
+
+  .donationHeroPixel .donationSecurity {
+    font-size: 9.5px !important;
+    line-height: 1.2 !important;
+  }
+
+  .donationHeroPixel .donationVideoCard {
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 470px !important;
+    min-height: 470px !important;
+    margin-top: 88px !important;
+    justify-self: start !important;
+    align-self: start !important;
+    border-radius: 18px !important;
+    border: 2px solid #f5b91f !important;
+    overflow: hidden !important;
+  }
+
+  .donationHeroPixel .donationVideoCard img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  .donationHeroPixel .videoOverlay {
+    background: linear-gradient(180deg, rgba(5, 43, 30, .03) 0%, rgba(5, 43, 30, .12) 48%, rgba(5, 43, 30, .72) 100%) !important;
+  }
+
+  .donationHeroPixel .playCircle {
+    width: 66px !important;
+    height: 66px !important;
+  }
+
+  .donationHeroPixel .videoOverlay strong {
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 58px !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  .donationHeroPixel .videoOverlay small {
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 36px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .donationHeroPixel .donationHeroCopy h1 {
+    font-size: 56px !important;
+  }
+
+  .donationHeroPixelGrid {
+    grid-template-columns: 445px 310px !important;
+  }
+
+  .donationHeroLeft {
+    width: 445px !important;
+    max-width: 445px !important;
+  }
+
+  .donationHeroPixel .donationVideoCard {
+    width: 310px !important;
+    max-width: 310px !important;
+    height: 486px !important;
+    min-height: 486px !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .donationHeroPixel .donationHeroCopy h1 span,
+  .donationHeroPixel .donationHeroCopy h1 strong {
+    white-space: normal !important;
+  }
+}

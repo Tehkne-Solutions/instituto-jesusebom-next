@@ -294,3 +294,8 @@ A hero da página `/doacao` foi refinada para que o card de vídeo da direita ac
 ### v30 — Hero da doação ajustada
 
 A página `/doacao` recebeu ajuste fino de hero para aproximar a composição do protótipo aprovado: texto e formulário no bloco esquerdo, vídeo vertical à direita, quebras de título controladas e formulário compactado. O formulário continua apenas preparando/enviando o payload para `/api/donation-leads`.
+
+
+### v31 — Hero da LP de Doação
+
+A hero da rota `/doacao` foi refinada para aproximar o título, formulário e vídeo do protótipo enviado pelo Rubens. O ajuste atua apenas em CSS e preserva o payload do formulário.

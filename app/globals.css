@@ -1217,17 +1217,17 @@ main { overflow: hidden; }
 
 .mosaicMain,
 .mosaicSmall,
-.mosaicCard {
-  position: absolute;
-  border-radius: 30px;
-  box-shadow: var(--shadow);
-}
-
 .mosaicMain {
-  inset: 0 96px 78px 0;
-  background: url('/assets/foto-criancas-cuidado-real.jpg') center/cover;
+  background-image: url('/assets/instituto/home/comunidade-evento-coletivo.jpg') !important;
 }
 
+.mosaicSmall {
+  background-image: url('/assets/instituto/paginas/comunidade-criancas-reunidas.jpg') !important;
+}
+
+.schoolCampaignImage {
+  background-image: url('/assets/instituto/programas/educacao-professora-crianca.jpg') !important;
+}
 .mosaicSmall {
   right: 0;
   bottom: 0;
@@ -3790,7 +3790,7 @@ body {
 }
 
 .heroFullBg {
-  background: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat !important;
+  background: url('/assets/instituto/home/comunidade-evento-coletivo.jpg') center/cover no-repeat !important;
 }
 
 .heroFullBg::after {
@@ -4092,15 +4092,15 @@ body {
 
 /* Substituir mosaicos locais por imagens de preenchimento melhores */
 .mosaicMain {
-  background-image: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85') !important;
+  background-image: url('/assets/instituto/home/comunidade-evento-coletivo.jpg') !important;
 }
 
 .mosaicSmall {
-  background-image: url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=85') !important;
+  background-image: url('/assets/instituto/paginas/comunidade-criancas-reunidas.jpg') !important;
 }
 
 .schoolCampaignImage {
-  background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=85') !important;
+  background-image: url('/assets/instituto/programas/educacao-professora-crianca.jpg') !important;
 }
 
 /* Remover qualquer pseudo-elemento de fade remanescente */
@@ -4405,7 +4405,7 @@ body {
   color: white;
   background:
     linear-gradient(rgba(5, 52, 32, .76), rgba(5, 52, 32, .76)),
-    url("https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+    url("/assets/instituto/doacao/voluntaria-mobilizacao-megafone.jpg") center/cover no-repeat;
 }
 
 .donationHero::after {
@@ -5090,7 +5090,7 @@ body {
   min-height: calc(100vh - 126px);
   background:
     linear-gradient(90deg, rgba(5, 52, 32, .86) 0%, rgba(5, 52, 32, .72) 43%, rgba(5, 52, 32, .62) 100%),
-    url("https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+    url("/assets/instituto/doacao/voluntaria-mobilizacao-megafone.jpg") center/cover no-repeat;
 }
 
 .donationHeroGrid {
@@ -5285,7 +5285,7 @@ body {
   min-height: 720px !important;
   color: #ffffff;
   overflow: hidden;
-  background-image: url("https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1800&q=85") !important;
+  background-image: url("/assets/instituto/doacao/voluntaria-mobilizacao-megafone.jpg") !important;
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -6829,7 +6829,7 @@ body {
   position: absolute;
   inset: 0;
   background:
-    url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2200&q=82")
+    url("/assets/instituto/home/comunidade-evento-coletivo.jpg")
     center / cover no-repeat;
   opacity: .34;
   transform: scale(1.02);

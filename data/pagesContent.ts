@@ -195,7 +195,7 @@ export const pagesContent: Record<string, ContentPage> = {
         "Alguns projetos fortalecem a aprendizagem. Outros desenvolvem disciplina, autoestima e convivência. Outros oferecem escuta, proteção, alimentação e acolhimento. Juntos, eles formam uma rede de cuidado integral."
       ],
       highlight: "Cada projeto é uma porta. Cada criança é uma história. Cada oportunidade pode mudar um futuro.",
-      image: institutoImages.programas.educacaoProfessora
+      image: institutoImages.programas.ensinoBilingue
     },
     sections: [
       {
@@ -226,7 +226,7 @@ export const pagesContent: Record<string, ContentPage> = {
       {
         eyebrow: "Cuidado, Acolhimento e Proteção",
         title: "Cada criança merece ser vista, ouvida, protegida e amada",
-        image: institutoImages.programas.educacaoProfessora,
+        image: institutoImages.paginas.acolhimentoCrianca,
         cards: [
           { title: "Atendimento Psicológico", description: "Escuta, acolhimento e cuidado emocional para crianças e adolescentes.", icon: HeartHandshake },
           { title: "Apoio Psicopedagógico", description: "Acompanhamento das dificuldades de aprendizagem e fortalecimento do desenvolvimento.", icon: BookOpen },
@@ -281,7 +281,7 @@ export const pagesContent: Record<string, ContentPage> = {
           "Mais crianças atendidas significam mais aulas, mais alimentação, mais materiais, mais organização, mais profissionais, mais voluntários e mais cuidado diário."
         ],
         highlight: "A obra cresceu. A responsabilidade também.",
-        image: institutoImages.historias.criancaAcaoEvento
+        image: institutoImages.doacao.apoioFamilias
       },
       {
         eyebrow: "Festa de Páscoa",
@@ -289,7 +289,7 @@ export const pagesContent: Record<string, ContentPage> = {
         text: [
           "A Festa de Páscoa é uma das grandes ações sociais do Instituto Jesus é Bom. Mais do que um evento, ela representa um movimento de fé, alegria, cuidado, alimentação e amor para milhares de vidas."
         ],
-        image: institutoImages.doacao.refeicaoComunidade,
+        image: institutoImages.doacao.sacolasCestas,
         cards: [
           { title: "500 cestas básicas distribuídas", description: "Ação direta de cuidado e apoio às famílias.", icon: Gift },
           { title: "3 mil kits de Páscoa entregues", description: "Kits entregues em uma grande mobilização comunitária.", icon: HandHeart },
@@ -340,6 +340,15 @@ export const pagesContent: Record<string, ContentPage> = {
     heroImage: institutoImages.doacao.voluntariaMobilizacao,
     primaryCta: { label: "Doe agora", href: "/doacao" },
     secondaryCta: { label: "Falar pelo WhatsApp", href: "https://wa.me/5521973468327" },
+    intro: {
+      eyebrow: "Introdução",
+      title: "Seu apoio faz a diferença todos os dias",
+      text: [
+        "Doar ao Instituto Jesus é Bom é ajudar a manter educação, alimentação, esportes, cuidados emocionais e apoio a famílias.",
+        "A sua contribuição garante continuidade aos projetos e cria oportunidades reais para crianças e adolescentes da comunidade."
+      ],
+      image: institutoImages.doacao.refeicaoComunidade
+    },
     suggestedValues: [
       { title: "R$ 30", description: "Ajuda a manter materiais, atividades e pequenas necessidades da rotina." },
       { title: "R$ 50", description: "Apoia alimentação, cuidado e acolhimento das crianças." },
@@ -430,7 +439,7 @@ export const pagesContent: Record<string, ContentPage> = {
         "Ser voluntário é participar dessa transformação com aquilo que você tem: tempo, talento, conhecimento, experiência, disposição e amor ao próximo."
       ],
       highlight: "Existe uma forma de servir que combina com você.",
-      image: institutoImages.doacao.voluntarioDoacoes
+      image: institutoImages.doacao.voluntariaMobilizacao
     },
     sections: [
       {
@@ -503,7 +512,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Fale com o Instituto Jesus é Bom",
     subtitle:
       "Nossa equipe está pronta para orientar famílias, receber parceiros, acolher voluntários, esclarecer dúvidas e conversar com quem deseja fazer parte dessa missão.",
-    heroImage: institutoImages.paginas.acolhimentoAbraco,
+    heroImage: institutoImages.paginas.equipeOrganizando,
     primaryCta: { label: "Falar pelo WhatsApp", href: "https://wa.me/5521973468327" },
     secondaryCta: { label: "Enviar e-mail", href: "mailto:contato@jesusebom.org" },
     contactChannels: [

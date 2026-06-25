@@ -123,7 +123,7 @@ export const projectCards = [
     title: "Robótica Educacional",
     category: "Educação",
     description: "Tecnologia, lógica e criatividade como ponte para novas possibilidades.",
-    image: institutoImages.programas.culturaEducacao,
+    image: institutoImages.programas.educacaoProfessora,
     icon: Sparkles
   },
   {

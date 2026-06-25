@@ -13,6 +13,7 @@ import {
   UsersRound,
   Volleyball
 } from "lucide-react";
+import { institutoImages } from "@/data/institutoImages";
 
 export const metadata: Metadata = {
   title: "Doação — Instituto Jesus é Bom",
@@ -32,6 +33,13 @@ const actionCards = [
   { title: "Esporte e convivência", text: "Natação, jiu-jítsu, ballet, recreação e experiências que fortalecem disciplina.", icon: Volleyball },
   { title: "Cuidado emocional", text: "Escuta, acolhimento, apoio psicológico e proteção para crianças e adolescentes.", icon: Heart },
   { title: "Ações sociais", text: "Alimentação, campanhas, eventos e apoio às famílias da comunidade.", icon: HandHeart }
+];
+
+const storyVideos = [
+  { label: "Professora de inglês", src: institutoImages.programas.ensinoBilingue },
+  { label: "Famílias acolhidas", src: institutoImages.doacao.apoioFamilias },
+  { label: "Ações durante a pandemia", src: institutoImages.historias.criancaAcaoEvento },
+  { label: "Juventude e fé", src: institutoImages.programas.culturaEducacao }
 ];
 
 const reasons = [
@@ -113,7 +121,7 @@ export default function DonationPage() {
 
             <div className="donationVideoCard" aria-label="Vídeo institucional demonstrativo">
               <img
-                src="/assets/doacao-hero-video-pablo-prototipo.jpg"
+                src={institutoImages.home.heroComunidade}
                 alt="Thumbnail do vídeo do Pablo, fundador, baseada no protótipo aprovado"
               />
               <div className="videoOverlay">
@@ -133,12 +141,7 @@ export default function DonationPage() {
               <p>Assista, compartilhe e veja como cada apoio ajuda a construir destinos todos os dias.</p>
             </div>
             <div className="storyVideoGrid">
-              {[
-                { label: "Professora de inglês", src: "/assets/instituto/programas/educacao-professora-crianca.jpg" },
-                { label: "Famílias acolhidas", src: "/assets/instituto/doacao/apoio-familias-entrega-acolhimento.jpg" },
-                { label: "Ações durante a pandemia", src: "/assets/instituto/historias/crianca-acao-evento.jpg" },
-                { label: "Juventude e fé", src: "/assets/instituto/programas/cultura-educacao-infantil.jpg" }
-              ].map(({ label, src }) => (
+              {storyVideos.map(({ label, src }) => (
                 <article className="storyVideoCard" key={label}>
                   <img src={src} alt={label} />
                   <span className="playMini"><Play size={20} fill="currentColor" /></span>
@@ -153,9 +156,11 @@ export default function DonationPage() {
         <section className="section donationFounder" id="pablo-fundador">
           <div className="container donationFounderGrid">
             <div className="donationFounderVideo" aria-label="Mensagem em vídeo do Pablo, fundador">
+              {/* TODO: substituir pelo frame oficial do vídeo do Pablo quando validado pelo Rubens. */}
+              {/* A imagem `institutoImages.paginas.liderancaValidarPablo` NÃO pode ser usada como foto do Pablo sem validação explícita. */}
               <img
                 src="/assets/doacao-hero-video-pablo-prototipo.jpg"
-                alt="Thumbnail do vídeo do Pablo, fundador"
+                alt="Thumbnail do vídeo do Pablo, fundador (placeholder)"
               />
               <span className="playCircle"><Play size={30} fill="currentColor" /></span>
               <div>
@@ -196,7 +201,7 @@ export default function DonationPage() {
                 ))}
               </div>
             </div>
-            <img src="/assets/instituto/doacao/voluntario-carregando-doacoes.jpg" alt="Grupo de voluntários reunidos" />
+            <img src={institutoImages.doacao.voluntarioDoacoes} alt="Grupo de voluntários reunidos" />
           </div>
         </section>
 
@@ -247,7 +252,7 @@ export default function DonationPage() {
               </p>
               <a className="btn lime" href="/quem-somos">Conheça nossa história</a>
             </div>
-            <img src="/assets/instituto/paginas/comunidade-criancas-reunidas.jpg" alt="Criança recebendo cuidado e acolhimento" />
+            <img src={institutoImages.paginas.acolhimentoCrianca} alt="Criança recebendo cuidado e acolhimento" />
           </div>
         </section>
 

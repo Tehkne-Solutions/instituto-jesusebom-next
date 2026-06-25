@@ -7,6 +7,14 @@
 - Adicionada seção editorial sobre Pablo, fundador, preparada para receber o vídeo oficial.
 - Mantido checkout fake, payload e modal de sucesso.
 
+## v40 — Auditoria final de imagens reais
+
+- Verificada a distribuição das fotos reais por página.
+- Removidas referências diretas fora do registry de imagens.
+- Confirmado que não há repetição de imagens dentro da mesma página.
+- Mantida proteção para não usar imagem de liderança como Pablo sem validação.
+- Preservadas imagens `needs-crop` fora de produção.
+
 ## v38 — Organização de imagens reais do Instituto
 
 - Criado script de preparação de fotos reais em `scripts/prepare-instituto-images.ps1`.
@@ -14,6 +22,7 @@
 - Gerado registry `data/institutoImages.ts` com paths prontos para uso no Next.js.
 - Separados prints verticais em `needs-crop` para crop manual antes do uso final.
 - Documentado mapeamento em `docs/IMAGENS-INSTITUTO-MAPPING.md`.
+- Corrigida reutilização de imagens reais nas páginas internas e no homepage, usando imagens únicas por seção e seção de doação.
 
 ## v35 — Checkout fake alinhado ao design da Doação
 

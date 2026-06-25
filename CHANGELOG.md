@@ -1,4 +1,3 @@
-
 ## v36 — Mobile da doação, fundador e vídeo do Pablo
 
 - Ajustado o mobile da página `/doacao` para evitar sobreposição do header sticky sobre a hero.
@@ -8,6 +7,13 @@
 - Adicionada seção editorial sobre Pablo, fundador, preparada para receber o vídeo oficial.
 - Mantido checkout fake, payload e modal de sucesso.
 
+## v38 — Organização de imagens reais do Instituto
+
+- Criado script de preparação de fotos reais em `scripts/prepare-instituto-images.ps1`.
+- Adicionada estrutura `public/assets/instituto` (home, doacao, paginas, programas, historias, needs-crop, arquivo-original).
+- Gerado registry `data/institutoImages.ts` com paths prontos para uso no Next.js.
+- Separados prints verticais em `needs-crop` para crop manual antes do uso final.
+- Documentado mapeamento em `docs/IMAGENS-INSTITUTO-MAPPING.md`.
 
 ## v35 — Checkout fake alinhado ao design da Doação
 
@@ -31,7 +37,6 @@
 - Mantida mensagem de sucesso no padrão visual do site.
 - Preparado para futura integração real com checkout, WhatsApp, e-mail, webhook ou planilha.
 - Mantido ZIP sem `node_modules` e sem `package-lock.json`.
-
 
 ## v33 — Doação hero pixel: form limpo e vídeo full height
 
@@ -70,13 +75,11 @@
 - Incluídas seções de histórias, impacto, formas de atuação, motivos para apoiar, sobre o Instituto e FAQ.
 - Mantido setup Vercel com registry público, sem `node_modules` e sem `package-lock.json`.
 
-
 ## v21 — Remoção definitiva do degradê da hero da Home
 
 - Removido o background com `linear-gradient` da `.heroFullBg`.
 - Desativado o pseudo-elemento `.heroFull::after`, que ainda criava o fade para o fundo da página.
 - Adicionado override final de segurança para impedir que o degradê retorne por cascata de CSS.
-
 
 ## v20 — Remoção do degradê da hero da Home
 
@@ -98,7 +101,6 @@
 - Criada rota placeholder `/doacao/checkout` com o texto “Aqui vai o checkout de pagamento.”
 - Corrigido import do ícone `ShieldCheck` em `LegalPage`.
 
-
 ## v17 — Páginas legais, footer funcional e consentimento 2026
 
 - Mantida a Home Completa como versão principal.
@@ -111,15 +113,12 @@
 - Mantido WhatsApp flutuante redondo, sem borda, e sem alterar a lógica de atendimento.
 - ZIP mantido sem `node_modules` e sem `package-lock.json`.
 
-
-
 ## V16 — Hotfix botão WhatsApp flutuante
 
 - Ajustado botão flutuante do WhatsApp para formato redondo.
 - Removida borda do botão de WhatsApp.
 - Corrigido tamanho/centralização do SVG do WhatsApp para evitar deformação visual.
 - Mantida a lógica do bubble de atendimento e conteúdo institucional.
-
 
 ## v15 — Clean Registry Install para Vercel
 
@@ -196,8 +195,6 @@
 - Fixado Node em `20.x` para evitar upgrade automático de major version na Vercel.
 - Mantida a Home Completa oficial como rota principal `/`.
 
-
-
 ## V9 — Correção install Vercel
 
 - Restaurado `package-lock.json` compatível com as dependências atuais.
@@ -220,13 +217,11 @@
 - Corrigido o SVG e o CSS do botão flutuante de WhatsApp para evitar distorção/deformação.
 - Adicionado `.gitignore` para impedir commit de `node_modules`, `.next` e arquivos locais.
 
-
 ## v14 — Favicon oficial sem alterações de build
 
 - Aplicado `public/favicon-Jesus-e-bom.webp` como favicon principal.
 - Mantida a base da v12, sem alterar `package.json`, lockfile ou configuração de instalação da Vercel.
 - ZIP gerado sem `node_modules`.
-
 
 ## v18 — Páginas internas oficiais
 
@@ -239,7 +234,6 @@
 - WhatsApp passa a usar como fallback o número oficial da Secretaria: 21 97346-8327.
 - Mantida configuração de deploy sem `node_modules` e sem `package-lock.json`.
 
-
 ## V22 — Overlay uniforme, imagens Unsplash e correções de encavalamento
 
 - Aplicado overlay escuro uniforme na hero da Home para recuperar legibilidade sem fade branco.
@@ -250,13 +244,11 @@
 - Cards de atuação recebem degradê diagonal azul para verde com textos e ícones brancos.
 - Removidos/ajustados elementos clicáveis sem função real e preparado fluxo /doacao/checkout.
 
-
 ## v23 — Imagens editoriais expandidas
 
 - Ajustadas as imagens laterais das páginas internas para preencher toda a área visual da coluna direita.
 - Removida sensação de imagem pequena/flutuante em layouts texto + imagem.
 - Mantido padrão responsivo, com imagem empilhada em mobile.
-
 
 ## v24 — Correção real das imagens laterais editoriais
 
@@ -266,14 +258,12 @@
 - Mantido o padrão texto à esquerda + imagem à direita no desktop.
 - Ajustado responsivo para empilhar com proporção correta no mobile.
 
-
 ## v27 — Correção pixel-perfect da LP de Doação
 
 - Reestruturada a hero da página `/doacao` para seguir o protótipo enviado pelo Rubens: texto à esquerda, formulário acoplado no mesmo bloco e vídeo à direita.
 - Removido o header global da LP de doação e aplicado header próprio com navegação por âncoras: Impacto, Como Atuamos, Quem Somos e FAQ.
 - Ajustados espaçamentos, largura do formulário, escala dos campos e proporção do vídeo para evitar elementos extras e desalinhamento.
 - Mantido fluxo técnico da doação com API preparada para WhatsApp, e-mail e futuro webhook/planilha.
-
 
 ## v28 — Ajuste final da LP Doação
 
@@ -282,13 +272,11 @@
 - Adicionado modal visual no padrão do site com a mensagem “Recebemos suas informações. Em breve nossa equipe dará continuidade.”
 - API de doação retorna `ok: true` e ecoa o payload recebido, sem WhatsApp, e-mail, planilha ou checkout por enquanto.
 
-
 ## v29 — Ajuste pixel da hero de doação
 
 - Ajustado o vídeo/card lateral da LP `/doacao` para acompanhar a altura do bloco esquerdo, conforme o protótipo aprovado.
 - Corrigido alinhamento vertical da hero para evitar vídeo centralizado/deslocado em relação ao título e formulário.
 - Mantido formulário abaixo do título e payload sem integração final.
-
 
 ## v30 — Ajuste final da hero da LP de Doação
 
@@ -298,7 +286,6 @@
 - Card de vídeo reposicionado para acompanhar visualmente a composição do protótipo sem esticar de forma artificial.
 - Mantido payload do formulário e modal de confirmação.
 
-
 ## v32 — Header sticky na página de doação
 
 - Header próprio da LP `/doacao` agora fica fixo/sticky durante o scroll.
@@ -306,6 +293,6 @@
 - Adicionado fundo verde translúcido com blur sutil para preservar legibilidade sobre a hero e seções claras.
 - Ajustado espaçamento superior da hero para evitar sobreposição do conteúdo pelo header fixo.
 
-
 ## v37
+
 - Atualizada a thumbnail do vídeo da hero da página de doação para usar a imagem do Pablo conforme o protótipo.

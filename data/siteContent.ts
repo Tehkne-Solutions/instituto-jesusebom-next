@@ -21,6 +21,7 @@ import {
   UserPlus,
   Building2
 } from "lucide-react";
+import { institutoImages } from "./institutoImages";
 
 export const navItems = [
   { label: "Quem Somos", href: "/quem-somos" },
@@ -108,42 +109,42 @@ export const projectCards = [
     title: "Estudo Dirigido",
     category: "Educação",
     description: "Rotina de estudos, acompanhamento pedagógico e suporte para crianças e adolescentes.",
-    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
+    image: institutoImages.programas.educacaoSala,
     icon: BookOpen
   },
   {
     title: "Ensino Bilíngue",
     category: "Educação",
     description: "Aprendizagem de inglês como ampliação de repertório, oportunidade e futuro.",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+    image: institutoImages.programas.ensinoBilingue,
     icon: GraduationCap
   },
   {
     title: "Robótica Educacional",
     category: "Educação",
     description: "Tecnologia, lógica e criatividade como ponte para novas possibilidades.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    image: institutoImages.programas.culturaEducacao,
     icon: Sparkles
   },
   {
     title: "Artes e Ballet",
     category: "Cultura",
     description: "Expressão, disciplina e desenvolvimento artístico dentro da formação integral.",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
+    image: institutoImages.programas.culturaEducacao,
     icon: Music2
   },
   {
     title: "Esporte e Jiu-jítsu",
     category: "Esporte",
     description: "Disciplina, saúde, autocontrole e convivência através do esporte.",
-    image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=1200&q=80",
+    image: institutoImages.programas.esporteRecreacao,
     icon: Volleyball
   },
   {
     title: "Acolhimento às famílias",
     category: "Desenvolvimento social",
     description: "Cuidado, escuta e apoio às famílias que caminham junto com as crianças.",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+    image: institutoImages.doacao.apoioFamilias,
     icon: HeartHandshake
   }
 ];

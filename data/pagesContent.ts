@@ -29,6 +29,7 @@ import {
   Volleyball
 } from "lucide-react";
 import type { ElementType } from "react";
+import { institutoImages } from "./institutoImages";
 
 export type ContentCard = {
   title: string;
@@ -93,7 +94,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Uma missão que transforma vidas através da fé, educação e esperança",
     subtitle:
       "Desde 2019, o Instituto Jesus é Bom acolhe crianças, adolescentes e famílias da Comunidade César Maia com projetos gratuitos que unem cuidado, formação, proteção e amor ao próximo.",
-    heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
+    heroImage: institutoImages.home.heroComunidade,
     primaryCta: { label: "Conheça nossa missão", href: "#missao" },
     secondaryCta: { label: "Quero apoiar", href: "/doacao" },
     intro: {
@@ -105,7 +106,7 @@ export const pagesContent: Record<string, ContentPage> = {
         "Hoje, o Instituto segue de portas abertas para acolher, ensinar, alimentar, proteger e inspirar crianças e adolescentes, sempre guiado pelo amor de Cristo e pelo compromisso com a transformação de vidas."
       ],
       highlight: "Não somos apenas uma instituição. Somos uma missão em movimento.",
-      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
+      image: institutoImages.paginas.comunidadeCriancas
     },
     sections: [
       {
@@ -126,7 +127,7 @@ export const pagesContent: Record<string, ContentPage> = {
         text: [
           "Ser referência em transformação social e educação cristã, avançando com responsabilidade e sonhando com a criação de uma escola cristã gratuita de ensino integral, capaz de atender crianças e adolescentes com excelência, cuidado, valores e propósito."
         ],
-        image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=85"
+        image: institutoImages.programas.educacaoProfessora
       },
       {
         eyebrow: "Pilares",
@@ -155,7 +156,7 @@ export const pagesContent: Record<string, ContentPage> = {
       {
         eyebrow: "Estrutura",
         title: "Uma equipe organizada para servir melhor",
-        image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80",
+        image: institutoImages.paginas.equipeOrganizando,
         cards: [
           { title: "Direção e Coordenação", description: "Gestão institucional, planejamento, organização e acompanhamento das ações.", icon: Landmark },
           { title: "Educação", description: "Estudo Dirigido, Matemática, Estudo Bilíngue, Ensino Bíblico, Artes e Robótica.", icon: BookOpen },
@@ -183,7 +184,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Projetos que cuidam da criança por inteiro",
     subtitle:
       "Educação, esporte, cultura, cuidado emocional, alimentação, proteção, fé e oportunidades para crianças e adolescentes da Comunidade César Maia.",
-    heroImage: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
+    heroImage: institutoImages.programas.culturaEducacao,
     primaryCta: { label: "Conheça os projetos", href: "#projetos" },
     secondaryCta: { label: "Como ajudar", href: "/doacao" },
     intro: {
@@ -194,13 +195,13 @@ export const pagesContent: Record<string, ContentPage> = {
         "Alguns projetos fortalecem a aprendizagem. Outros desenvolvem disciplina, autoestima e convivência. Outros oferecem escuta, proteção, alimentação e acolhimento. Juntos, eles formam uma rede de cuidado integral."
       ],
       highlight: "Cada projeto é uma porta. Cada criança é uma história. Cada oportunidade pode mudar um futuro.",
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80"
+      image: institutoImages.programas.educacaoProfessora
     },
     sections: [
       {
         eyebrow: "Educação e Desenvolvimento",
         title: "Educar é abrir caminhos para um futuro com dignidade, propósito e esperança",
-        image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
+        image: institutoImages.programas.educacaoSala,
         cards: [
           { title: "Estudo Dirigido", description: "Apoio para aprender, criar rotina de estudo e fortalecer a confiança das crianças.", icon: BookOpen },
           { title: "Matemática", description: "Aulas com professora especialista para desenvolver raciocínio, segurança e aprendizagem.", icon: GraduationCap },
@@ -213,7 +214,7 @@ export const pagesContent: Record<string, ContentPage> = {
       {
         eyebrow: "Esporte, Cultura e Convivência",
         title: "Cuidar também é oferecer experiências, disciplina, autoestima e oportunidades",
-        image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=1200&q=80",
+        image: institutoImages.programas.esporteRecreacao,
         cards: [
           { title: "Natação", description: "Desenvolvimento físico, segurança, disciplina, saúde e superação.", icon: Volleyball },
           { title: "Jiu-Jitsu", description: "Respeito, disciplina, autocontrole e fortalecimento emocional.", icon: Trophy },
@@ -225,7 +226,7 @@ export const pagesContent: Record<string, ContentPage> = {
       {
         eyebrow: "Cuidado, Acolhimento e Proteção",
         title: "Cada criança merece ser vista, ouvida, protegida e amada",
-        image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+        image: institutoImages.programas.educacaoProfessora,
         cards: [
           { title: "Atendimento Psicológico", description: "Escuta, acolhimento e cuidado emocional para crianças e adolescentes.", icon: HeartHandshake },
           { title: "Apoio Psicopedagógico", description: "Acompanhamento das dificuldades de aprendizagem e fortalecimento do desenvolvimento.", icon: BookOpen },
@@ -236,7 +237,7 @@ export const pagesContent: Record<string, ContentPage> = {
       {
         eyebrow: "Alimentação e Ações Sociais",
         title: "Cuidado também se serve à mesa",
-        image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=85",
+        image: institutoImages.doacao.refeicaoComunidade,
         cards: [
           { title: "Alimentação diária", description: "Lanches, refeições e acolhimento com cuidado, carinho e responsabilidade.", icon: HandHeart },
           { title: "Campanhas sociais", description: "Distribuição de cestas, kits, alimentos, brinquedos, materiais e apoio em momentos especiais.", icon: Gift },
@@ -260,7 +261,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Cada número representa uma vida alcançada",
     subtitle:
       "O impacto do Instituto Jesus é Bom é medido em dados, mas também em histórias, famílias, sorrisos, refeições, atendimentos e oportunidades reais.",
-    heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
+    heroImage: institutoImages.historias.criancaAcaoEvento,
     primaryCta: { label: "Ver números", href: "#numeros" },
     secondaryCta: { label: "Quero apoiar", href: "/doacao" },
     stats: [
@@ -280,7 +281,7 @@ export const pagesContent: Record<string, ContentPage> = {
           "Mais crianças atendidas significam mais aulas, mais alimentação, mais materiais, mais organização, mais profissionais, mais voluntários e mais cuidado diário."
         ],
         highlight: "A obra cresceu. A responsabilidade também.",
-        image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85"
+        image: institutoImages.historias.criancaAcaoEvento
       },
       {
         eyebrow: "Festa de Páscoa",
@@ -288,7 +289,7 @@ export const pagesContent: Record<string, ContentPage> = {
         text: [
           "A Festa de Páscoa é uma das grandes ações sociais do Instituto Jesus é Bom. Mais do que um evento, ela representa um movimento de fé, alegria, cuidado, alimentação e amor para milhares de vidas."
         ],
-        image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=85",
+        image: institutoImages.doacao.refeicaoComunidade,
         cards: [
           { title: "500 cestas básicas distribuídas", description: "Ação direta de cuidado e apoio às famílias.", icon: Gift },
           { title: "3 mil kits de Páscoa entregues", description: "Kits entregues em uma grande mobilização comunitária.", icon: HandHeart },
@@ -336,7 +337,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "A sua doação não termina no PIX. Ela continua na vida de uma criança.",
     subtitle:
       "Sua contribuição ajuda o Instituto Jesus é Bom a manter projetos gratuitos de educação, alimentação, esporte, fé, cuidado emocional, proteção e desenvolvimento.",
-    heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
+    heroImage: institutoImages.doacao.voluntariaMobilizacao,
     primaryCta: { label: "Doe agora", href: "/doacao" },
     secondaryCta: { label: "Falar pelo WhatsApp", href: "https://wa.me/5521973468327" },
     suggestedValues: [
@@ -359,7 +360,7 @@ export const pagesContent: Record<string, ContentPage> = {
           { title: "Copiar Chave PIX", description: "contato@jesusebom.org", icon: Gift },
           { title: "Enviar comprovante", description: "Envie pelo WhatsApp oficial após realizar sua contribuição.", icon: MessageCircle }
         ],
-        image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=85"
+        image: institutoImages.doacao.sacolasCestas
       },
       {
         eyebrow: "Mantenedor mensal",
@@ -418,7 +419,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Doe tempo, talento e presença",
     subtitle:
       "Ser voluntário no Instituto Jesus é Bom é colocar amor em movimento e ajudar a transformar vidas de forma prática.",
-    heroImage: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80",
+    heroImage: institutoImages.doacao.voluntarioDoacoes,
     primaryCta: { label: "Quero ser voluntário", href: "#formulario" },
     secondaryCta: { label: "Falar com o Instituto", href: "/contato" },
     intro: {
@@ -429,7 +430,7 @@ export const pagesContent: Record<string, ContentPage> = {
         "Ser voluntário é participar dessa transformação com aquilo que você tem: tempo, talento, conhecimento, experiência, disposição e amor ao próximo."
       ],
       highlight: "Existe uma forma de servir que combina com você.",
-      image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=85"
+      image: institutoImages.doacao.voluntarioDoacoes
     },
     sections: [
       {
@@ -459,7 +460,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Transparência e prestação de contas",
     subtitle:
       "Confiança também se constrói com clareza, responsabilidade e compromisso com cada vida alcançada.",
-    heroImage: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
+    heroImage: institutoImages.paginas.acolhimentoAbraco,
     primaryCta: { label: "Falar com o Instituto", href: "/contato" },
     secondaryCta: { label: "Ver relatórios", href: "/relatorios" },
     sections: [
@@ -502,7 +503,7 @@ export const pagesContent: Record<string, ContentPage> = {
     title: "Fale com o Instituto Jesus é Bom",
     subtitle:
       "Nossa equipe está pronta para orientar famílias, receber parceiros, acolher voluntários, esclarecer dúvidas e conversar com quem deseja fazer parte dessa missão.",
-    heroImage: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=85",
+    heroImage: institutoImages.paginas.acolhimentoAbraco,
     primaryCta: { label: "Falar pelo WhatsApp", href: "https://wa.me/5521973468327" },
     secondaryCta: { label: "Enviar e-mail", href: "mailto:contato@jesusebom.org" },
     contactChannels: [

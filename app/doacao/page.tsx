@@ -134,21 +134,13 @@ export default function DonationPage() {
             </div>
             <div className="storyVideoGrid">
               {[
-                "Professora de inglês",
-                "Famílias acolhidas",
-                "Ações durante a pandemia",
-                "Juventude e fé"
-              ].map((label, index) => (
+                { label: "Professora de inglês", src: "/assets/instituto/programas/educacao-professora-crianca.jpg" },
+                { label: "Famílias acolhidas", src: "/assets/instituto/doacao/apoio-familias-entrega-acolhimento.jpg" },
+                { label: "Ações durante a pandemia", src: "/assets/instituto/historias/crianca-acao-evento.jpg" },
+                { label: "Juventude e fé", src: "/assets/instituto/programas/cultura-educacao-infantil.jpg" }
+              ].map(({ label, src }) => (
                 <article className="storyVideoCard" key={label}>
-                  <img
-                    src={`https://images.unsplash.com/photo-${[
-                      "1509062522246-3755977927d7",
-                      "1529156069898-49953e39b3ac",
-                      "1491438590914-bc09fcaaf77a",
-                      "1503454537195-1dcabb73ffb9"
-                    ][index]}?auto=format&fit=crop&w=600&q=85`}
-                    alt={label}
-                  />
+                  <img src={src} alt={label} />
                   <span className="playMini"><Play size={20} fill="currentColor" /></span>
                   <strong>{label}</strong>
                 </article>
@@ -162,8 +154,8 @@ export default function DonationPage() {
           <div className="container donationFounderGrid">
             <div className="donationFounderVideo" aria-label="Mensagem em vídeo do Pablo, fundador">
               <img
-                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1100&q=85"
-                alt="Capa demonstrativa para o vídeo do Pablo, fundador"
+                src="/assets/doacao-hero-video-pablo-prototipo.jpg"
+                alt="Thumbnail do vídeo do Pablo, fundador"
               />
               <span className="playCircle"><Play size={30} fill="currentColor" /></span>
               <div>
@@ -204,10 +196,7 @@ export default function DonationPage() {
                 ))}
               </div>
             </div>
-            <img
-              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=85"
-              alt="Grupo de voluntários reunidos"
-            />
+            <img src="/assets/instituto/doacao/voluntario-carregando-doacoes.jpg" alt="Grupo de voluntários reunidos" />
           </div>
         </section>
 
@@ -258,10 +247,7 @@ export default function DonationPage() {
               </p>
               <a className="btn lime" href="/quem-somos">Conheça nossa história</a>
             </div>
-            <img
-              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=85"
-              alt="Criança recebendo cuidado e acolhimento"
-            />
+            <img src="/assets/instituto/paginas/comunidade-criancas-reunidas.jpg" alt="Criança recebendo cuidado e acolhimento" />
           </div>
         </section>
 

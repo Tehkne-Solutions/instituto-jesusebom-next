@@ -6,6 +6,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StaggerContainer";
 import { StaggerItem } from "@/components/motion/StaggerItem";
+import { institutoImages } from "@/data/institutoImages";
 import {
   impactNumbers,
   pillars,
@@ -160,12 +161,22 @@ export default function HomeCompletaPage() {
         <section className="section sectionSoft" id="quem-somos">
           <div className="container storySplitComplete">
             <FadeIn className="imageMosaic" y={26}>
-              <div className="mosaicMain" />
+              <div className="mosaicMain">
+                <img
+                  src={institutoImages.paginas.acolhimentoAbraco}
+                  alt="Crianças e equipe em acolhimento"
+                />
+              </div>
               <div className="mosaicCard">
                 <strong>{officialCopy.location}</strong>
                 <span>{officialCopy.founded}</span>
               </div>
-              <div className="mosaicSmall" />
+              <div className="mosaicSmall">
+                <img
+                  src={institutoImages.paginas.comunidadeCriancas}
+                  alt="Comunidade de crianças reunidas"
+                />
+              </div>
             </FadeIn>
 
             <div>
@@ -268,6 +279,10 @@ export default function HomeCompletaPage() {
                 </div>
               </div>
               <div className="schoolCampaignImage">
+                <img
+                  src={institutoImages.programas.educacaoSala}
+                  alt="Sala de aula de educação integral"
+                />
                 <div className="schoolBadge">
                   <School size={24} />
                   <strong>Projeto Escola Cristã Integral</strong>

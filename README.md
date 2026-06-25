@@ -46,7 +46,6 @@ O projeto deve continuar sem `node_modules` no Git. O fluxo configurado evita lo
 }
 ```
 
-
 ---
 
 # Deploy Vercel — v15
@@ -142,15 +141,12 @@ NEXT_PUBLIC_JEB_WHATSAPP_PHONE=55DDDNUMERO
 
 Sem essa variável, o CTA final do atendimento aponta para `#contato`.
 
-
-
 ## V9 — Correção install Vercel
 
 - Restaurado `package-lock.json` compatível com as dependências atuais.
 - Alterado install command da Vercel para `npm ci --no-audit --no-fund`.
 - Mantido Node 20.x.
 - Motivo: evitar o erro intermitente do `npm install`: `Exit handler never called!`.
-
 
 ## V11 — Correção de instalação na Vercel
 
@@ -163,6 +159,15 @@ npm ci --no-audit --no-fund
 npm run build
 ```
 
+## Organização de imagens reais do Instituto
+
+Coloque o arquivo `Fotos.zip` em `_incoming/Fotos.zip` na raiz do projeto e rode o script de preparação:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\prepare-instituto-images.ps1
+```
+
+Isso irá extrair, organizar e gerar `data/institutoImages.ts` com os caminhos prontos para uso no Next.js. Prints do WhatsApp/Instagram serão movidos para `public/assets/instituto/needs-crop` e precisam de crop manual antes do uso final.
 
 ## V12 — Hotfix visual
 
@@ -183,22 +188,20 @@ git rm -r --cached node_modules
 
 Depois faça commit apenas dos arquivos reais do projeto.
 
-
 ## v14 — Favicon oficial
 
 Esta versão parte da v12 e altera apenas os assets/metadados de favicon. Não altera dependências, scripts ou setup de build.
 
-
 ## V16 — Hotfix WhatsApp
 
 Botão flutuante do WhatsApp ajustado para formato redondo, sem borda e com ícone centralizado.
-
 
 ## v18 — Páginas institucionais oficiais
 
 Esta versão adiciona as páginas internas com conteúdo baseado no `Pacote de Conteúdo Principal do Site.docx` e na apresentação `Institucional_v3.pdf`.
 
 Novas rotas:
+
 - `/quem-somos`
 - `/o-que-fazemos`
 - `/impacto-social`
@@ -207,12 +210,12 @@ Novas rotas:
 - `/contato`
 
 Também foi atualizada a navegação global, o footer e os contatos oficiais:
+
 - WhatsApp Secretaria: 21 97346-8327
 - E-mail: contato@jesusebom.org
 - Instagram: @institutojesusebom
 
 Importante: `node_modules/` e `package-lock.json` continuam ignorados para evitar instabilidade no deploy da Vercel.
-
 
 ## v19 — Refinamento visual
 
@@ -226,7 +229,6 @@ A hero principal da Home não usa mais degradê sobre a imagem. A imagem termina
 
 Hero da Home corrigida sem degradê/fade: `.heroFullBg` usa apenas a imagem e `.heroFull::after` foi desativado.
 
-
 ## V22 — Overlay uniforme, imagens Unsplash e correções de encavalamento
 
 - Aplicado overlay escuro uniforme na hero da Home para recuperar legibilidade sem fade branco.
@@ -237,16 +239,13 @@ Hero da Home corrigida sem degradê/fade: `.heroFullBg` usa apenas a imagem e `.
 - Cards de atuação recebem degradê diagonal azul para verde com textos e ícones brancos.
 - Removidos/ajustados elementos clicáveis sem função real e preparado fluxo /doacao/checkout.
 
-
 ### v23 — Ajuste visual das imagens laterais
 
 As páginas internas agora usam imagens laterais maiores, preenchendo a coluna direita no padrão editorial solicitado. Em mobile, as imagens empilham com proporção controlada.
 
-
 ## v24 — imagens laterais corrigidas
 
 As páginas internas tiveram o container editorial ampliado e as imagens da direita agora ocupam a área visual inteira da coluna, conforme revisão visual.
-
 
 ## Landing Page de Doação
 
@@ -269,14 +268,12 @@ DONATION_LEADS_WEBHOOK_URL=https://sua-automacao-ou-planilha
 
 Se `DONATION_LEADS_WEBHOOK_URL` não estiver configurada, a API `/api/donation-leads` responde normalmente e informa que o webhook ainda não foi ativado.
 
-
 ## v27 — Correção pixel-perfect da LP de Doação
 
 - Reestruturada a hero da página `/doacao` para seguir o protótipo enviado pelo Rubens: texto à esquerda, formulário acoplado no mesmo bloco e vídeo à direita.
 - Removido o header global da LP de doação e aplicado header próprio com navegação por âncoras: Impacto, Como Atuamos, Quem Somos e FAQ.
 - Ajustados espaçamentos, largura do formulário, escala dos campos e proporção do vídeo para evitar elementos extras e desalinhamento.
 - Mantido fluxo técnico da doação com API preparada para WhatsApp, e-mail e futuro webhook/planilha.
-
 
 ## v28 — Ajuste final da LP Doação
 
@@ -285,26 +282,21 @@ Se `DONATION_LEADS_WEBHOOK_URL` não estiver configurada, a API `/api/donation-l
 - Adicionado modal visual no padrão do site com a mensagem “Recebemos suas informações. Em breve nossa equipe dará continuidade.”
 - API de doação retorna `ok: true` e ecoa o payload recebido, sem WhatsApp, e-mail, planilha ou checkout por enquanto.
 
-
 ### v29 — ajuste da LP de doação
 
 A hero da página `/doacao` foi refinada para que o card de vídeo da direita acompanhe a altura do bloco esquerdo, seguindo o protótipo de referência.
-
 
 ### v30 — Hero da doação ajustada
 
 A página `/doacao` recebeu ajuste fino de hero para aproximar a composição do protótipo aprovado: texto e formulário no bloco esquerdo, vídeo vertical à direita, quebras de título controladas e formulário compactado. O formulário continua apenas preparando/enviando o payload para `/api/donation-leads`.
 
-
 ### v31 — Hero da LP de Doação
 
 A hero da rota `/doacao` foi refinada para aproximar o título, formulário e vídeo do protótipo enviado pelo Rubens. O ajuste atua apenas em CSS e preserva o payload do formulário.
 
-
 ### v32 — Header sticky na página de doação
 
 A rota `/doacao` mantém header próprio da landing page e agora esse header permanece fixo durante o scroll, com fundo verde translúcido e blur sutil para garantir legibilidade.
-
 
 ## v33 — Ajuste fino da hero de Doação
 
@@ -338,11 +330,10 @@ Exemplos:
 
 A rota `/doacao/checkout` foi refinada para seguir o design da LP de doação: fundo escuro institucional, título menor, card de checkout mais limpo, QR Code fake para doação anônima e formulário completo para doação com dados. Nenhum pagamento real é processado; o fluxo apenas prepara payload para integração futura.
 
-
 ## v36 — Doação mobile + fundador
 
 A página `/doacao` recebeu ajustes de mobile, card de vídeo do Pablo/fundador e uma seção institucional preparada para o vídeo oficial.
 
-
 ## v37
+
 - Atualizada a thumbnail do vídeo da hero da página de doação para usar a imagem do Pablo conforme o protótipo.

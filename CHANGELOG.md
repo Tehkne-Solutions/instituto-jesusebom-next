@@ -7,6 +7,12 @@
 - Adicionada seção editorial sobre Pablo, fundador, preparada para receber o vídeo oficial.
 - Mantido checkout fake, payload e modal de sucesso.
 
+## v41 — Correção semântica de imagens da Home
+
+- Atualizadas as imagens do mosaico e da campanha da home para refletir acolhimento e educação reais.
+- Utilizado `institutoImages.paginas.acolhimentoAbraco` e `institutoImages.paginas.comunidadeCriancas` no mosaico da seção "Quem somos".
+- Utilizado `institutoImages.programas.educacaoSala` na seção de campanha da escola cristã integral.
+
 ## v40 — Auditoria final de imagens reais
 
 - Verificada a distribuição das fotos reais por página.
